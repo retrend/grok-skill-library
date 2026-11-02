@@ -14,6 +14,10 @@ export GH_TOKEN="${GH_TOKEN:-${GITHUB_TOKEN:-}}"
 [ -d node_modules/@xenova/transformers ] || npm i --no-save --prefix "$PWD" @xenova/transformers@2.17.2 >/dev/null
 SITE_URL="$URL" python3 build_skills.py
 node build_embeddings.mjs
+# Library tab: always built from the real catalogue (read-only). Missing or empty file -> empty library.json.
+unset LIBRARY_CATALOG LIBRARY_OUT
+python3 build_library.py
+node build_library_embeddings.mjs
 touch .nojekyll   # serve skills/*.md raw instead of letting Jekyll render them
 LOCAL_COUNT="$(python3 -c "import json;print(json.load(open('index.json'))['count'])")"
 
@@ -22,7 +26,8 @@ gh auth status >/dev/null 2>&1 || { echo "Not signed in to GitHub. Set GH_TOKEN 
 gh repo view "$OWNER/$REPO" >/dev/null 2>&1 || { echo "Repo $OWNER/$REPO not found or not accessible."; exit 1; }
 [ -d .git ] || git init -q -b main
 git remote get-url origin >/dev/null 2>&1 || git remote add origin "https://github.com/$OWNER/$REPO.git"
-git add -A index.html app.js ask.js styles.css skills.json embeddings.json index.json llms.txt llms-full.txt \
+git add -A index.html app.js ask.js library.js styles.css skills.json embeddings.json index.json llms.txt llms-full.txt \
+  library.json library-embeddings.json build_library.py build_library_embeddings.mjs \
   skills .nojekyll build_skills.py build_embeddings.mjs deploy.sh serve.sh README.md .gitignore
 if git diff --cached --quiet; then
   echo "No changes to commit."

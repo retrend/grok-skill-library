@@ -320,6 +320,8 @@
   function onKey(e) {
     const tag = (e.target && e.target.tagName) || "";
     const inInput = tag === "INPUT" || tag === "TEXTAREA" || tag === "SELECT" || e.target.isContentEditable;
+    // The Library tab (library.js) handles its own keys.
+    if (document.body.dataset.view === "library" && !detailOpen) return;
 
     if (e.key === "/" && !inInput && !e.metaKey && !e.ctrlKey) {
       e.preventDefault();

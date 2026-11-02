@@ -8,9 +8,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23c44dff'/%3E%3Cstop offset='1' stop-color='%237c5cff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='8' fill='url(%23g)'/%3E%3C/svg%3E" />
   <link rel="stylesheet" href="styles.css" />
   <script src="https://cdn.jsdelivr.net/npm/marked@11.1.1/marked.min.js" defer></script>
   <script src="app.js" defer></script>
+  <script src="library.js" defer></script>
   <script type="module" src="ask.js"></script>
 </head>
 <body>
@@ -23,6 +25,10 @@
           <p class="brand-sub">Grok Bot · Tweet → Skill</p>
         </div>
       </div>
+      <nav class="tabs" role="tablist" aria-label="Sections">
+        <a class="tab active" id="tab-skills" role="tab" href="#skills" aria-selected="true">Skills</a>
+        <a class="tab" id="tab-library" role="tab" href="#library" aria-selected="false">Library</a>
+      </nav>
       <div class="topbar-actions">
         <button type="button" class="btn btn-accent" id="btn-ask" title="Ask your skills (a)" aria-expanded="false">Ask ✦</button>
         <a class="btn btn-ghost" href="#for-agents" id="link-agents" title="Machine-readable files for AI bots">For AI agents</a>
@@ -31,10 +37,11 @@
       </div>
     </header>
 
+    <div id="view-skills">
     <section class="controls" aria-label="Search and filters">
       <div class="search-wrap">
         <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
-        <input type="search" id="search" placeholder="Search skills…  (press /)" autocomplete="off" spellcheck="false" />
+        <input type="search" id="search" class="search-input" placeholder="Search skills…  (press /)" autocomplete="off" spellcheck="false" />
         <kbd class="kbd-hint">/</kbd>
       </div>
       <div class="sort-wrap">
@@ -59,6 +66,48 @@
       </div>
     </div>
 
+    </div>
+
+    <div id="view-library" hidden>
+      <section class="controls lib-controls" aria-label="Search and filter the catalogue">
+        <div class="search-wrap">
+          <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+          <input type="search" id="lib-search" class="search-input" placeholder="Search the catalogue…" autocomplete="off" spellcheck="false" />
+          <kbd class="kbd-hint">/</kbd>
+        </div>
+        <div class="sort-wrap">
+          <label for="lib-status" class="sr-only">Status</label>
+          <select id="lib-status">
+            <option value="active">Hide skipped</option>
+            <option value="all">All</option>
+            <option value="new">New</option>
+            <option value="starred">Starred</option>
+            <option value="skip">Skipped</option>
+          </select>
+        </div>
+        <div class="sort-wrap">
+          <label for="lib-sort" class="sr-only">Sort</label>
+          <select id="lib-sort">
+            <option value="newest">Newest found</option>
+            <option value="az">A–Z</option>
+            <option value="type">Type</option>
+          </select>
+        </div>
+      </section>
+      <p class="lib-status-line"><span id="lib-count" aria-live="polite"></span></p>
+      <section class="chips lib-chips" id="lib-type-chips" aria-label="Type filters"></section>
+      <section class="chips lib-chips" id="lib-own-chips" aria-label="Already own filter"></section>
+      <section class="chips lib-chips" id="lib-tag-chips" aria-label="Tag filters"></section>
+      <main class="grid" id="lib-grid"></main>
+      <div class="empty" id="lib-empty" hidden>
+        <div class="empty-inner">
+          <p class="empty-title" id="lib-empty-title">No matching entries</p>
+          <p class="empty-body" id="lib-empty-body">Try a different search, or clear the filters.</p>
+          <button type="button" class="btn btn-accent" id="lib-clear">Clear filters</button>
+        </div>
+      </div>
+    </div>
+
     <footer class="agents" id="for-agents" aria-label="For AI agents">
       <h2>For AI agents</h2>
       <p>Point a bot at <a href="llms.txt">llms.txt</a>. It explains the library and lists every skill.</p>
@@ -66,6 +115,7 @@
         <li><a href="index.json">index.json</a>: every skill's id, description, tags and link, without the full text.</li>
         <li><code>skills/&lt;id&gt;.md</code>: one skill as raw Markdown.</li>
         <li><a href="llms-full.txt">llms-full.txt</a>: all skills in one file.</li>
+        <li><a href="library.json">library.json</a>: the Library catalogue (outside skills, agents, plugins and more found by Library Scout).</li>
       </ul>
       <p class="agents-tip">Match the task against each description (they all start with “Use this when”), then fetch that skill.</p>
     </footer>

@@ -143,7 +143,7 @@ body {
   pointer-events: none;
 }
 
-#search {
+#search, .search-input {
   width: 100%;
   padding: 12px 44px 12px 42px;
   background: var(--bg-elev);
@@ -155,8 +155,8 @@ body {
   outline: none;
   transition: border-color 0.15s, box-shadow 0.15s;
 }
-#search::placeholder { color: var(--text-mute); }
-#search:focus {
+#search::placeholder, .search-input::placeholder { color: var(--text-mute); }
+#search:focus, .search-input:focus {
   border-color: var(--accent);
   box-shadow: 0 0 0 3px var(--accent-soft);
 }
@@ -174,6 +174,7 @@ body {
   pointer-events: none;
 }
 #search:focus + .kbd-hint,
+.search-input:focus + .kbd-hint,
 .search-wrap:focus-within .kbd-hint { opacity: 0; }
 
 .sort-wrap select {
@@ -636,3 +637,51 @@ a.btn{text-decoration:none;display:inline-flex;align-items:center}
 .agents a,.raw-link{color:var(--accent);text-decoration:none}.agents a:hover,.raw-link:hover{text-decoration:underline}
 .agents code{font-family:var(--mono);font-size:.8rem;background:rgba(255,255,255,.06);padding:1px 5px;border-radius:4px}
 .agents-tip{color:var(--text-mute);font-size:.8rem;margin:0}
+
+/* —— Tabs (Skills / Library) —— */
+.tabs{display:flex;gap:4px;padding:4px;border:1px solid var(--border);border-radius:999px;background:var(--bg-elev)}
+.tab{padding:6px 14px;border-radius:999px;font-size:.85rem;font-weight:500;color:var(--text-dim);text-decoration:none;white-space:nowrap}
+.tab:hover{color:var(--text)}
+.tab.active{background:var(--accent-soft);color:#e9c4ff;box-shadow:0 0 16px rgba(196,77,255,.15)}
+body[data-view=library] #status,body[data-view=library] #btn-random{display:none}
+@media (max-width:900px){.topbar{flex-wrap:wrap}.tabs{order:3}}
+
+/* —— Library view —— */
+.lib-status-line{margin:-12px 0 14px;font-size:.82rem;color:var(--text-dim);font-variant-numeric:tabular-nums}
+.lib-chips{margin-bottom:12px;align-items:center}
+.lib-chips:empty{display:none}
+#lib-tag-chips{margin-bottom:24px}
+.chips-label{font-size:.7rem;text-transform:uppercase;letter-spacing:.06em;color:var(--text-mute);margin-right:4px;min-width:84px}
+.lib-card{cursor:default;min-height:0}
+.lib-card:hover{transform:none}
+.lib-badges{display:flex;flex-wrap:wrap;gap:6px}
+.badge{font-size:.7rem;font-weight:600;padding:2px 8px;border-radius:999px;border:1px solid var(--border-strong);color:var(--text-dim);text-transform:none}
+.badge-type{color:#cdb8ff;border-color:rgba(124,92,255,.45);background:rgba(124,92,255,.12)}
+.badge-star{color:#ffd479;border-color:rgba(255,212,121,.4);background:rgba(255,212,121,.08)}
+.badge-skip{color:var(--text-mute)}
+.badge-own{color:#7ee2a8;border-color:rgba(126,226,168,.45);background:rgba(126,226,168,.1)}
+.lib-summary{margin:0;color:var(--text);font-size:.88rem;line-height:1.5}
+.lib-use{margin:0;color:var(--text-dim);font-size:.83rem;line-height:1.5}
+.lib-label{display:block;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;color:var(--text-mute);margin-bottom:2px}
+.lib-notes{margin:0;color:var(--text-mute);font-size:.78rem;line-height:1.45;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.lib-foot{display:flex;flex-wrap:wrap;align-items:center;gap:6px 12px;margin-top:auto;padding-top:6px;border-top:1px solid var(--border)}
+.lib-meta-item{font-size:.75rem;color:var(--text-mute)}
+.lib-foot .source-link{margin-left:auto}
+.ans-kind{display:inline-block;font-size:.65rem;font-weight:600;text-transform:uppercase;letter-spacing:.05em;padding:1px 6px;border-radius:99px;margin-right:6px;vertical-align:1px;background:rgba(255,255,255,.07);color:var(--text-dim)}
+.ans-kind[data-kind=library]{background:rgba(126,226,168,.12);color:#7ee2a8}
+
+/* Library toolbar: search grows, dropdowns stay compact; wraps on narrow screens */
+.lib-controls{align-items:center}
+.lib-controls .search-wrap{flex:1 1 320px}
+.lib-controls .sort-wrap{flex:0 0 auto}
+.lib-controls .sort-wrap select{min-width:150px}
+@media (max-width:640px){.lib-controls .search-wrap{flex-basis:100%}.lib-controls .sort-wrap{flex:1 1 0}.lib-controls .sort-wrap select{width:100%;min-width:0}}
+.tab:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+/* Library cards: equal height per row, footer pinned to the bottom, link always bottom-right */
+#lib-grid{align-items:stretch}
+#lib-grid .lib-card{height:100%}
+.lib-foot{flex-wrap:nowrap;align-items:flex-end;justify-content:space-between}
+.lib-foot:empty{display:none}
+.lib-foot-meta{display:flex;flex-wrap:wrap;gap:4px 12px;min-width:0}
+.lib-foot .source-link{margin-left:auto;flex:0 0 auto;white-space:nowrap}

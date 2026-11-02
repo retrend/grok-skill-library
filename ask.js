@@ -1,9 +1,11 @@
-// Ask panel: hybrid (keyword + semantic) retrieval over skill chunks, fully in-browser.
+// Ask panel: hybrid (keyword + semantic) retrieval over skill chunks and catalogue entries, fully in-browser.
 const TJS = "https://cdn.jsdelivr.net/npm/@xenova/transformers@2.17.2";
 const $ = (s) => document.querySelector(s);
 const esc = (s) => String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
 const STOP = new Set("a an the and or of to in on for with how do i my me is are can what which when why should use using get from by it be at as this that your you does".split(" "));
 let skills = [], chunks = [], embedder = null, modelState = "loading";
+let libCount = 0;
+const items = new Map(); // key -> { kind, id, name, tags, description, href, typeLabel }
 const history = [];
 
 const tokens = (t) => t.toLowerCase().match(/[a-z0-9]+/g)?.filter((w) => w.length > 1 && !STOP.has(w)) || [];
@@ -22,6 +24,8 @@ async function loadModel() {
     env.allowLocalModels = false;
     embedder = await pipeline("feature-extraction", "Xenova/all-MiniLM-L6-v2");
     modelState = "ready";
+    // Catalogue entries without prebuilt vectors (no library-embeddings.json): embed them here, it is only a few.
+    for (const c of chunks) if (!c.v) { try { c.v = Array.from((await embedder(c.text.slice(0, 2000), { pooling: "mean", normalize: true })).data); } catch {} }
   } catch (e) { console.warn("Semantic model unavailable, using keywords", e); modelState = "failed"; }
   setBadge();
 }
@@ -36,25 +40,35 @@ async function retrieve(question) {
   let qt = tokens(question);
   if (qt.length < 2 && ctx) qt = qt.concat(tokens(ctx)); // short follow-ups borrow context
   let qv = null;
-  if (embedder && chunks.length && chunks[0].v) {
+  if (embedder && chunks.some((c) => c.v)) {
     try { const e = await embedder((qt.length < 3 && ctx ? ctx + " " : "") + question, { pooling: "mean", normalize: true }); qv = Array.from(e.data); } catch {}
   }
   const semW = qv ? 0.65 : 0;
-  const scored = chunks.map((c) => {
-    const s = skills.find((k) => k.id === c.skill);
+  const scored = chunks.filter((c) => items.has(c.key)).map((c) => {
+    const s = items.get(c.key);
     const kw = keywordScore(qt, `${s.name} ${s.tags.join(" ")} ${c.section} ${c.text}`);
-    const sem = qv ? Math.max(0, dot(qv, c.v)) : 0;
+    const sem = qv && c.v ? Math.max(0, dot(qv, c.v)) : 0;
     return { c, s, score: semW * sem + (1 - semW) * Math.min(1, kw) };
   }).sort((a, b) => b.score - a.score);
   // aggregate by skill: best chunk + small bonus for several good chunks
   const bySkill = new Map();
-  for (const r of scored.slice(0, 40)) {
-    const g = bySkill.get(r.s.id) || { s: r.s, score: 0, hits: [] };
-    g.score += g.hits.length ? r.score * 0.15 : r.score; g.hits.push(r); bySkill.set(r.s.id, g);
+  for (const r of [...scored.slice(0, 40), ...scored.filter((r) => r.s.kind === "library").slice(0, 5)]) {
+    if (r._seen) continue; r._seen = true;
+    const g = bySkill.get(r.s.key) || { s: r.s, score: 0, hits: [] };
+    g.score += g.hits.length ? r.score * 0.15 : r.score; g.hits.push(r); bySkill.set(r.s.key, g);
   }
   const ranked = [...bySkill.values()].sort((a, b) => b.score - a.score);
   const top = ranked[0]?.score || 0;
-  return { ranked: ranked.filter((g, i) => i === 0 || g.score >= top * 0.75).slice(0, 3), qt, semantic: !!qv, top };
+  // Up to 3 of your skills, plus up to 2 catalogue entries if they score close to the best match.
+  // (Catalogue entries are one short chunk each, so they would rarely make a shared top 3.)
+  const mine = ranked.filter((g) => g.s.kind === "skill");
+  const lib = ranked.filter((g) => g.s.kind === "library");
+  const topMine = mine[0]?.score || 0, topLib = lib[0]?.score || 0;
+  const pick = [
+    ...mine.filter((g, i) => i === 0 || g.score >= topMine * 0.75).slice(0, 3),
+    ...lib.filter((g, i) => (i === 0 ? g.score >= top * 0.7 : g.score >= topLib * 0.85)).slice(0, 2),
+  ].filter((g) => g.score >= 0.12);
+  return { ranked: pick, qt, semantic: !!qv, top };
 }
 
 function trimSnippet(text, qt) {
@@ -77,25 +91,25 @@ function bubble(role, html) {
 async function ask(q) {
   q = q.trim(); if (!q) return;
   bubble("user", esc(q));
-  const thinking = bubble("bot", '<span class="typing">Searching your skills…</span>');
+  const thinking = bubble("bot", '<span class="typing">Searching your skills and catalogue…</span>');
   const { ranked, qt, semantic, top } = await retrieve(q);
   history.push({ q, ids: ranked.map((g) => g.s.id) });
   if (!ranked.length || top < 0.12) {
-    thinking.innerHTML = "I couldn't find a skill that covers that. Try different wording, or browse by tag.";
+    thinking.innerHTML = "I couldn't find a skill or catalogue entry that covers that. Try different wording, or browse by tag.";
     return;
   }
-  const lead = ranked.length === 1 ? "Your best match is" : `I'd look at these ${ranked.length} skills, best first:`;
+  const lead = ranked.length === 1 ? "Your best match is" : `I'd look at these ${ranked.length}, best first:`;
   thinking.innerHTML = `<p>${ranked.length === 1 ? lead + ` <strong>${esc(ranked[0].s.name)}</strong>.` : lead}</p>` +
     ranked.map((g, i) => {
       const secs = []; const seen = new Set();
       for (const h of g.hits) { if (seen.has(h.c.section) || secs.length >= 2) continue; seen.add(h.c.section); secs.push(h); }
       return `<div class="ans-skill">
-        <a class="ans-title" href="#skill/${encodeURIComponent(g.s.id)}">${i + 1}. ${esc(g.s.name)} →</a>
+        <span class="ans-kind" data-kind="${g.s.kind}">${esc(g.s.typeLabel)}</span><a class="ans-title" href="${g.s.href}">${i + 1}. ${esc(g.s.name)} →</a>
         <p class="ans-desc">${esc(g.s.description.slice(0, 200))}${g.s.description.length > 200 ? "…" : ""}</p>
-        ${secs.map((h) => `<div class="ans-sec"><span class="ans-sec-name">${esc(h.c.section)}</span><ul>${trimSnippet(h.c.text, qt).map((l) => `<li>${hl(l.replace(/^(\d+\.|[-*])\s*/, ""), qt)}</li>`).join("")}</ul></div>`).join("")}
+        ${g.s.kind === "library" ? "" : secs.map((h) => `<div class="ans-sec"><span class="ans-sec-name">${esc(h.c.section)}</span><ul>${trimSnippet(h.c.text, qt).map((l) => `<li>${hl(l.replace(/^(\d+\.|[-*])\s*/, ""), qt)}</li>`).join("")}</ul></div>`).join("")}
       </div>`;
     }).join("") +
-    `<p class="ans-foot">${semantic ? "Ranked by meaning and keywords" : "Ranked by keywords (semantic model not loaded)"}. Ask a follow-up to dig deeper.</p>`;
+    `<p class="ans-foot">${semantic ? "Ranked by meaning and keywords" : "Ranked by keywords (semantic model not loaded)"}. "Skill" = your own skills; "Library" = outside finds from the catalogue. Ask a follow-up to dig deeper.</p>`;
   thinking.scrollIntoView({ block: "end", behavior: "smooth" });
 }
 
@@ -112,18 +126,35 @@ function bindUI() {
     if (e.key === "Escape" && !panel.hidden && document.getElementById("detail").hidden) toggle(false);
   });
 }
-function greet() { bubble("bot", `Ask me anything about your ${skills.length} skills. I'll point you to the best ones and pull out the relevant steps.`); }
+function greet() {
+  const lib = libCount ? ` and ${libCount} catalogue entr${libCount === 1 ? "y" : "ies"}` : "";
+  bubble("bot", `Ask me anything about your ${skills.length} skills${lib}. I'll point you to the best ones and pull out the relevant steps.`);
+}
 
 (async function init() {
   bindUI(); setBadge();
+  const getJson = (u) => fetch(u).then((r) => (r.ok ? r.json() : null)).catch(() => null);
   try {
-    const [s, e] = await Promise.all([fetch("skills.json").then((r) => r.json()), fetch("embeddings.json").then((r) => r.ok ? r.json() : null).catch(() => null)]);
-    skills = s.skills || [];
-    if (e && e.chunks) chunks = e.chunks;
+    const [s, e, lib, le] = await Promise.all([getJson("skills.json"), getJson("embeddings.json"), getJson("library.json"), getJson("library-embeddings.json")]);
+    skills = (s && s.skills) || [];
+    for (const k of skills) items.set("s:" + k.id, { kind: "skill", key: "s:" + k.id, id: k.id, name: k.name, tags: k.tags || [], description: k.description || "", href: `#skill/${encodeURIComponent(k.id)}`, typeLabel: "Skill" });
+    if (e && e.chunks) chunks = e.chunks.map((c) => ({ ...c, key: "s:" + c.skill }));
     else { // fallback: section chunks without vectors -> keyword only
       chunks = skills.flatMap((k) => [{ skill: k.id, section: "Overview", text: k.name + ". " + k.description },
-        ...k.body.split(/\n(?=#{1,4}\s)/).map((p) => ({ skill: k.id, section: (p.match(/^#{1,4}\s+(.+)/) || [, "Intro"])[1], text: p.replace(/^#{1,4}\s+.+/, "").trim() }))]);
+        ...k.body.split(/\n(?=#{1,4}\s)/).map((p) => ({ skill: k.id, section: (p.match(/^#{1,4}\s+(.+)/) || [, "Intro"])[1], text: p.replace(/^#{1,4}\s+.+/, "").trim() }))]).map((c) => ({ ...c, key: "s:" + c.skill }));
     }
+    // Catalogue entries (skip status left out). Vectors come from library-embeddings.json when it matches.
+    const entries = ((lib && lib.entries) || []).filter((x) => x && x.name && x.status !== "skip");
+    const vecs = new Map(((le && le.chunks) || []).map((c) => [c.entry, c]));
+    for (const x of entries) {
+      const key = "l:" + x.id, tags = Array.isArray(x.tags) ? x.tags : [];
+      const type = String(x.type || "other");
+      items.set(key, { kind: "library", key, id: x.id, name: x.name, tags, description: [x.summary, x.use_when && "Use when: " + x.use_when].filter(Boolean).join(" "), href: `#library/${encodeURIComponent(x.id)}`, typeLabel: "Library · " + type });
+      const text = [x.name, x.summary, x.use_when && `Use when: ${x.use_when}`, tags.length && `Tags: ${tags.join(", ")}`].filter(Boolean).join(". ");
+      const pre = vecs.get(x.id);
+      chunks.push({ key, section: "Library", text, ...(pre && pre.text === text && pre.v ? { v: pre.v } : {}) });
+    }
+    libCount = entries.length;
     greet();
     if (e && e.chunks) loadModel(); else { modelState = "failed"; setBadge(); }
   } catch (err) { console.error(err); }
