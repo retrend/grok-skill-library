@@ -241,6 +241,7 @@
           ${authors ? `<span class="meta-item">${authors}</span>` : ""}
           <span class="meta-item">${skill.wordCount.toLocaleString("en-GB")} words</span>
           <span class="meta-item">Updated ${formatDate(skill.mtime)}</span>
+          <a class="meta-item raw-link" href="skills/${encodeURIComponent(skill.id)}.md" target="_blank" rel="noopener">Raw .md ↗</a>
         </div>
         ${sourcesHtml}
       </div>

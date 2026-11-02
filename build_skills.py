@@ -9,7 +9,28 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 WORKFLOWS = Path("/home/box/agent-data/workflows")
-OUT = Path(__file__).resolve().parent / "skills.json"
+ROOT = Path(__file__).resolve().parent
+OUT = ROOT / "skills.json"
+SITE_URL = os.environ.get("SITE_URL", "https://retrend.github.io/grok-skill-library/").rstrip("/") + "/"
+
+# Files matching any of these are left out of the public build (reported on stdout).
+SECRET_PATTERNS = [
+    ("github-token", r"gh[pousr]_[A-Za-z0-9]{20,}"),
+    ("github-pat", r"github_pat_[A-Za-z0-9_]{20,}"),
+    ("sk-api-key", r"\bsk-[A-Za-z0-9_-]{20,}"),
+    ("slack-token", r"xox[abprs]-[A-Za-z0-9-]{10,}"),
+    ("aws-key", r"AKIA[0-9A-Z]{16}"),
+    ("google-key", r"AIza[0-9A-Za-z_-]{30,}"),
+    ("private-key", r"-----BEGIN [A-Z ]*PRIVATE KEY"),
+    ("bearer-token", r"(?i)bearer\s+[A-Za-z0-9._-]{24,}"),
+    ("key-assignment", r"(?i)(api[_-]?key|secret|token|password)\s*[:=]\s*['\"]?[A-Za-z0-9/+_.-]{16,}"),
+    ("email", r"[A-Za-z0-9._%+-]+@[A-Za-z0-9-]+\.[A-Za-z0-9.-]*[A-Za-z]{2,}"),
+    ("phone", r"(?<![\d/=-])\+\d{1,3}[\s.-]?\(?\d{2,4}\)?[\s.-]?\d{3,4}[\s.-]?\d{3,4}(?!\d)"),
+]
+
+
+def secret_hits(text: str) -> list[str]:
+    return [label for label, pat in SECRET_PATTERNS if re.search(pat, text)]
 
 # Keyword → tag mapping (checked against name + description + body head)
 TAG_RULES: list[tuple[str, list[str]]] = [
@@ -137,9 +158,16 @@ def word_count(text: str) -> int:
 
 def main() -> None:
     skills = []
+    excluded: list[tuple[str, list[str]]] = []
+    raws: dict[str, str] = {}
     for skill_path in sorted(WORKFLOWS.glob("*/SKILL.md")):
         folder = skill_path.parent.name
         raw = skill_path.read_text(encoding="utf-8")
+        hits = secret_hits(raw)
+        if hits:
+            excluded.append((folder, hits))
+            continue
+        raws[folder] = raw
         meta, body = parse_frontmatter(raw)
         name = meta.get("name") or folder.replace("-", " ").title()
         description = meta.get("description") or ""
@@ -173,13 +201,83 @@ def main() -> None:
             }
         )
 
-    OUT.write_text(json.dumps({"generatedAt": datetime.now(timezone.utc).isoformat(), "count": len(skills), "skills": skills}, ensure_ascii=False, indent=2), encoding="utf-8")
+    generated = datetime.now(timezone.utc).isoformat()
+    OUT.write_text(json.dumps({"generatedAt": generated, "count": len(skills), "skills": skills}, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"Wrote {len(skills)} skills → {OUT}")
+    write_agent_files(skills, raws, generated)
+    if excluded:
+        for folder, hits in excluded:
+            print(f"EXCLUDED {folder}: possible secret/personal data ({', '.join(hits)})")
     missing = [s["id"] for s in skills if not s["hasSource"]]
     if missing:
         print(f"Missing Source section ({len(missing)}): {', '.join(missing)}")
     else:
         print("All skills have a Source section.")
+
+
+def write_agent_files(skills: list[dict], raws: dict[str, str], generated: str) -> None:
+    """Emit skills/<id>.md, index.json, llms.txt, llms-full.txt for AI agents."""
+    sdir = ROOT / "skills"
+    sdir.mkdir(exist_ok=True)
+    keep = {f"{s['id']}.md" for s in skills}
+    for old in sdir.glob("*.md"):
+        if old.name not in keep:
+            old.unlink()
+    for s in skills:
+        (sdir / f"{s['id']}.md").write_text(raws[s["id"]], encoding="utf-8")
+
+    by_name = sorted(skills, key=lambda s: s["id"])
+    index = {
+        "name": "Grok Bot Skill Library",
+        "site": SITE_URL,
+        "generatedAt": generated,
+        "count": len(by_name),
+        "skills": [
+            {
+                "id": s["id"],
+                "name": s["name"],
+                "description": s["description"],
+                "tags": s["tags"],
+                "sources": s["sourceUrls"],
+                "url": f"{SITE_URL}skills/{s['id']}.md",
+                "updated": s["mtime"][:10],
+            }
+            for s in by_name
+        ],
+    }
+    (ROOT / "index.json").write_text(json.dumps(index, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+
+    lines = [
+        "# Grok Bot Skill Library",
+        "",
+        f"> {len(by_name)} reusable playbooks (skills) for marketing, content, SEO/AI search, outreach, ads, design and AI-agent workflows.",
+        "> Each skill is a Markdown file with YAML front matter (name, description) and step-by-step instructions.",
+        "",
+        "## How to use this library",
+        "",
+        f"1. Fetch the index (one call, no bodies): {SITE_URL}index.json",
+        "   Fields per skill: id, name, description, tags, sources, url, updated.",
+        "2. Pick skills by matching your task against `description`. Every description starts with",
+        "   'Use this when ...', so treat it as the trigger condition. `tags` help narrow by topic.",
+        f"3. Fetch the full skill as raw Markdown: {SITE_URL}skills/<id>.md",
+        "4. Follow the skill's steps. Skills may link to each other by id; fetch those the same way.",
+        "",
+        f"All skills in one file: {SITE_URL}llms-full.txt",
+        f"Human browser with search: {SITE_URL}",
+        f"Generated: {generated[:10]}",
+        "",
+        "## Skills",
+        "",
+    ]
+    for s in by_name:
+        lines.append(f"- [{s['id']}]({SITE_URL}skills/{s['id']}.md): {s['description']}")
+    (ROOT / "llms.txt").write_text("\n".join(lines) + "\n", encoding="utf-8")
+
+    full = [f"# Grok Bot Skill Library (full text, {len(by_name)} skills)", f"Index: {SITE_URL}index.json", ""]
+    for s in by_name:
+        full += ["", "=" * 72, f"# skill: {s['id']}", f"# url: {SITE_URL}skills/{s['id']}.md", "=" * 72, "", raws[s["id"]].rstrip(), ""]
+    (ROOT / "llms-full.txt").write_text("\n".join(full) + "\n", encoding="utf-8")
+    print(f"Wrote skills/*.md ({len(by_name)}), index.json, llms.txt, llms-full.txt")
 
 
 if __name__ == "__main__":

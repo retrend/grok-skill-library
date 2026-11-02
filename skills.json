@@ -1,7 +1,27 @@
 {
-  "generatedAt": "2026-10-16T02:00:44.293673+00:00",
-  "count": 33,
+  "generatedAt": "2026-11-02T05:22:41.672703+00:00",
+  "count": 44,
   "skills": [
+    {
+      "id": "add-generative-ui-answers-to-an-agent-with-openu",
+      "name": "Add generative UI answers to an agent with OpenUI",
+      "description": "Use this when an app or client agent should answer with live interface pieces (cards, charts, tables, forms, maps) instead of paragraphs, on any model.",
+      "body": "# Add generative UI answers to an agent with OpenUI\n\n## How it works\nYou define which components exist (card, chart, map, button, etc.). The model picks which ones each answer needs and how to arrange them, and OpenUI renders them while the answer streams in. The model never writes site code; it only picks from your components, so answers stay on-brand and can't break anything else.\n\n## Steps\n1. Install Node.js 24 and pnpm, and get an OpenRouter API key (one key for most models).\n2. Optionally preview it first at openui.com/compare.\n3. Scaffold the starter app: `pnpx @openuidev/cli@latest create --example open-intelligent-ui`. Leave off `--example` to pick from a list. The CLI installs dependencies and starts the app.\n4. Stop the app (Ctrl+C) and set three values in `.env`: `LLM_BASE_URL` (the OpenRouter URL), `LLM_API_KEY` ([OPENROUTER_KEY]) and `LLM_MODEL` (e.g. `anthropic/claude-opus-5.5`).\n5. Run `npm run dev`, open `localhost:3000` and ask it to plan a day in San Francisco. If a map renders, setup works.\n6. Decide whether you want validation. Calling OpenRouter directly shows raw model output, mistakes included, which is good for comparing models. For production, run `pnpx @openuidev/cli@latest generate-api-key`; it writes an OpenUI key to `.env` so OpenUI's hosted service checks and fixes small output errors.\n7. Optional test helpers to add with your coding agent: a model picker in the header, a compare page that sends one prompt to two models, saved prompt buttons, and seed data your prompts need.\n8. Test with prompts your users actually send each week. Run each one several times per model without editing the output.\n9. Swap in your own components and design system, using openui.com/cookbooks for recipes.\n\n## Prompts worth testing\n- An interactive trip or itinerary\n- A marketing budget as a donut chart with sliders and a table (the most reliable prompt in the source's tests)\n- Last month's orders as a dashboard with revenue by day, top products and refunds\n\n## Results from the source (author's own runs)\nOpus 5.5 was the most reliable. Gemini 4 Argon, Muse Wonder, Qwen3.8 Max, GLM 5.3 and Kimi K3 were also tested.\n\n## Not for\nTerminal-only or internal agent workflows where text output is fine, or cases where the model must generate arbitrary new UI code.\n\n## Source\nMachina (@EXM7777), \"Generative UI 101: How to build live interfaces with Opus 5.5\", https://x.com/EXM7777/status/2111457056452665697, 17 Oct 2026. Sponsored by OpenUI. Links: openui.com, github.com/thesysdev/openui, openui.com/benchmarks.\n",
+      "sourceUrls": [
+        "https://x.com/EXM7777/status/2111457056452665697"
+      ],
+      "authors": [
+        "@EXM7777"
+      ],
+      "tags": [
+        "agents",
+        "generative",
+        "answers"
+      ],
+      "wordCount": 401,
+      "mtime": "2026-11-02T03:11:42.538981+00:00",
+      "hasSource": true
+    },
     {
       "id": "add-methodology-scoring-for-ai-information-gain",
       "name": "Add methodology scoring for AI information gain",
@@ -21,7 +41,7 @@
         "scoring"
       ],
       "wordCount": 487,
-      "mtime": "2026-10-06T20:54:57.155183+00:00",
+      "mtime": "2026-11-02T03:09:14.138090+00:00",
       "hasSource": true
     },
     {
@@ -40,7 +60,7 @@
         "verification"
       ],
       "wordCount": 499,
-      "mtime": "2026-10-06T20:54:47.294862+00:00",
+      "mtime": "2026-11-02T03:09:12.030123+00:00",
       "hasSource": true
     },
     {
@@ -60,7 +80,7 @@
         "design"
       ],
       "wordCount": 494,
-      "mtime": "2026-10-06T20:54:42.002616+00:00",
+      "mtime": "2026-11-02T03:09:08.262190+00:00",
       "hasSource": true
     },
     {
@@ -82,7 +102,7 @@
         "ugc"
       ],
       "wordCount": 550,
-      "mtime": "2026-10-06T20:54:43.490692+00:00",
+      "mtime": "2026-11-02T03:09:09.486166+00:00",
       "hasSource": true
     },
     {
@@ -99,7 +119,7 @@
         "tiktok"
       ],
       "wordCount": 583,
-      "mtime": "2026-10-13T06:56:54.511080+00:00",
+      "mtime": "2026-11-02T03:09:28.978366+00:00",
       "hasSource": false
     },
     {
@@ -115,7 +135,7 @@
         "outreach"
       ],
       "wordCount": 693,
-      "mtime": "2026-10-13T23:53:47.351072+00:00",
+      "mtime": "2026-11-02T03:09:29.010368+00:00",
       "hasSource": false
     },
     {
@@ -130,7 +150,7 @@
         "ugc"
       ],
       "wordCount": 887,
-      "mtime": "2026-10-13T10:34:22.741436+00:00",
+      "mtime": "2026-11-02T03:09:29.010368+00:00",
       "hasSource": false
     },
     {
@@ -149,8 +169,39 @@
         "content"
       ],
       "wordCount": 481,
-      "mtime": "2026-10-06T20:54:46.818842+00:00",
+      "mtime": "2026-11-02T03:09:11.550131+00:00",
       "hasSource": true
+    },
+    {
+      "id": "build-a-local-business-lead-list-from-google-map",
+      "name": "Build a local-business lead list from Google Maps and license records",
+      "description": "Use this when you sell to local trades (roofers, HVAC, electricians, plumbers, contractors) and need an outbound list no paid database has, built from Google Maps listings plus public license records and cleaned with Claude Code.",
+      "body": "# Steps\n\nWork in one folder (`local-list/`) where Claude Code runs. Every step saves a CSV there.\n\n## 0. Set up\n```bash\ncurl -fsSL https://claude.ai/install.sh | bash\nmkdir local-list && cd local-list && claude\n```\nStart with 1 business type and 1 state (or region).\n\n## 1. Pull the listings\n- One search is 1 business type in 1 city.\n- List every name your buyer goes by (e.g. roofer, roofing contractor, roof repair). Run each name in every city you sell in, because owners describe themselves in their own words. Example plan: 3 terms x 4 cities = 12 searches.\n- **Clay** (Google Maps source): run Google's business type first, then keyword searches. A search returns up to 1,000 results, so split big cities into neighbourhoods. Use Clay to test 1 niche in 1 city.\n- **Apify**, \"Google Maps Scraper\" actor by Compass: terms in Search term(s), 1 location per run (a whole state works). Clear \"Number of places to extract\" so it pulls everything. Use Apify for full-state coverage.\n- Export every search as a CSV into the folder, then prompt:\n> Combine the Google Maps CSVs in this folder into 1 file called listings.csv. Remove the duplicate businesses, matching on the place ID first, then on the phone number. Tell me how many you removed.\n\n## 2. Size by review count (floor and ceiling)\n- **Floor:** sort `listings.csv` by review count, lowest first. Open the 10 smallest on Maps (photos, website), then move up 10 at a time. The first review count with a team behind it (staff in photos, a team page, more than 1 truck) is your floor.\n- **Ceiling:** find the chains.\n> Read listings.csv. List every business name that shows up in 3 or more cities, with the cities and the review count for each.\n- Cut the chains (they buy through head office) and set the ceiling below where they start. Set both numbers from your own rows.\n> Keep the rows in listings.csv with between [FLOOR] and [CEILING] reviews, and drop the chains you found. Save the result over listings.csv and tell me how many rows are left.\n\n## 3. Add the license records\n- Download your trade's file from [STATE_LICENSE_SOURCE] into the folder as `licenses.csv`. Use the trade-specific file, not the combined one. US examples from the source: Texas TDLR daily CSVs (no status column, so filter on expiration date), California CSLB License Master and Personnel files (roofers are C-39), Florida DBPR weekly files.\n- If the trade isn't licensed in that region, copy `listings.csv` to `matched.csv` and skip to step 5.\n> Keep only the [LICENSE_TYPE] rows in licenses.csv, and drop the expired licenses ([by expiration date | by the status column]). Then match licenses.csv to listings.csv, on the phone number's digits first, then on the business name and city, ignoring Inc, LLC, punctuation and capital letters. Add the license number and every status, date and name column the license file has to each matched row, and save the result as matched.csv. Put the listings with no match in unmatched.csv, and tell me how many matched.\n- If there's a personnel or officer file, save it as `personnel.csv` and have Claude Code add 1 name and title per license on the license number.\n- Check 20 matches by hand before you trust the rest. Fix spelling misses in `unmatched.csv` by hand.\n\n## 4. Scrape regions that only have a search page\n- Read the site's terms first.\n> This state only has a search page: [URL]. Write a Python script called scraper.py that pulls the business name, the person named on the license, phone number, city, license number, license status and issue date for [LICENSE_TYPE] in [COUNTY] into licenses.csv. Wait 2 seconds between pages, and save after every page so a stopped run picks up where it left off. Test it on 20 rows first and show me the results.\n- Check the 20 rows against the page by eye. Blank rows usually mean the page renders in the browser, so ask for Playwright:\n```bash\npython3 -m pip install playwright\npython3 -m playwright install chromium\n```\n- Re-test, then do the full run and go back to the step 3 match.\n- Schedule it monthly. New licenses are your best reason to write.\n> Run scraper.py from the first page at 7am on the 1st of every month, and keep a dated copy of each month's licenses.csv. Use [SCHEDULER, e.g. launchd on Mac], and tell me where you saved the job.\n\n## 5. Clean, then tag what each business sells\n- Read the first 20 rows of `matched.csv` yourself, then:\n> Read matched.csv. Group the businesses by what they are, with a count and 3 example names for each group. Flag the schools, coaches, consultants, suppliers and any listing marked permanently closed.\n- Keep the cut pile under half the file. If it's bigger, use a narrower search term next pull.\n> Remove the schools, coaches, consultants, suppliers and permanently closed listings you flagged in matched.csv. Move the rows with no website, or a Facebook, Instagram or Yelp page as their website, to call-only.csv. Save the rest as clean.csv, with a domain column (the website address minus https:// and www.) and a full name column from the license name, so SMITH, JOHN A becomes John Smith. Leave the full name blank for any license name that's a company.\n- Import `clean.csv` into Clay. Add a Use AI column (Web research) with this prompt:\n> Visit [Website] and say in 5 words or fewer what this business mainly sells, in the words its own site uses, like \"residential re-roofs\" or \"commercial flat roofs\". Write \"unclear\" for a site that doesn't say.\n- Note the 3 to 5 most common answers. Add a second AI column that puts each row into one of those niches or \"other\". Write 1 message per niche.\n- Opener for new licenses:\n> [First name], saw [Business] got its [license type] license in [month]. We help [niche] companies [your main result]. Worth a 15-minute call next week?\n- For older licenses or rows with no date, open on what the website says the business sells.\n\n## 6. Find the person, verify, send\n- In Clay, run \"Find Work Email with Prospeo\" on the full name and domain columns. For rows with no name, run \"Find people at company with Prospeo\" on the domain first. Leave catch-all off.\n- On send day, export the list, re-verify with [EMAIL_VERIFIER, e.g. MillionVerifier], and hold anything it can't confirm. Keep bounces under 2%.\n- Upload 1 list per niche to [SENDER]: Instantly for volume email, lemlist when you want call steps (Maps listings come with phone numbers).\n- Check outreach rules for your market before sending, e.g. CAN-SPAM in the US or the Spam Act in Australia. Honour opt-outs. (Added, not in source.)\n\n## Success check\nA finished row has: business, category, reviews between floor and ceiling, license number/status/date, a niche tag, a named person, a verified email and the listing phone.\n\n## Rules\n- 1 business type and 1 region to start. The first region is the slowest because every license file has its own columns.\n- Read the terms before you scrape anything, including Google Maps and Apify usage terms. (Added: scraping Maps through third-party tools may be against Google's terms, so check before running at scale.)\n- Test 20 rows before every full run.\n- Re-run the license pull monthly.\n- Bounce under 2% on every list.\n\n# Not for\n- Selling to B2B companies that already show up in lead databases (Apollo, ZoomInfo). This is for local trades found on a map.\n- Regions with no public license data (you can still do steps 1, 2, 5 and 6).\n- Writing the outreach copy itself. This skill builds the list.\n- Any auto-sending without verification and opt-out handling.\n\n# Source\n- Alex Vacca (@itsalexvacca), \"Google Maps + Claude Code = your next lead list\", X article, 15 Oct 2026: https://x.com/itsalexvacca/status/2110732018367795261\n- Summary post, 21 Oct 2026: https://x.com/itsalexvacca/status/2112805599549460770\n- Author is CEO of Frontal (GTM agency) and a Clay Elite Studio Partner. Tool choices (Clay, Prospeo, Instantly, lemlist) reflect that. Pricing as quoted in Oct 2026: Apify $4/1,000 places on the free plan ($5 free usage a month), Instantly Growth $47/mo, lemlist Multichannel $109/mo per user. The \"9 in 10 failed campaigns failed on data\" figure is the author's claim.\n",
+      "sourceUrls": [],
+      "authors": [],
+      "tags": [
+        "outreach",
+        "build",
+        "local"
+      ],
+      "wordCount": 1403,
+      "mtime": "2026-11-02T03:11:53.966959+00:00",
+      "hasSource": false
+    },
+    {
+      "id": "build-a-personal-brand-on-x-in-three-steps",
+      "name": "Build a personal brand on X in three steps",
+      "description": "Use this when starting or resetting a personal or founder account on X and you need a repeatable plan: niche and profile, a content-pillar funnel mix, and a posting and packaging routine.",
+      "body": "# Goal\nBuild an X account that earns reach, trust and conversions, using a three-step crash course: craft the brand, set content pillars, execute content.\n\n# Inputs\n- [YOUR_SKILLS] and the hot niches you could serve ([NICHE_CANDIDATES])\n- [OFFER_OR_PRODUCT_LINK] (optional)\n- Time budget per post, which decides the posting strategy in step 3\n\n# Step 1: Craft the brand\n1. Find your pocket. Overlap a hot niche (the video's examples: AI, tech, startups, crypto) with your skills. The overlap is your pocket.\n2. Pick audience pain points. Ask what your younger self (the video says 16) would want to consume to upskill in this niche.\n3. Study the top 10 to 20 accounts in the niche (the video uses an AI assistant to list them). For each, note: formats (articles, threads, videos), messaging (how they package hooks and address pain points), and gaps. Find gaps by reading their comments for critiques and questions, then turn those into your own content.\n4. Profile basics:\n   - Bio: three lines at most, just say what you do.\n   - Profile picture: your real face (the video claims this beats 80% of the competition; unverified).\n   - Banner: a plain colour or a simple quote.\n   - CTA (optional): a link to a product in the bio, not contact details.\n\n# Step 2: Content pillars\n5. Treat X as top of funnel: generate impressions fast and send people to other platforms (the video's example: YouTube).\n6. Split content roughly: 60 to 70% top of funnel (trends, viral posts, infographics, news, broad niche topics), about 30% trust and personal (personal takes, videos), about 10% conversion (product or off-platform offer, never pushy).\n\n# Step 3: Execute content\n7. Be value-driven: how-tos and full guides, plus \"only you can say\" posts drawn from your own network and experience. Skip aimless takes.\n8. Own a niche: don't copy existing accounts; define a specific category.\n9. Show proof: impressions generated, case studies, a video of you talking to a client about their pain points.\n10. Pick one posting strategy and don't mix them:\n   - Quality: 3 to 5 posts a day, at least 3 hours apart, about 3 hours of work per post.\n   - Quantity: up to 24 posts a day, at least 1 hour apart, for news-style or fast niches. Higher flop risk.\n11. Package each post: a curiosity-gap hook, a clear CTA that tells people exactly what to do (the video's example: \"We work with founders that are struggling to write content. DM me this word...\"), and a mix of formats across long and short video and long and short written posts. [HOOK_EXAMPLES: the video gives none; add your own.]\n\n# Avoid\n- Negativity: politics and hate on other creators; reports and mutes hurt reach. Block haters instead.\n- Reply-guy spam.\n- AI slop: low-effort AI-generated replies.\n\n# Success check\n- Profile, niche statement and the three-bucket content mix are written down.\n- A posting strategy is chosen and followed for a set period ([REVIEW_PERIOD]), then reviewed against impressions and conversions. (added, not in source)\n\n# Not for\n- Automated posting or reply bots.\n- Paid growth or audience purchases.\n- Treating the percentages and frequencies as proven; they are the author's opinion.\n\n# Source\nRyan (@ryangrowthh), \"How to build a personal brand on X\" crash course video (about 18 min), https://x.com/ryangrowthh/status/2115618441571013084, 2026-10-29. Method taken from the video content; the post itself only lists chapters. Pairs with the bot-assisted money-path skill for monetisation.\n",
+      "sourceUrls": [],
+      "authors": [],
+      "tags": [
+        "content",
+        "youtube"
+      ],
+      "wordCount": 573,
+      "mtime": "2026-11-02T03:11:57.494953+00:00",
+      "hasSource": false
     },
     {
       "id": "build-an-ai-hook-bank-from-saved-tiktoks",
@@ -175,7 +226,29 @@
         "tiktok"
       ],
       "wordCount": 999,
-      "mtime": "2026-10-06T20:54:47.182857+00:00",
+      "mtime": "2026-11-02T03:09:11.890125+00:00",
+      "hasSource": true
+    },
+    {
+      "id": "build-motion-graphics-videos-with-claude-code",
+      "name": "Build motion-graphics videos with Claude Code",
+      "description": "Use this when making launch promos, product updates, tweet-to-video or website-to-video motion graphics with a coding agent and an HTML or React video framework.",
+      "body": "# Build motion-graphics videos with Claude Code\n\n## Setup (about 10 minutes)\n1. Use Claude Code (or a similar agent that writes code, runs it and reviews the output) with the strongest model and high reasoning. The source used Opus 5.5.\n2. Pick a framework that renders code to MP4:\n   - HyperFrames (HTML to MP4, open source from HeyGen): `npx skills add heygen-com/hyperframes`, then `npx hyperframes init my-video && cd my-video`. Slash commands: `/hyperframes`, `/hyperframes-cli`, `/gsap`.\n   - Remotion (React): `npx skills add remotion-dev/skills`, then `npx create-video@latest`.\n3. Smoke test: \"Using /hyperframes, create a 5-second video where the words 'Hello World' animate in one at a time on a cream background.\" If you get an MP4 back, you're set.\n4. Run the first few videos in Plan Mode so scenes are mapped out before any code, which saves wasted renders.\n\n## Brand skill\nCreate `.claude/skills/brand-motion/SKILL.md`:\n```\n---\nname: brand-motion\ndescription: Brand rules for every motion video. Use for any video, animation, or motion graphic.\n---\n# [BRAND] Motion Guidelines\n## Colours\nPrimary [#hex]; Secondary [#hex]; Accent [#hex], used sparingly for the one thing that matters most; Background [#hex]\n## Typography\nHeadlines [font, weight]; Body [font, weight]. Never more than two fonts per video.\n## Logo\nFile: assets/logo.svg. Always use the real file, never redraw it. Clear space [X]px. Never stretch, recolour, or animate it in pieces.\n## Motion personality\nWe move like: [confident and precise / warm and playful / calm and premium]\nPrimary motion: damped springs, slight overshoot, quick settle\nTransitions: [e.g. hard cuts on the beat]\nNever: [bouncy cartoon motion / spinning / glitch effects]\n## End card\nEvery video ends on [logo + tagline / CTA], held [X] seconds.\n```\n\n## Brief template (8 parts)\n```\nROLE: You are a senior motion designer and creative developer at a world-class studio. Your work is meticulously art-directed, never template-looking.\nFORMAT: Length [15]s, aspect [16:9 / 9:16 / 1:1], [30] fps, framework [/hyperframes or Remotion]\nGOAL: [one sentence on what the viewer should feel or do]\nSCENES: Scene 1 ([0:00-0:03]): [what's on screen, what moves, how] ... final scene: end card, CTA, logo\nVISUAL STYLE: palette [#hex...], background [colour/texture], references [attached images and what to take from each]\nTYPOGRAPHY: font [name]; headlines [weight, size, enter/exit]; body [weight, size]\nMOTION LANGUAGE: feel [snappy / smooth / playful]; transitions [how scenes hand off]. Every element moves with intent.\nAUDIO: music [file, BPM]; sync [which moments land on which beats]; SFX [where, sparingly]\nDO NOT: generic fade-ins or default easing; stock gradients or glows; more than [X] words on screen; [other]\nPROCESS: Plan the full sequence before writing code. Show me the scene plan first, then build.\n```\nShortcut: describe the video in plain English, have Claude interview you one question at a time, then fill in this template.\n\n## Craft rules\n- **Pacing:** one idea per scene, vary the rhythm, give the track's BPM and say where to cut, and go easy on sound effects. Claude's default output runs slow.\n- **Real assets only:** put logo SVGs, font files, screenshots and audio in `assets/` and reference them by name. Never let it redraw a logo, guess a font, or invent a screenshot.\n- **Scene by scene:** give exact timestamps for every scene.\n\n## Starter prompts (all use /hyperframes plus brand-motion)\n- **Launch promo, 15s:** problem as kinetic type (0-4s), then product screenshots as floating UI cards with a zoom on [key feature] (4-11s), then logo and CTA end card held 2s. Transitions should feel connected, never like separate slides.\n- **Talking-head intro:** transcribe `assets/clip.mp4`, add key-word captions only, [2-3] overlays at set moments with sparing sound effects, never cover the face, and a 2s animated title. Show the caption plan and overlay timings before building.\n- **Tweet to video, 12s, 1:1:** avatar and handle slide in, text builds line by line with the key phrase in the accent colour, then settles into a readable card. Don't recreate the X interface or logo. Say which phrase gets emphasis before building.\n- **Website to video, 20s, 16:9:** screenshot the hero, features and CTA, and pull the real colours, fonts, logo and copy with nothing invented. Headline as kinetic type, three feature cards, then logo and CTA. Show the captures and the plan first.\n\n## Iteration loops\n1. **Self-review after each render:** export a 20-frame contact sheet, review it as a harsh creative director, and score readability on a phone, continuity, audio sync and polish (does anything look templated?) out of 10. List the three biggest weaknesses, fix them, re-render, and repeat until every score is 8 or above. This can run on a schedule or with `/loop`.\n2. **Human review:** give timestamped notes (\"At 0:03 the headline enters too fast\"), say what to keep, and save each render as v1, v2, v3.\n3. Optionally, set up a dedicated motion-designer review agent. The source's prompt for it is an image: [PLACEHOLDER].\n\n## Not for\nLive-action footage editing (see the talking-head auto-edit skill), photoreal generative video, or one-off GIFs.\n\n## Source\nAI Edge (@aiedge_, by @milesdeutscher), \"Opus 5.5: Motion Engineering (FULL GUIDE)\", https://x.com/aiedge_/status/2112552093483671966, 21 Oct 2026 AEDT. Shared via https://x.com/aiedge_/status/2112725613056602509, which links the free asset library https://motionvideo.xyz/ (not reviewed). The \"<15 minutes\" and \"killed motion designers\" lines are the author's claims.\n",
+      "sourceUrls": [
+        "https://x.com/aiedge_/status/2112552093483671966",
+        "https://x.com/aiedge_/status/2112725613056602509",
+        "https://motionvideo.xyz/"
+      ],
+      "authors": [
+        "@aiedge_",
+        "@milesdeutscher"
+      ],
+      "tags": [
+        "agents",
+        "design"
+      ],
+      "wordCount": 874,
+      "mtime": "2026-11-02T03:11:45.358975+00:00",
       "hasSource": true
     },
     {
@@ -199,7 +272,7 @@
         "ads"
       ],
       "wordCount": 1253,
-      "mtime": "2026-10-08T06:27:23.045813+00:00",
+      "mtime": "2026-11-02T03:09:28.962364+00:00",
       "hasSource": true
     },
     {
@@ -219,7 +292,7 @@
         "codex"
       ],
       "wordCount": 353,
-      "mtime": "2026-10-06T20:55:08.035417+00:00",
+      "mtime": "2026-11-02T03:09:22.241984+00:00",
       "hasSource": true
     },
     {
@@ -246,7 +319,7 @@
         "workflows"
       ],
       "wordCount": 1490,
-      "mtime": "2026-10-06T20:54:48.606913+00:00",
+      "mtime": "2026-11-02T03:09:13.682097+00:00",
       "hasSource": true
     },
     {
@@ -267,7 +340,7 @@
         "calibrated"
       ],
       "wordCount": 306,
-      "mtime": "2026-10-06T20:54:47.770880+00:00",
+      "mtime": "2026-11-02T03:09:12.526115+00:00",
       "hasSource": true
     },
     {
@@ -286,7 +359,7 @@
         "verification"
       ],
       "wordCount": 567,
-      "mtime": "2026-10-06T20:55:03.051321+00:00",
+      "mtime": "2026-11-02T03:09:18.262033+00:00",
       "hasSource": true
     },
     {
@@ -306,7 +379,7 @@
         "realistic"
       ],
       "wordCount": 238,
-      "mtime": "2026-10-06T20:55:00.243259+00:00",
+      "mtime": "2026-11-02T03:09:16.050063+00:00",
       "hasSource": true
     },
     {
@@ -322,7 +395,7 @@
         "engagers"
       ],
       "wordCount": 1335,
-      "mtime": "2026-10-06T20:54:37.266330+00:00",
+      "mtime": "2026-11-02T03:09:07.030215+00:00",
       "hasSource": false
     },
     {
@@ -343,7 +416,7 @@
         "ugc"
       ],
       "wordCount": 386,
-      "mtime": "2026-10-06T20:54:43.402688+00:00",
+      "mtime": "2026-11-02T03:09:09.402168+00:00",
       "hasSource": true
     },
     {
@@ -364,7 +437,7 @@
         "outreach"
       ],
       "wordCount": 513,
-      "mtime": "2026-10-06T20:54:56.863175+00:00",
+      "mtime": "2026-11-02T03:09:13.874094+00:00",
       "hasSource": true
     },
     {
@@ -384,8 +457,23 @@
         "deep"
       ],
       "wordCount": 194,
-      "mtime": "2026-10-06T20:55:01.855295+00:00",
+      "mtime": "2026-11-02T03:09:17.306046+00:00",
       "hasSource": true
+    },
+    {
+      "id": "pick-and-run-a-bot-assisted-money-path-on-x",
+      "name": "Pick and run a bot-assisted money path on X",
+      "description": "Use this when you want to turn an X account plus an AI bot team into income (selling your own offer, lead gen, sponsors, a bot-setup service, a new offer from your skills, or a job) and need ready-made prompts for each path.",
+      "body": "# Steps\n\nPick ONE path first. Path 1 (audience + funnel) underpins the others.\n\n## Path 1: Grow an audience and funnel it to your offer\nFor people with an existing product or service.\n1. **Map the funnel.** Aim for roughly 60% top-of-funnel posts (reach), 30% middle (trust), 10% bottom (sales).\n> Using my brief, pillars and recent posts, map my content to a funnel. Tell me what % of my posts are TOF, MOF and BOF, what's missing, and give me a weekly posting mix that grows my audience while driving people to [PRODUCT_OR_SERVICE].\n2. **Create content that sells.** Core MOF/BOF pillars: case studies, results (screenshots, numbers, before/after), behind the scenes, frameworks, lessons.\n> Using my results, client wins and experience, give me 10 MOF/BOF post ideas that prove I can deliver [OUTCOME]. Focus on case studies, results and behind the scenes. Match my voice doc.\n3. **Turn the profile into a sales page.**\n> Audit my X profile like a conversion expert. Review my bio, pinned post, banner and link. Tell me what's unclear, what's missing, and rewrite each one to drive people to [PRODUCT_OR_SERVICE].\n4. **Add soft CTAs** to your best posts, e.g. \"I break this down in my newsletter (link in bio)\" or \"DM me 'system' and I'll send the template.\"\n> For any post I send you, suggest 3 soft CTAs that point to [PRODUCT_OR_SERVICE] without sounding salesy. Match my voice doc.\n5. **Track what converts** weekly.\n> Each week, report which posts drove the most profile visits, link clicks, DMs and new followers. Flag the topics and formats that convert best so I can make more of them.\n\n## Path 2: Lead generation (fastest)\n1. Define a qualified lead (attach emails or prospect briefs if you have them).\n> Using my brief and services, define my ideal client: industry, account size, stage, budget signals, and the specific problems I solve for them. Then list the signals on X that show someone is a good lead right now.\n2. Build a \"Lead Scout\" bot.\n> You're my Lead Scout. Every day, search X for people who match my ideal client and show buying signals: hiring posts, people asking for help with [SERVICE], founders who just raised or launched, and accounts with strong products but weak content. Find 10 leads, explain why each one is a fit, and score them 1 to 10. Send the list to [DESTINATION] by [TIME].\n3. Draft outreach: write the template outline yourself (to avoid AI slop), let the bot fill in each message, and **you approve and send manually**.\n4. Tips: scrape for people posting about the pain you solve, run outreach on more than one channel, have the bot build a pipeline tracker.\n\n## Path 3: Sponsors (small audiences too)\n- Build a \"Sponsorship Hunter\" bot that spots which brands pay creators in your niche, tracks open campaigns and drafts outreach, and can sign you up to creator-campaign sites. [SPONSORSHIP_HUNTER_PROMPT: the source linked a shared bot that wasn't readable. Write your own.]\n- Author's claim: at ~1,500 followers several sponsors reached out, about $1,500/mo for a few posts. Treat as one anecdote.\n\n## Path 4: Sell bot setup as a service\n1. Build useful systems for yourself first (content, research, coding), then document them publicly on X.\n2. Turn your setup into a template.\n> Document my entire bot setup as a reusable template: my coordinator instructions, every bot's role, prompt and routine, and how they work together. Remove anything personal so I can adapt it for a client.\n3. Package the offer: name, who it's for, what's in setup, training and retainer, pricing. Put it on a site, ideally with a video sales letter.\n4. Find clients with the Lead Scout from Path 2, tuned to this offer:\n> Find 10 people on X in [NICHE] who are posting about AI agents, asking how to use bots, or clearly struggling to keep up with content. Score each 1 to 10 and explain why they'd benefit from a bot team.\n5. Deliver: weekly check-ins, bot tune-ups, skills management, add-ons like a second brain in Obsidian or Notion.\n- Service ideas: content teams for founders, X account audits, selling templates and skills, lead-gen agents for agencies, workshops or 1-on-1 setup calls.\n\n## Path 5: Build an offer from zero (existing skills)\n1. Skills interview:\n> Interview me one question at a time to uncover every skill, result and piece of expertise I have. Ask about my work history, side projects, things people ask me for help with, and problems I've solved for myself. Then list everything I could realistically package into an offer.\n2. Market demand:\n> Search X for what people in [NICHE] are struggling with, asking for help on, or complaining about. Also scan my replies, DMs and comments from the last 60 days. List the top 10 problems and any existing offers that solve them (with prices if visible). Then compare them to my skills and rank the 3 strongest overlaps.\n3. Package it:\n> Package my top overlap into an offer. Give me a name, who it's for, the outcome, the format, a launch price, and a one-paragraph pitch for my bio or pinned post.\n4. **Validate, then sell.** Test demand with posts, polls, long-form, reply strategy or a free/discounted offer.\n> Write 5 posts to validate [OFFER] this week: a problem post, a poll, a behind-the-scenes post, a waitlist post and a soft pre-sell. Match my voice doc.\n5. Once validated, build bots for client acquisition (organic content, outreach).\n\n## Path 6: Get hired\n> You're my Job Application Agent. I want to apply for [ROLE] at [COMPANY]. Job post: [LINK].\n> 1. Research the company (site, X account, news): what they do, customers, brand voice, launches or funding, what content works. Identify the 3 biggest problems this role is hired to solve.\n> 2. Break down the job post (skills, keywords, outcomes). Compare to my brief and results. Tell me where I'm strong, weak, and how to position gaps honestly.\n> 3. Rewrite my CV for this role, one page, using job-post keywords naturally. Only real experience and results from my brief. Never invent or exaggerate. Ask me if something is missing.\n> 4. Draft a cover letter under 200 words on how I'd help in the first 90 days, plus one piece of proof (a quick content audit, 5 post ideas, or a 30-day plan).\n> 5. Open the application page and fill the form. Upload the CV as a PDF. STOP before submitting and send me a screenshot and summary. Submit only when I say \"approved\".\n> 6. Log company, role, date, link and status. Remind me to follow up in 5 days and draft a short follow-up.\n\n## Guardrails (added, not in source)\n- Review before anything goes out: no auto-DMs, auto-replies or auto-applications. Follow X's automation and spam rules.\n- Don't invent results, testimonials or credentials in sales content or CVs.\n- Disclose paid sponsorships as the platform requires.\n- Income figures are anecdotes, not promises.\n\n# Not for\n- Generic \"get rich\" content with no existing skill, offer or audience to build on.\n- Growing the audience itself. Path 1 assumes you've got a content system already.\n- Automating mass outreach or fake engagement.\n\n# Source\n- Ryan (@ryangrowthh), X article \"How to Make Money on X with [Bot] (REAL GUIDE)\", 26 Oct 2026: https://x.com/ryangrowthh/status/2114730076197798214\n- The author's bot-platform name is generic in this skill. His summary image, example bot links and linked posts weren't reviewed. Income claims are his own.\n",
+      "sourceUrls": [],
+      "authors": [],
+      "tags": [
+        "content",
+        "outreach"
+      ],
+      "wordCount": 1262,
+      "mtime": "2026-11-02T03:11:55.062957+00:00",
+      "hasSource": false
     },
     {
       "id": "prime-context-with-indirect-prompts-and-compound",
@@ -404,7 +492,7 @@
         "prompting"
       ],
       "wordCount": 972,
-      "mtime": "2026-10-06T20:54:47.114854+00:00",
+      "mtime": "2026-11-02T03:09:11.774127+00:00",
       "hasSource": true
     },
     {
@@ -420,7 +508,7 @@
         "outreach"
       ],
       "wordCount": 568,
-      "mtime": "2026-10-06T20:54:57.123182+00:00",
+      "mtime": "2026-11-02T03:09:14.102091+00:00",
       "hasSource": true
     },
     {
@@ -442,7 +530,27 @@
         "design"
       ],
       "wordCount": 1337,
-      "mtime": "2026-10-06T20:54:41.558592+00:00",
+      "mtime": "2026-11-02T03:09:07.982195+00:00",
+      "hasSource": true
+    },
+    {
+      "id": "run-a-compounding-ai-content-system",
+      "name": "Run a compounding AI content system",
+      "description": "Use this when setting up or running a weekly content engine where agents scout ideas and analyse performance, but drafts come from your own experience, voice and swipe file.",
+      "body": "# Run a compounding AI content system\n\n## Steps\n0. **Do the work first.** Every piece starts from a real problem, an artifact you built and a lesson. Ask yourself: what was hard to understand, what did I build to make it clearer, which constraint changed the design, and what would I do differently? Never outsource ideation to AI.\n1. **Build the swipe file.** In [NOTES_VAULT] (e.g. Obsidian), create a swipe-file folder and clip full-text posts and articles into it with a web clipper. Add a one-line note on why each piece works, plus tags. Keep a `voice.md` file of your own writing that sounds like you. Point your drafting agent at both before it writes anything.\n2. **Send out the scouts** (as routines):\n   - **Outlier scanner** (daily): \"Every morning, search X for posts and articles in [NICHES] from the last 24 hours. Compare each one's view count to the account's follower count. Send me the ten biggest outliers, with the link, the views, the follower count, and one line on why you think it worked.\"\n   - **Reply analyst** (Mondays): pull replies to your posts from the last 30, 60 and 90 days, sort them into what people liked, disliked and asked for, and write a weekly ideas brief.\n   - **Content strategist** (48 hours after each post): break down the post's style, format, topic and metrics, and write the analysis into the vault.\n3. **Talk it, draft it, edit it.** Dictate the core argument (e.g. with Wispr Flow) so the raw material is in your natural voice. Then prompt: \"I want to do an article about [TOPIC]. Refer to the swipe file for related articles, then brainstorm an outline.\" Have the agent draft from the outline, your voice file and the swipe file. Edit by hand: cut, fix claims and sharpen the opening.\n4. **Make the visual earn its place.** Ask for a clean diagram of the idea. If it comes out bland, attach style reference images: \"The graph was bland. Use these reference images for design style and visual direction and make it look a lot better.\"\n5. **Publish the useful thing.** The article carries the value and the post is the hook that gets it opened. On X, quote-post your own post with a second piece of media and a slightly different take.\n6. **Close the feedback loop** with two analyst agents. A voice analyst updates `voice.md` with word choices, sentence length and intro structures. A performance analyst writes what worked and what underperformed back into the vault.\n7. **Let it compound.** Each weekly cycle starts from the updated vault, voice file and briefs.\n\n## Not for\nFully automated, AI-originated content with no real experience behind it, or posting drafts without a human edit.\n\n## Source\nJ.B. (@VibeMarketer_), video at https://x.com/VibeMarketer_/status/2110749655516520958 (15 Oct 2026) and summary post at https://x.com/VibeMarketer_/status/2111433557197410499 (17 Oct 2026). Tools shown: Obsidian with Web Clipper, Grok Bot (scout bots), Wispr Flow, Codex or Hermes Agent, and Codex's image model. Author's stated results over 12 months on X: 22.4M impressions and 40.5K followers.\n",
+      "sourceUrls": [
+        "https://x.com/VibeMarketer_/status/2110749655516520958",
+        "https://x.com/VibeMarketer_/status/2111433557197410499"
+      ],
+      "authors": [
+        "@VibeMarketer_"
+      ],
+      "tags": [
+        "agents",
+        "content"
+      ],
+      "wordCount": 507,
+      "mtime": "2026-11-02T03:11:42.542981+00:00",
       "hasSource": true
     },
     {
@@ -458,7 +566,23 @@
         "signal"
       ],
       "wordCount": 1215,
-      "mtime": "2026-10-12T09:50:00.811933+00:00",
+      "mtime": "2026-11-02T03:09:29.010368+00:00",
+      "hasSource": false
+    },
+    {
+      "id": "run-a-draft-through-a-three-lens-critique-gauntl",
+      "name": "Run a draft through a three-lens critique gauntlet",
+      "description": "Use this when you've finished a draft of a landing page, sales page, or flagship post and want it stress-tested by three distinct critics (hook, proof, clarity) before any prospect sees it.",
+      "body": "# Steps\n\n## 1. Build 3 critic profiles from real material (once, then reuse)\nDon't use made-up branding-workshop personas. Ground each one in evidence:\n\n1. **Direct-response legend (packaging and hook).** Built on Eugene Schwartz and David Ogilvy's principles. Cares about one thing: does the first line earn the next 5 seconds of attention, and is the headline specific enough to stop a stranger cold?\n2. **Hostile CFO (proof and unit economics).** Built on the hardest budget pushback from your last 20 stalled deals: [STALLED_DEAL_OBJECTIONS]. Hunts every vague claim, unbacked percentage and \"save time\" promise that would get laughed out of a boardroom.\n3. **Busy practitioner (clarity and mechanism).** Built from verbatim customer transcripts, Slack rants and churn interviews: [CUSTOMER_TRANSCRIPTS]. Flags every sentence where you sound like a SaaS brochure instead of someone who does the job.\n\nSave each profile as its own prompt or agent, with its source material attached.\n\n## 2. Write the raw draft once\nFinish a full draft first. Don't ask teammates \"thoughts?\" in Slack: that gets polite feedback and typo fixes.\n\n## 3. Run the gauntlet in private\nFeed the draft through the lenses, in order or side by side:\n- **Lens 1** attacks the hook and headline until the curiosity gap is undeniable.\n- **Lens 2** strips the fluff and forces hard receipts (numbers, proof, named results) into the body.\n- **Lens 3** rewrites the mechanism in the exact words your buyers use on calls.\n\nStarter critic prompt (added, not in source):\n> You are [LENS_PROFILE]. Here is your source material: [EVIDENCE]. Read the draft below. List every line that fails your test, quote it, say why, and give a rewrite. Do not praise. Draft: [DRAFT]\n\n## 4. Merge and publish\nApply the accepted rewrites into one draft. Re-run any lens whose section changed a lot. Publish only after the draft survives all three. (The merge-and-rerun step is added, not in source.)\n\n## Success check\nBy the time it goes live, each lens has nothing left to flag: the first line is specific, every claim has proof, and the mechanism reads in buyer language.\n\n# Not for\n- Generic copy polish or typo checks.\n- Replacing real customer research. If you have no transcripts or objections yet, collect them first, or the personas turn into the made-up ones this method warns against.\n- Anything where you haven't got a finished draft.\n\n# Source\n- J.B. (@VibeMarketer_), X post, 26 Oct 2026: https://x.com/VibeMarketer_/status/2114725739513905621\n- The \"10x the conversion rate\" claim is the author's, with no data in the post.\n",
+      "sourceUrls": [],
+      "authors": [],
+      "tags": [
+        "agents",
+        "content",
+        "landing-pages"
+      ],
+      "wordCount": 423,
+      "mtime": "2026-11-02T03:11:55.062957+00:00",
       "hasSource": false
     },
     {
@@ -478,7 +602,7 @@
         "shorts"
       ],
       "wordCount": 324,
-      "mtime": "2026-10-06T20:54:42.466640+00:00",
+      "mtime": "2026-11-02T03:09:08.562184+00:00",
       "hasSource": true
     },
     {
@@ -493,7 +617,7 @@
         "youtube"
       ],
       "wordCount": 1349,
-      "mtime": "2026-10-08T06:26:19.022579+00:00",
+      "mtime": "2026-11-02T03:09:28.962364+00:00",
       "hasSource": true
     },
     {
@@ -509,7 +633,7 @@
         "tiktok"
       ],
       "wordCount": 735,
-      "mtime": "2026-10-12T06:24:35.645644+00:00",
+      "mtime": "2026-11-02T03:09:28.986366+00:00",
       "hasSource": false
     },
     {
@@ -526,7 +650,40 @@
         "outreach"
       ],
       "wordCount": 2116,
-      "mtime": "2026-10-13T14:48:23.803912+00:00",
+      "mtime": "2026-11-02T03:09:29.046370+00:00",
+      "hasSource": false
+    },
+    {
+      "id": "run-seo-from-claude-code-with-two-api-keys",
+      "name": "Run SEO from Claude Code with two API keys",
+      "description": "Use this when a SaaS or service business wants keyword research, a content calendar, per-vertical landing pages and a competitor link-building list from Claude Code, using a Keywords Everywhere key and a DataForSEO key.",
+      "body": "# Goal\nReplace an agency SEO retainer with one agent session driven by two API keys: keyword universe, competitor gaps, content calendar, per-vertical pages, link targets.\n\n# Inputs\n- [KEYWORDS_EVERYWHERE_API_KEY] and [DATAFORSEO_API_KEY], stored in a `.env` file the agent reads (never pasted into chat or committed).\n- [SEED_KEYWORDS] and [YOUR_DOMAIN]\n- [COMPETITOR_DOMAINS]: three or more\n- [VERTICALS]: the industries you serve (the demo used 20)\n\n# Steps\n1. Put both keys in `.env`. Add `.env` to `.gitignore`. (added, not in source)\n2. Keyword universe. Use Keywords Everywhere to pull related keywords and \"people also search for\" for each seed. Dedupe and save to a file with volume. The demo shows about 4,800 keywords.\n3. Gap analysis. Send the keywords to the DataForSEO SERP API. For each one record who ranks (your domain plus [COMPETITOR_DOMAINS]) and flag keywords where no competitor ranks well. Those are the gaps. [Check DataForSEO docs for exact endpoints and per-call cost first.]\n4. Content calendar. Cluster the gap keywords by intent or page type (pricing, \"best for\", vs, alternatives, integrations, templates, how-to, FAQ and so on). Lay them out as a week-by-week plan, one page per working day.\n5. Vertical pages. For each of [VERTICALS], find long-tail keywords, then draft one unique page per vertical with structured data (schema) included. Each page needs real vertical-specific content, not a swapped industry name. (added, not in source)\n6. Link building. Use DataForSEO's domain intersection to list every domain linking to two or more competitors but not to you. Rank by how many competitors each links to (the demo shows 3/3 and 2/3).\n7. Review gate. Show the keyword file, calendar, page drafts and link list for human review before publishing anything or contacting any site. (added, not in source)\n\n# Success check\n- A saved keyword file, gap list, calendar, page drafts and ranked link list exist.\n- Gap keywords really show no strong competitor in the SERP data.\n\n# Failure modes\n- API costs: DataForSEO charges per call. Check pricing and cap the batch size before step 3. (added, not in source)\n- Thin templated vertical pages risk being treated as low-quality or duplicate content. (added, not in source)\n- Search volume and SERP data are snapshots. Re-pull on a schedule.\n\n# Not for\n- Publishing pages or sending link-building outreach without review.\n- Sites with no competitors to compare, or work that needs a GSC-first approach (see the striking-distance skill).\n- Treating the post's \"agency retainer in 2 API keys\" as a verified result. It's the author's claim.\n\n# Source\nCody Schneider (@codyschneider), https://x.com/codyschneider/status/2116274004684136742, 2026-10-30. Post promotes Graphed (the author's product); the method itself uses Keywords Everywhere and DataForSEO. The attached video is a motion-graphic, not a screen recording.\n",
+      "sourceUrls": [],
+      "authors": [],
+      "tags": [
+        "agents",
+        "content",
+        "seo",
+        "landing-pages"
+      ],
+      "wordCount": 453,
+      "mtime": "2026-11-02T03:11:57.598953+00:00",
+      "hasSource": false
+    },
+    {
+      "id": "run-tiered-outbound-across-cold-email-linkedin-d",
+      "name": "Run tiered outbound across cold email, LinkedIn DMs and cold calls",
+      "description": "Use this when you're setting up B2B outbound that needs to book meetings across email, LinkedIn and phone, and want one rule (account tier) that decides which channels each account gets, plus a setup playbook per channel.",
+      "body": "# Steps\n\n## 0. Tier your accounts first\nPut a tier in its own column next to every account. Every channel reads it.\n- **Tier 1:** strong fit with an active signal (new hire, funding round, from the last few weeks).\n- **Tier 2:** strong fit, no signal yet.\n- **Tier 3:** adjacent fit.\n\"Strong fit\" = matches your best customers on industry, company size and buyer title. \"Adjacent\" = matches on some.\n\n| Tier | Gets | Message |\n|---|---|---|\n| 1 | Call + LinkedIn + email | 1 custom message per account |\n| 2 | LinkedIn + email | Template with 1 variable swapped |\n| 3 | Email only | High-volume sequences |\n\nNever push a Tier 1 account into a high-volume email sequence.\n\n## 1. Cold email (volume engine): 20 to 25 sends a day per warmed inbox\n1. **List:** in [LIST_TOOL, e.g. Clay] use Find companies (best customers' industry and size), then Find people (buyer titles), then a work-email waterfall ([EMAIL_FINDER, e.g. Prospeo] first).\n2. **Sending domains:** never send cold email from your main domain. Buy look-alike domains (e.g. get[yourcompany].com), add each to your mail provider, create 3 inboxes per domain.\n3. **DNS on every domain:** one SPF, one DKIM, one DMARC record (merge duplicates). Example from the source (Google Workspace):\n```\nTXT @                  v=spf1 include:_spf.google.com ~all\nTXT google._domainkey  v=DKIM1; k=rsa; p=...   (key generated in Google Admin: Apps > Google Workspace > Gmail > Authenticate email)\nTXT _dmarc             v=DMARC1; p=none; rua=mailto:dmarc@get[yourcompany].com\n```\n4. **Warm up** 2 to 4 weeks before the first send in [SENDER_TOOL, e.g. Instantly or lemlist] (Instantly's minimum is 2 weeks). Leave warm-up on after launch.\n5. **Signals:** add new-hire and news/funding signals to the account list. A strong-fit account with a fresh signal moves to Tier 1 that week, and email 1 opens on that signal.\n6. **3-email sequence about the situation behind the signal** (email 1 under 80 words, one question at the end). Example for a company that just hired a head of sales:\n> EMAIL 1 (day 1) Subject: [first name]'s first quarter\n> [First name], a new sales leader's first quarter usually comes with a pipeline target. We help [company type] with [the problem you solve]. Want me to send the 1-page plan we'd run for [company]?\n>\n> EMAIL 2 (day 4) Subject: re: [first name]'s first quarter\n> [First name], 1 thing we see at [company type] in the first 90 days: [1 specific pattern]. [Customer] had the same setup and [1 short result]. Worth a look?\n>\n> EMAIL 3 (day 9) Subject: re: [first name]'s first quarter\n> Last note from me, [first name]. The 1-page plan for [company] is ready whenever you'd like it. Just reply \"send it\".\n- Tier 1: rewrite email 1 by hand per account, in its own low-volume campaign. Tier 2: swap the 1 line about their company. Tier 3: swap the signal line for 1 line about the problem you solve, send at volume.\n7. **Ramp** a few sends a day up to 20 to 25 per inbox (Instantly recommends max 30). Volume comes from more inboxes: about 20 inboxes on 7 domains for 500 a day.\n8. **A yes** is a reply asking for times. Answer within the hour:\n> Great, [first name]. Does [DAY_1 TIME] or [DAY_2 TIME] ([TIMEZONE]) work? Or grab any slot here: [CALENDAR_LINK]\n- **What burns it:** bounces above 2%; mail failing SPF, DKIM or DMARC.\n\n## 2. LinkedIn DMs (precision play), Tier 1 and 2 only\nJudge it on meetings, not replies. (Source cites one platform's 257K sends where AI-personalized messages got more replies but slightly fewer meetings: 0.93 vs 1.02 per 100.)\n1. Fix your profile first: headline says who you help and the result, in plain words.\n2. Save the 2 or 3 buyers at each Tier 1 and Tier 2 account to a Sales Navigator lead list.\n3. **Every morning check:** Sales Navigator \"Viewed your profile recently\", likes and comments on your posts, \"Following your company\".\n4. **Send the request right after** they notice you, and say so in the note (under 200 characters; for Tier 1 rewrite per person):\n> Hi [first name], saw you [viewed my profile / liked my post on [topic] / followed us]. We work with [company type] on [the problem]. Happy to connect.\n5. **Message 1 the day after they accept** (lead with something useful):\n> Thanks for connecting, [first name]. We just put together [a 1-page note / a teardown] on [the problem] for [company type]. Want me to send it over?\n6. **Message 2, 5 days later if no reply:**\n> [First name], 1 thing we keep seeing at [company type]: [1 specific pattern]. Happy to send the full note.\n7. **When they say \"send it\":**\n> Here it is: [LINK]. Worth 20 minutes to walk through it? [DAY_1 TIME] or [DAY_2 TIME]?\n8. Run it as one sequence in [LINKEDIN_SEQUENCER, e.g. lemlist Multichannel] (visit, invite with note, 2 messages). Add profile viewers and new followers by hand each morning.\n9. **Withdraw pending requests older than 3 weeks** each week. LinkedIn restricts invites when too many sit pending. Withdrawn people can't be re-invited for up to 3 weeks.\n- Benchmarks cited (Reachium, 180,155 requests): 27.1% accepted, 27.6% of those replied, 2.0% booked. About 5 meetings per 1,000 requests.\n\n## 3. Cold calling (Tier 1 closer)\nSource numbers: Belkins, 175,000+ dials, about 1 meeting per 370. The author's own team ran about 1 per 37 and it only paid off on seven-figure deals, so he cut the phone for everything below Tier 1.\n1. **Check do-not-call and consent rules** for every country on the list before buying mobiles. Get your own legal read.\n2. Pull Tier 1 mobiles with [MOBILE_FINDER, e.g. Prospeo via Clay] from each person's LinkedIn URL. Scrub against the do-not-call registry.\n3. Load into [DIALER, e.g. Nooks, a parallel dialer]; sync calls to your CRM.\n4. **Call the day after email 1** and open on the same situation:\n> [First name], it's [your name] at [your company]. I emailed you yesterday about [the situation behind the signal]. Worth 20 minutes next week to walk you through it?\n> If \"just send me an email\": It's already in your inbox, subject line \"[SUBJECT]\". Can I put 20 minutes on [DAY] so we can go through it together?\n5. **Voicemail (15 seconds)** pointing to the email. Stop at 2 voicemails (Gong data cited: email replies went 2.73% to 5.87% with a voicemail, and fell to 2.2% with 3 or more).\n> [First name], [your name] from [your company]. I emailed you yesterday about [the situation behind the signal]. No need to call back. You can reply right there.\n6. Keep your calendar open and send the invite before you hang up.\n7. Log every dial: conversation, pickup without conversation, voicemail, no answer.\n- Skip generic title lists: those people get dialed all day and stopped picking up.\n\n## 4. Track and run it\n- Friday numbers: email = meetings per 1,000 sent; LinkedIn = meetings per 100 accepted requests; calls = meetings per 100 conversations.\n- Change 1 thing at a time, judge on meetings booked.\n- 4-week rollout: **Wk 1** domains, DNS, warm-up, LinkedIn profile, do-not-call check. **Wk 2** build list and tiers, save Sales Navigator buyers, write call opener and voicemail. **Wk 3** turn on signals, write the 3 emails, build the sequencer flow, pull and scrub Tier 1 mobiles. **Wk 4** domains are warm, start email for every tier, add LinkedIn people daily, call Tier 1 the day after email 1.\n\n## Guardrails (added, not in source)\n- Check email law for each market before sending (CAN-SPAM, GDPR/PECR, the Spam Act in Australia), include opt-out, and honour it.\n- LinkedIn's terms restrict automation tools. Review the risk before automating invites and messages, and keep volume modest.\n- Send-day email verification and 2% bounce ceiling still apply.\n\n# Not for\n- Consumer or local-trade lists (use a Google Maps and license-records list for those).\n- Replacing list quality. Fix the list and tiers first.\n- Mass-calling without a do-not-call scrub and a legal check.\n\n# Source\n- Alex Vacca (@itsalexvacca), X article \"How to book meetings with cold email, LinkedIn DMs and cold calling\", 26 Oct 2026: https://x.com/itsalexvacca/status/2114749822704193558\n- Summary post: https://x.com/itsalexvacca/status/2114856538498363698\n- Author is CEO of Frontal (GTM agency) and a Clay Elite Studio Partner, so tool picks (Clay, Prospeo, Instantly, lemlist, Nooks, Sales Navigator) reflect that. Benchmarks and prices are as he quoted them in Oct 2026 from Instantly, Reachium, Belkins and Gong reports. Own-campaign numbers (5 to 18% reply on signal campaigns) are his claims.\n",
+      "sourceUrls": [],
+      "authors": [],
+      "tags": [
+        "outreach",
+        "tiered",
+        "outbound"
+      ],
+      "wordCount": 1442,
+      "mtime": "2026-11-02T03:11:55.062957+00:00",
       "hasSource": false
     },
     {
@@ -546,7 +703,7 @@
         "shorts"
       ],
       "wordCount": 416,
-      "mtime": "2026-10-06T20:55:07.163401+00:00",
+      "mtime": "2026-11-02T03:09:21.397994+00:00",
       "hasSource": true
     },
     {
@@ -567,7 +724,7 @@
         "youtube"
       ],
       "wordCount": 492,
-      "mtime": "2026-10-06T20:54:45.026764+00:00",
+      "mtime": "2026-11-02T03:09:10.394150+00:00",
       "hasSource": true
     },
     {
@@ -587,7 +744,7 @@
         "workflows"
       ],
       "wordCount": 213,
-      "mtime": "2026-10-06T20:55:07.847414+00:00",
+      "mtime": "2026-11-02T03:09:22.045986+00:00",
       "hasSource": true
     },
     {
@@ -606,7 +763,27 @@
         "verification"
       ],
       "wordCount": 768,
-      "mtime": "2026-10-06T20:54:58.819225+00:00",
+      "mtime": "2026-11-02T03:09:15.022077+00:00",
+      "hasSource": true
+    },
+    {
+      "id": "turn-launch-post-replies-into-personalized-produ",
+      "name": "Turn launch-post replies into personalized product demos",
+      "description": "Use this when launching a product on X whose output can be personalized (video, image, copy, audit) and you want the reply section to become a live demo that drives signups.",
+      "body": "# Turn launch-post replies into personalized product demos\n\n## Why it works\nX ranks posts that keep people on the platform. Long reply threads and time spent in the comments push a post further. Every personalized result posted in the replies is a public demo, which makes the next person ask for one too.\n\n## Steps\n1. **Pick the personalization.** Choose one thing your product can make for a single person in about a minute: [OUTPUT, e.g. a video of them in a movie scene].\n2. **Write the hook reply.** Answer \"congrats\"-type comments with a question that collects the input. Example: \"Thanks! What's your favorite movie? I'll make you something cool.\"\n3. **Wire the pipeline:**\n   - The X API reads new replies on the launch post.\n   - Claude turns each reply (plus profile context) into a generation prompt: [PROMPT_TEMPLATE].\n   - [PRODUCT_API] generates the result.\n   - The X API posts a reply with a preview and a link.\n4. **Gate the full result.** Reply \"Your [OUTPUT]'s ready, go check it out\" with a preview and a link to [RESULT_PAGE]. The full result is waiting on your site, and editing or keeping it requires signing up.\n5. **Personalize onboarding.** After signup, tailor the experience to their name, company and what they asked for.\n6. **Let it compound.** Every public preview invites more requests. Watch the comment-to-like ratio and time in the replies as signs it's working.\n\n## Guardrails (added, not in source)\n- Only use someone's photo or likeness if they explicitly asked, and say upfront what you'll make.\n- Automated replies should go only to people who replied to you. Rate-limit them, avoid duplicate text, and follow X's automation rules and API tier limits.\n- Have a human review outputs before they post, and plan capacity, since the source says launches have broken products under load.\n\n## Gaps\nThe source's 10-page setup guide is gated. Exact X API endpoints, prompt templates and queue design are [PLACEHOLDER].\n\n## Not for\nProducts with no fast, personalizable output, or cold auto-replies to people who didn't engage.\n\n## Source\nMatt Epstein (@mattepstein, Shown Media), \"I drove $7M by abusing X's API and connecting it to Claude\", https://x.com/mattepstein/status/2112573983707247036, 21 Oct 2026 AEDT. The $7M figure is the author's claim, and the article ends with a pitch for his agency.\n",
+      "sourceUrls": [
+        "https://x.com/mattepstein/status/2112573983707247036"
+      ],
+      "authors": [
+        "@mattepstein"
+      ],
+      "tags": [
+        "content",
+        "turn",
+        "launch"
+      ],
+      "wordCount": 383,
+      "mtime": "2026-11-02T03:11:45.170976+00:00",
       "hasSource": true
     },
     {
@@ -626,7 +803,7 @@
         "engineering"
       ],
       "wordCount": 294,
-      "mtime": "2026-10-06T20:55:07.263403+00:00",
+      "mtime": "2026-11-02T03:09:21.517992+00:00",
       "hasSource": true
     },
     {
@@ -646,8 +823,24 @@
         "ads"
       ],
       "wordCount": 255,
-      "mtime": "2026-10-06T20:54:42.966666+00:00",
+      "mtime": "2026-11-02T03:09:08.982176+00:00",
       "hasSource": true
+    },
+    {
+      "id": "write-linkedin-posts-that-collect-leads-not-like",
+      "name": "Write LinkedIn posts that collect leads, not likes",
+      "description": "Use this when a B2B company or founder wants LinkedIn posts that book sales calls, and needs a post type, a fill-in template and a lead-magnet plan.",
+      "body": "# Rule\nWrite the post your buyer would ask you to send them.\n\n# Three rules behind every post\n1. Give away the work: a finished thing usable the same day (skill pack, guide, checklist, template, repo, teardown).\n2. Prove you used it yourself: name who on your team uses it and what it did for you.\n3. Filter fast: line 1 states the problem or result so only your buyer stops. Everyone else scrolls.\n\n# Inputs\n- <LEAD_MAGNET>: a finished asset you use yourself\n- <BUYER>: who you sell to\n- <PROOF_NUMBER>: a real figure from your own work\n- <EMAIL_CAPTURE_PAGE>: a page that asks for an email, not a comment\n\n# Steps\n1. Pick one post type below. Start with the behind-the-scenes demo.\n2. Build one lead magnet you use yourself, finished and usable the same day.\n3. Write line 1 for your buyer, with the proof or the problem in it.\n4. Put the result or offer in line 2.\n5. Link to <EMAIL_CAPTURE_PAGE> in the post. Don't ask for a comment word: the author reports LinkedIn now cuts reach on those (his test: 32 impressions in 18 minutes; unverified).\n6. Follow up with people who fit while they still remember you. The author says signups without follow-up were wasted.\n7. Track signups, meetings booked and revenue from content. Likes come last.\n8. Reuse your best lead magnet about 3 months later with a new first line. Share it on X and YouTube too.\n\n# The six post types\n1. Behind-the-scenes demo: show your best person doing what you sell, with their exact tools. Order: person, result, list of jobs and tools.\n```\n<Name>, our <role>, <does the thing you sell> at <a real number>.\n<What it changed for your business, in 1 line.>\n\nWhat <the setup> does every week:\n→ <job 1>\n→ <job 2>\n→ <job 3>\n\n<The tools it runs on.>\nGet the setup free: <EMAIL_CAPTURE_PAGE>\n```\n2. Guide that picks a fight: topic is the question your buyer asks right before they need you. Open with something they already dislike. Three bullets answer three objections (one per reader type). Show the result before the contents.\n```\nRest in peace, <the thing your buyer is tired of>.\nFor 2026, I built <the guide> so you can <the result they want>.\n\n→ <Objection 1, answered>\n→ <Objection 2, answered>\n→ <Objection 3, answered>\n\nWhat our team got with it: <the result>.\nWhat's inside: <the contents>\nGet it free: <EMAIL_CAPTURE_PAGE>\n```\n3. Tool post: build something inside a tool your buyers use daily, then name every file or piece.\n```\nI built <what you built> that <result 1>, <result 2> and <result 3>, all inside <the tool your buyers use>.\n\nThe <N> files we use ourselves:\n1. <name>\n2. <name>\n3. <name>\nGet them free: <EMAIL_CAPTURE_PAGE>\n```\n4. Shift post: name what is changing in your buyer's job now. Old way in one line, new way in one line, then one step per line.\n```\n<The job> used to mean <the old way>.\n<Who> do it like this now:\n→ <step 1>\n→ <step 2>\n→ <step 3>\nGet <the free thing that does step 1>: <EMAIL_CAPTURE_PAGE>\n```\n5. \"My team didn't want me to share this\": one-line story with tension, contents sorted by team or role, then say what it doesn't need (no setup, keys or code).\n```\nMy team didn't want me to share this: <the thing we use for the job>.\n\nFor <team 1>: <item>\nFor <team 2>: <item>\nFor <team 3>: <item>\n\nNo setup. Copy it straight into <the tool they already use>.\nGet it free: <EMAIL_CAPTURE_PAGE>\n```\n6. Link post: proof in line 1, offer in line 2, link to the email page, no comment word.\n```\nWe packaged <N> <things> that <proof number> at <your company>.\nGet them for free, ready to <use them>.\n\n<What's inside, 1 line per item.>\n\n<EMAIL_CAPTURE_PAGE>\n```\n\n# Success check\n- Signups, meetings booked and revenue from content are tracked per post.\n- A post can be judged a win with few likes if signups are high (the author's post #6: 186 likes, 142 day-one signups).\n\n# Anti-patterns\n- Posts with no asset behind them (the author's 2,400-like post produced 0 leads).\n- Comment-word bait as the only capture method.\n- Lead magnets that were generated and never used by your team.\n- Collecting emails and never following up.\n- Emailing or messaging signups beyond what they consented to; follow local email and privacy law. (added, not in source)\n- Treating the author's counts as a benchmark for your account.\n\n# Source\nAlex Vacca (@itsalexvacca), \"How to actually book calls from LinkedIn posts (full course)\", https://x.com/itsalexvacca/status/2115082777083433121, 2026-10-27. Figures are the author's. He runs Frontal, which sells these services.\n",
+      "sourceUrls": [],
+      "authors": [],
+      "tags": [
+        "content",
+        "youtube",
+        "outreach"
+      ],
+      "wordCount": 793,
+      "mtime": "2026-11-02T03:30:36.350511+00:00",
+      "hasSource": false
     }
   ]
 }

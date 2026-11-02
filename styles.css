@@ -627,3 +627,12 @@ mark, .hl {
 .ask-form{display:flex;gap:8px;padding:10px 12px}
 .ask-form input{flex:1;font:inherit;padding:9px 12px;border-radius:10px;border:1px solid var(--border,#2a2d35);background:rgba(0,0,0,.25);color:inherit}
 .ask-note{font-size:.68rem;color:var(--text-mute,#888);margin:0 12px 10px}
+
+/* For AI agents */
+a.btn{text-decoration:none;display:inline-flex;align-items:center}
+.agents{margin:40px 0 24px;padding:18px 20px;border:1px solid var(--border);border-radius:var(--radius);background:var(--bg-elev);color:var(--text-dim);font-size:.88rem;line-height:1.55}
+.agents h2{margin:0 0 8px;font-size:1rem;color:var(--text)}
+.agents p{margin:0 0 8px}.agents ul{margin:0 0 8px;padding-left:18px}
+.agents a,.raw-link{color:var(--accent);text-decoration:none}.agents a:hover,.raw-link:hover{text-decoration:underline}
+.agents code{font-family:var(--mono);font-size:.8rem;background:rgba(255,255,255,.06);padding:1px 5px;border-radius:4px}
+.agents-tip{color:var(--text-mute);font-size:.8rem;margin:0}

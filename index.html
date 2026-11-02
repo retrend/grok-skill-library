@@ -25,6 +25,7 @@
       </div>
       <div class="topbar-actions">
         <button type="button" class="btn btn-accent" id="btn-ask" title="Ask your skills (a)" aria-expanded="false">Ask ✦</button>
+        <a class="btn btn-ghost" href="#for-agents" id="link-agents" title="Machine-readable files for AI bots">For AI agents</a>
         <button type="button" class="btn btn-ghost" id="btn-random" title="Random skill (r)">Random</button>
         <span class="status" id="status" aria-live="polite">Loading…</span>
       </div>
@@ -57,6 +58,17 @@
         <button type="button" class="btn btn-accent" id="btn-clear">Clear filters</button>
       </div>
     </div>
+
+    <footer class="agents" id="for-agents" aria-label="For AI agents">
+      <h2>For AI agents</h2>
+      <p>Point a bot at <a href="llms.txt">llms.txt</a>. It explains the library and lists every skill.</p>
+      <ul>
+        <li><a href="index.json">index.json</a>: every skill's id, description, tags and link, without the full text.</li>
+        <li><code>skills/&lt;id&gt;.md</code>: one skill as raw Markdown.</li>
+        <li><a href="llms-full.txt">llms-full.txt</a>: all skills in one file.</li>
+      </ul>
+      <p class="agents-tip">Match the task against each description (they all start with “Use this when”), then fetch that skill.</p>
+    </footer>
   </div>
 
   <!-- Detail slide-over -->
