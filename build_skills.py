@@ -202,7 +202,8 @@ def main() -> None:
             }
         )
 
-    generated = datetime.now(timezone.utc).isoformat()
+    # Deterministic: newest skill's mtime, so a rebuild with no skill changes produces identical files.
+    generated = max((s["mtime"] for s in skills), default=datetime.now(timezone.utc).isoformat())
     OUT.write_text(json.dumps({"generatedAt": generated, "count": len(skills), "skills": skills}, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"Wrote {len(skills)} skills → {OUT}")
     write_agent_files(skills, raws, generated)
@@ -265,7 +266,7 @@ def write_agent_files(skills: list[dict], raws: dict[str, str], generated: str) 
         "",
         f"All skills in one file: {SITE_URL}llms-full.txt",
         f"Human browser with search: {SITE_URL}",
-        f"Generated: {generated[:10]}",
+        f"Last skill update: {generated[:10]}",
         "",
         "## Skills",
         "",
