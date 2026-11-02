@@ -92,15 +92,16 @@ def parse_frontmatter(text: str) -> tuple[dict, str]:
 
 
 def extract_source_section(body: str) -> str | None:
-    m = re.search(r"^##\s+Source\s*$", body, re.MULTILINE | re.IGNORECASE)
-    if not m:
-        return None
-    rest = body[m.end() :]
-    # Until next ## heading or end
-    next_h = re.search(r"^##\s+", rest, re.MULTILINE)
-    if next_h:
-        rest = rest[: next_h.start()]
-    return rest.strip()
+    """Return the '# Source(s)' section (any heading level), else any 'Source:' lines."""
+    m = re.search(r"^(#{1,4})\s+Sources?\b[^\n]*$", body, re.MULTILINE | re.IGNORECASE)
+    if m:
+        rest = body[m.end() :]
+        next_h = re.search(r"^#{1,%d}\s+" % len(m.group(1)), rest, re.MULTILINE)
+        if next_h:
+            rest = rest[: next_h.start()]
+        return rest.strip()
+    lines = re.findall(r"^\W{0,4}Sources?\W{0,4}:.*$", body, re.MULTILINE | re.IGNORECASE)
+    return "\n".join(lines).strip() or None
 
 
 def extract_urls(text: str) -> list[str]:
