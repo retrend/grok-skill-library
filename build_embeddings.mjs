@@ -1,5 +1,6 @@
 // Chunk skills by section and embed with all-MiniLM-L6-v2 -> embeddings.json
 import fs from "fs";
+import crypto from "crypto";
 import { pipeline, env } from "@xenova/transformers";
 env.cacheDir = process.env.HOME + "/.cache/transformers-js";
 const MODEL = "Xenova/all-MiniLM-L6-v2";
@@ -24,11 +25,20 @@ for (const s of skills) {
     if (buf.trim().length >= 40) chunks.push({ skill: s.id, section, text: buf.trim() });
   }
 }
+// Skip if inputs are unchanged (vectors differ slightly run to run, which would force a pointless commit).
+const OUT = new URL("./embeddings.json", import.meta.url);
+const inputHash = crypto.createHash("sha256").update(MODEL + JSON.stringify(chunks)).digest("hex");
+try {
+  if (JSON.parse(fs.readFileSync(OUT)).inputHash === inputHash) {
+    console.log(`Embeddings up to date (${chunks.length} chunks from ${skills.length} skills)`);
+    process.exit(0);
+  }
+} catch {}
 const embed = await pipeline("feature-extraction", MODEL);
 const out = [];
 for (const c of chunks) {
   const e = await embed(`${c.section}: ${c.text}`.slice(0, 2000), { pooling: "mean", normalize: true });
   out.push({ ...c, v: Array.from(e.data, (x) => Math.round(x * 1e4) / 1e4) });
 }
-fs.writeFileSync(new URL("./embeddings.json", import.meta.url), JSON.stringify({ model: MODEL, dim: 384, count: out.length, chunks: out }));
+fs.writeFileSync(OUT, JSON.stringify({ model: MODEL, dim: 384, inputHash, count: out.length, chunks: out }));
 console.log(`Embedded ${out.length} chunks from ${skills.length} skills`);
