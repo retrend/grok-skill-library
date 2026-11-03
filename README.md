@@ -28,7 +28,9 @@ cd /workspace/skill-browser && GH_TOKEN="$GITHUB_TOKEN" ./deploy.sh
 ```
 
 It rebuilds everything, commits and pushes only if something changed, then waits until the live
-`index.json` count matches the local build. Re-running with no changes is safe.
+`index.json` count matches the local build. Re-running with no changes is safe. The daily routine runs
+this same command; the build also regenerates `webmcp.json` and `.well-known/mcp.json`, and the deploy
+commits `webmcp.js`, `webmcp.json` and `.well-known/`.
 
 Build only (no push):
 
@@ -76,6 +78,25 @@ Test build with a sample catalogue: `LIBRARY_CATALOG=/tmp/library-test/catalog.j
 Agents should fetch `index.json`, match the task against `description` (each starts with
 "Use this when"), then fetch `skills/<id>.md`.
 
+## WebMCP
+
+`webmcp.js` registers read-only tools through `navigator.modelContext` when the page is opened in a
+WebMCP-capable browser. There is no server endpoint; the tools run in the page and only read this
+site's own files.
+
+| Tool | Inputs | What |
+|------|--------|------|
+| `search_skills` | `query`, `limit` | Keyword search over skills |
+| `get_skill` | `id` | Full SKILL.md plus metadata for one skill |
+| `list_skills` | `tag`, `source` | Compact list of all skills, optionally filtered |
+| `search_library` | `query`, `type`, `need`, `licence`, `limit` | Keyword search over the Library catalogue |
+| `get_library_entry` | `id` | One catalogue entry |
+
+- `webmcp.json` and `.well-known/mcp.json` are the same manifest (tool names, descriptions, input schemas),
+  written by `build_skills.py` from its `WEBMCP_TOOLS` list. `llms.txt` lists the tools under "WebMCP tools".
+- Search in the tools is keyword-only (no embeddings), so it works without loading the model.
+- Change a tool in both `webmcp.js` and `WEBMCP_TOOLS` in `build_skills.py`.
+
 ## Keyboard
 
 | Key | Action |
@@ -98,4 +119,6 @@ Agents should fetch `index.json`, match the task against `description` (each sta
 - `build_skills.py` — parser and secret scan (read-only over workflows)
 - `library.js` — Library tab
 - `build_library.py`, `build_library_embeddings.mjs` — catalogue → `library.json`, `library-embeddings.json`
+- `webmcp.js` — WebMCP tool registration
+- `webmcp.json`, `.well-known/mcp.json` — generated WebMCP manifest
 - `deploy.sh` — build, commit, push, verify

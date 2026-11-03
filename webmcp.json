@@ -1,0 +1,135 @@
+{
+  "name": "Grok Bot Skill Library",
+  "description": "Read-only WebMCP tools registered in the browser by webmcp.js when the page is opened in a WebMCP-capable browser (navigator.modelContext). There is no server endpoint.",
+  "site": "https://retrend.github.io/grok-skill-library/",
+  "transport": "webmcp",
+  "script": "https://retrend.github.io/grok-skill-library/webmcp.js",
+  "tools": [
+    {
+      "name": "search_skills",
+      "description": "Keyword search over the skills in this Skill Library (step-by-step playbooks for marketing, content, SEO, ads, outreach and agent work). Returns the best matches with id, name, description, tags and the raw Markdown URL. Call get_skill with an id to read the full skill.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "query": {
+            "type": "string",
+            "description": "What you are trying to do, e.g. 'video editing' or 'get cited in AI search'."
+          },
+          "limit": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 50,
+            "default": 5,
+            "description": "Most results to return (default 5)."
+          }
+        },
+        "required": [
+          "query"
+        ]
+      },
+      "annotations": {
+        "readOnlyHint": true
+      }
+    },
+    {
+      "name": "get_skill",
+      "description": "Get one skill from this Skill Library by id: its full SKILL.md text (front matter and steps) plus name, description, tags, sources and last update.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Skill id, as returned by search_skills or list_skills."
+          }
+        },
+        "required": [
+          "id"
+        ]
+      },
+      "annotations": {
+        "readOnlyHint": true
+      }
+    },
+    {
+      "name": "list_skills",
+      "description": "List every skill in this Skill Library as a compact list (id, name, description, tags). Optionally keep only skills with a given tag, or skills whose source links contain a given text (e.g. an X handle or domain).",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "tag": {
+            "type": "string",
+            "description": "Only skills with this tag (case-insensitive)."
+          },
+          "source": {
+            "type": "string",
+            "description": "Only skills whose source URLs or authors contain this text."
+          }
+        }
+      },
+      "annotations": {
+        "readOnlyHint": true
+      }
+    },
+    {
+      "name": "search_library",
+      "description": "Keyword search over the Library catalogue: outside skills, plugins, templates and agents (mostly GitHub projects) found by Library Scout. These are links to other people's work, not skills in this library. Filter by type, need (the entry's main topic, e.g. video or seo) or licence.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "query": {
+            "type": "string",
+            "description": "Keywords, e.g. 'seo audit' or 'caption video'. Leave empty to list by filters only."
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "skill",
+              "plugin",
+              "template",
+              "agent",
+              "other"
+            ],
+            "description": "Only this entry type."
+          },
+          "need": {
+            "type": "string",
+            "description": "Only entries whose main topic (first tag) is this, e.g. video, seo, social, ads."
+          },
+          "licence": {
+            "type": "string",
+            "description": "Only this licence, e.g. MIT or Apache-2.0."
+          },
+          "limit": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 50,
+            "default": 10,
+            "description": "Most results to return (default 10)."
+          }
+        }
+      },
+      "annotations": {
+        "readOnlyHint": true
+      }
+    },
+    {
+      "name": "get_library_entry",
+      "description": "Get one Library catalogue entry by id: name, type, need, author, licence, summary, when to use it, tags and the source link.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Entry id, as returned by search_library."
+          }
+        },
+        "required": [
+          "id"
+        ]
+      },
+      "annotations": {
+        "readOnlyHint": true
+      }
+    }
+  ]
+}

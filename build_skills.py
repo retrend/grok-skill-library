@@ -29,6 +29,59 @@ SECRET_PATTERNS = [
 ]
 
 
+# WebMCP tools registered by webmcp.js. Kept here so webmcp.json and llms.txt list the same tools.
+# /workspace/webmcp-test/test_webmcp.mjs checks this list matches what webmcp.js registers.
+_RO = {"readOnlyHint": True}
+WEBMCP_TOOLS = [
+    {
+        "name": "search_skills",
+        "description": "Keyword search over the skills in this Skill Library (step-by-step playbooks for marketing, content, SEO, ads, outreach and agent work). Returns the best matches with id, name, description, tags and the raw Markdown URL. Call get_skill with an id to read the full skill.",
+        "inputSchema": {"type": "object", "properties": {
+            "query": {"type": "string", "description": "What you are trying to do, e.g. 'video editing' or 'get cited in AI search'."},
+            "limit": {"type": "integer", "minimum": 1, "maximum": 50, "default": 5, "description": "Most results to return (default 5)."},
+        }, "required": ["query"]},
+        "annotations": _RO,
+    },
+    {
+        "name": "get_skill",
+        "description": "Get one skill from this Skill Library by id: its full SKILL.md text (front matter and steps) plus name, description, tags, sources and last update.",
+        "inputSchema": {"type": "object", "properties": {
+            "id": {"type": "string", "description": "Skill id, as returned by search_skills or list_skills."},
+        }, "required": ["id"]},
+        "annotations": _RO,
+    },
+    {
+        "name": "list_skills",
+        "description": "List every skill in this Skill Library as a compact list (id, name, description, tags). Optionally keep only skills with a given tag, or skills whose source links contain a given text (e.g. an X handle or domain).",
+        "inputSchema": {"type": "object", "properties": {
+            "tag": {"type": "string", "description": "Only skills with this tag (case-insensitive)."},
+            "source": {"type": "string", "description": "Only skills whose source URLs or authors contain this text."},
+        }},
+        "annotations": _RO,
+    },
+    {
+        "name": "search_library",
+        "description": "Keyword search over the Library catalogue: outside skills, plugins, templates and agents (mostly GitHub projects) found by Library Scout. These are links to other people's work, not skills in this library. Filter by type, need (the entry's main topic, e.g. video or seo) or licence.",
+        "inputSchema": {"type": "object", "properties": {
+            "query": {"type": "string", "description": "Keywords, e.g. 'seo audit' or 'caption video'. Leave empty to list by filters only."},
+            "type": {"type": "string", "enum": ["skill", "plugin", "template", "agent", "other"], "description": "Only this entry type."},
+            "need": {"type": "string", "description": "Only entries whose main topic (first tag) is this, e.g. video, seo, social, ads."},
+            "licence": {"type": "string", "description": "Only this licence, e.g. MIT or Apache-2.0."},
+            "limit": {"type": "integer", "minimum": 1, "maximum": 50, "default": 10, "description": "Most results to return (default 10)."},
+        }},
+        "annotations": _RO,
+    },
+    {
+        "name": "get_library_entry",
+        "description": "Get one Library catalogue entry by id: name, type, need, author, licence, summary, when to use it, tags and the source link.",
+        "inputSchema": {"type": "object", "properties": {
+            "id": {"type": "string", "description": "Entry id, as returned by search_library."},
+        }, "required": ["id"]},
+        "annotations": _RO,
+    },
+]
+
+
 def secret_hits(text: str) -> list[str]:
     return [label for label, pat in SECRET_PATTERNS if re.search(pat, text)]
 
@@ -268,6 +321,13 @@ def write_agent_files(skills: list[dict], raws: dict[str, str], generated: str) 
         f"Human browser with search: {SITE_URL}",
         f"Last skill update: {generated[:10]}",
         "",
+        "## WebMCP tools",
+        "",
+        "If your browser supports WebMCP (navigator.modelContext), opening the site registers these read-only tools.",
+        f"They run in the page and only read this site's own files. Manifest: {SITE_URL}webmcp.json",
+        "",
+        *[f"- {t['name']}({', '.join(t['inputSchema']['properties'])}): {t['description']}" for t in WEBMCP_TOOLS],
+        "",
         "## Skills",
         "",
     ]
@@ -275,11 +335,24 @@ def write_agent_files(skills: list[dict], raws: dict[str, str], generated: str) 
         lines.append(f"- [{s['id']}]({SITE_URL}skills/{s['id']}.md): {s['description']}")
     (ROOT / "llms.txt").write_text("\n".join(lines) + "\n", encoding="utf-8")
 
+    manifest = {
+        "name": "Grok Bot Skill Library",
+        "description": "Read-only WebMCP tools registered in the browser by webmcp.js when the page is opened in a WebMCP-capable browser (navigator.modelContext). There is no server endpoint.",
+        "site": SITE_URL,
+        "transport": "webmcp",
+        "script": f"{SITE_URL}webmcp.js",
+        "tools": WEBMCP_TOOLS,
+    }
+    mtext = json.dumps(manifest, ensure_ascii=False, indent=2) + "\n"
+    (ROOT / "webmcp.json").write_text(mtext, encoding="utf-8")
+    (ROOT / ".well-known").mkdir(exist_ok=True)
+    (ROOT / ".well-known" / "mcp.json").write_text(mtext, encoding="utf-8")
+
     full = [f"# Grok Bot Skill Library (full text, {len(by_name)} skills)", f"Index: {SITE_URL}index.json", ""]
     for s in by_name:
         full += ["", "=" * 72, f"# skill: {s['id']}", f"# url: {SITE_URL}skills/{s['id']}.md", "=" * 72, "", raws[s["id"]].rstrip(), ""]
     (ROOT / "llms-full.txt").write_text("\n".join(full) + "\n", encoding="utf-8")
-    print(f"Wrote skills/*.md ({len(by_name)}), index.json, llms.txt, llms-full.txt")
+    print(f"Wrote skills/*.md ({len(by_name)}), index.json, llms.txt, llms-full.txt, webmcp.json, .well-known/mcp.json")
 
 
 if __name__ == "__main__":

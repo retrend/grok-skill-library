@@ -13,6 +13,7 @@
   <script src="https://cdn.jsdelivr.net/npm/marked@11.1.1/marked.min.js" defer></script>
   <script src="app.js" defer></script>
   <script src="library.js" defer></script>
+  <script src="webmcp.js" defer></script>
   <script type="module" src="ask.js"></script>
 </head>
 <body>
@@ -117,6 +118,7 @@
         <li><a href="llms-full.txt">llms-full.txt</a>: all skills in one file.</li>
         <li><a href="library.json">library.json</a>: the Library catalogue (outside skills, agents, plugins and more found by Library Scout).</li>
       </ul>
+      <p><strong>WebMCP tools.</strong> In a browser with WebMCP (<code>navigator.modelContext</code>), this page registers read-only tools an agent can call: <code>search_skills</code>, <code>get_skill</code>, <code>list_skills</code>, <code>search_library</code> and <code>get_library_entry</code>. They run in the page and only read this site's files. Tool list and inputs: <a href="webmcp.json">webmcp.json</a>.</p>
       <p class="agents-tip">Match the task against each description (they all start with “Use this when”), then fetch that skill.</p>
     </footer>
   </div>

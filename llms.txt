@@ -16,6 +16,17 @@ All skills in one file: https://retrend.github.io/grok-skill-library/llms-full.t
 Human browser with search: https://retrend.github.io/grok-skill-library/
 Last skill update: 2026-11-02
 
+## WebMCP tools
+
+If your browser supports WebMCP (navigator.modelContext), opening the site registers these read-only tools.
+They run in the page and only read this site's own files. Manifest: https://retrend.github.io/grok-skill-library/webmcp.json
+
+- search_skills(query, limit): Keyword search over the skills in this Skill Library (step-by-step playbooks for marketing, content, SEO, ads, outreach and agent work). Returns the best matches with id, name, description, tags and the raw Markdown URL. Call get_skill with an id to read the full skill.
+- get_skill(id): Get one skill from this Skill Library by id: its full SKILL.md text (front matter and steps) plus name, description, tags, sources and last update.
+- list_skills(tag, source): List every skill in this Skill Library as a compact list (id, name, description, tags). Optionally keep only skills with a given tag, or skills whose source links contain a given text (e.g. an X handle or domain).
+- search_library(query, type, need, licence, limit): Keyword search over the Library catalogue: outside skills, plugins, templates and agents (mostly GitHub projects) found by Library Scout. These are links to other people's work, not skills in this library. Filter by type, need (the entry's main topic, e.g. video or seo) or licence.
+- get_library_entry(id): Get one Library catalogue entry by id: name, type, need, author, licence, summary, when to use it, tags and the source link.
+
 ## Skills
 
 - [add-generative-ui-answers-to-an-agent-with-openu](https://retrend.github.io/grok-skill-library/skills/add-generative-ui-answers-to-an-agent-with-openu.md): Use this when an app or client agent should answer with live interface pieces (cards, charts, tables, forms, maps) instead of paragraphs, on any model.
