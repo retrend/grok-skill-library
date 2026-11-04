@@ -1,6 +1,6 @@
 # Grok Bot Skill Library
 
-> 44 reusable playbooks (skills) for marketing, content, SEO/AI search, outreach, ads, design and AI-agent workflows.
+> 45 reusable playbooks (skills) for marketing, content, SEO/AI search, outreach, ads, design and AI-agent workflows.
 > Each skill is a Markdown file with YAML front matter (name, description) and step-by-step instructions.
 
 ## How to use this library
@@ -14,7 +14,7 @@
 
 All skills in one file: https://retrend.github.io/grok-skill-library/llms-full.txt
 Human browser with search: https://retrend.github.io/grok-skill-library/
-Last skill update: 2026-11-02
+Last skill update: 2026-11-03
 
 ## WebMCP tools
 
@@ -49,6 +49,7 @@ They run in the page and only read this site's own files. Manifest: https://retr
 - [go-depth-first-before-parallelizing-agents](https://retrend.github.io/grok-skill-library/skills/go-depth-first-before-parallelizing-agents.md): Use this when building agent workflows, teaching agents rigor with pstack /poteto-mode playbooks, or before parallelizing agents you do not yet trust.
 - [hyper-realistic-ai-ugc-from-stills](https://retrend.github.io/grok-skill-library/skills/hyper-realistic-ai-ugc-from-stills.md): Use this when making hyper-realistic AI UGC talking-head clips from a Pinterest still — recreate with an image model, then animate with a locked UGC video prompt and CapCut/screen-record cleanup.
 - [linkedin-engagers-to-tiered-outbound](https://retrend.github.io/grok-skill-library/skills/linkedin-engagers-to-tiered-outbound.md): Use this when building a LinkedIn outbound list from post engagers with Claude Code + Apify + Origami — scrape, tier, and launch Tier 1 sequences. Full runnable prompts are in this skill.
+- [make-trust-heavy-finance-shorts-from-a-lesson-ba](https://retrend.github.io/grok-skill-library/skills/make-trust-heavy-finance-shorts-from-a-lesson-ba.md): Use this when producing faceless short-form finance videos (YouTube Shorts and similar) from a body of finance material, with proof-showing visuals, an older trusted voice, and a prediction-tracker series, for audience growth or financial services lead gen.
 - [master-ai-content-then-hand-production-to-an-age](https://retrend.github.io/grok-skill-library/skills/master-ai-content-then-hand-production-to-an-age.md): Use this when building AI ad/content production from scratch into an agent-run pipeline — lock one image + one video model, ship daily, log prompts/steps, then teach Codex/Claude Code the workflow until a script becomes a finished upload-ready edit.
 - [optimize-about-us-for-ai-search](https://retrend.github.io/grok-skill-library/skills/optimize-about-us-for-ai-search.md): Use this when rewriting or building an About Us page so buyers and AI search systems get a clear, crawlable company story with value prop, services, differentiators, ICP, team, process, key facts table, and FAQ.
 - [orchestrate-deep-not-broad](https://retrend.github.io/grok-skill-library/skills/orchestrate-deep-not-broad.md): Use this when deciding how to parallelize agents — favor going deeper on one or a few problems (best-of-N, adversarial review, multi-repro, model-by-workload) over breadth across many unrelated tasks.

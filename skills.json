@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-02T03:30:36.350511+00:00",
-  "count": 44,
+  "generatedAt": "2026-11-03T22:03:55.108220+00:00",
+  "count": 45,
   "skills": [
     {
       "id": "add-generative-ui-answers-to-an-agent-with-openu",
@@ -425,6 +425,27 @@
       ],
       "wordCount": 1335,
       "mtime": "2026-11-02T03:09:07.030215+00:00",
+      "hasSource": true
+    },
+    {
+      "id": "make-trust-heavy-finance-shorts-from-a-lesson-ba",
+      "name": "Make trust-heavy finance Shorts from a lesson bank",
+      "description": "Use this when producing faceless short-form finance videos (YouTube Shorts and similar) from a body of finance material, with proof-showing visuals, an older trusted voice, and a prediction-tracker series, for audience growth or financial services lead gen.",
+      "body": "# Goal\nTurn a large body of finance material (interviews, books, your own firm's content) into a steady stream of 65 to 90 word Shorts whose visuals prove each line, then use view and retention data to double down on what works.\n\n# Inputs\n- <SOURCE_MATERIAL>: transcripts or notes you have the right to use (your own content, licensed content, or public ideas you will restate in your own words)\n- <ANGLE>: the audience and offer (for lead gen: the service and the call to action, such as <CTA>)\n- <VOICE>: a mature, trustworthy synthetic or human voice\n- Tools named in the source: Claude for research and scripts, ElevenLabs for the voice, Pexels for footage\n- <COMPLIANCE_REVIEWER>: someone who signs off on financial claims (added, not in source)\n\n# Steps\n1. Pull the source transcripts and have Claude list the lessons the source repeats, then rewrite each as actionable advice for a viewer. The source's rule: keep the lesson, drop the person. Restate in your own words with real numbers.\n   - Example pattern: \"your house is not an asset\" becomes \"3 reasons your $400,000 house is costing you money every month.\"\n   - Example pattern: \"savers are losers\" becomes \"why $10,000 in your savings account might be losing you money.\"\n2. Split topics into separate lanes rather than five identical pages. The source's five: core lessons, houses and real estate, gold/silver/bitcoin, debt and credit, and a prediction tracker. Start with one lane, find what works, then expand.\n3. Optional running series (the source's \"crash series\"): a numbered tracker of public predictions. For each entry show the original prediction, its date, and what the market actually did afterwards. Use only sourced, verifiable facts and neutral wording. (guardrail added, not in source)\n4. Script prompt (from the source): ask Claude for a 65 to 90 word script that hooks with the biggest financial consequence, builds suspense, and saves the payoff for last. Then have it reread the script and remove every trace of AI-sounding phrasing.\n5. Voice: use an older-sounding voice in ElevenLabs. Finance is trust-heavy, and a young-sounding voice undercuts advice about mortgages and money.\n6. Footage: search Pexels for the exact thing the sentence names, so visuals prove the line.\n   - house: mortgage paperwork\n   - savings: bank statements\n   - gold: coin shops\n   - crash: real market charts\n   - debt: credit card statements\n   - If the script says a $400,000 house costs $3,100 a month before repairs, show the bill, not generic stock of office handshakes.\n7. Post three different Shorts a day.\n8. After 10 to 30 videos, read the analytics:\n   - Viewers leave in the first 3 seconds: fix the hook.\n   - Viewers leave halfway: the script is boring.\n   - One topic gets about 10x the views of another: make more of that topic.\n9. Once a channel qualifies for monetisation, keep feeding the winners.\n10. For lead gen (added, not in source): end each Short with <CTA>, keep one landing page per lane, and track enquiries and booked calls, not only views.\n11. Compliance gate (added, not in source): before publishing, have <COMPLIANCE_REVIEWER> check every claim, number, example and disclaimer against the rules that apply where you operate (general-advice disclaimers, no guaranteed returns, no personalised advice, required licensing statements).\n\n# Success check\n- Each Short is 65 to 90 words, visuals match each sentence, and one clear CTA is present.\n- After 10 to 30 videos you can name the best lane and hook type from retention data.\n\n# Failure modes\n- Generic stock footage that doesn't match the line.\n- Copying a source's phrasing or voice, or implying their endorsement. (added, not in source)\n- Unverified predictions or numbers presented as fact.\n- Revenue figures taken as likely: the source's example uses an illustrative $0.45 RPM (50M views = $22,500). Actual rates vary and monetisation requires meeting platform thresholds.\n\n# Anti-patterns\n- Five identical finance channels.\n- Personalised financial advice or return promises in a Short.\n- Impersonating a named expert or using their likeness or cloned voice. (added, not in source)\n- Skipping compliance review for a regulated service.\n\n# Source\nVid (@MethodByVid), https://x.com/MethodByVid/status/2117686246789288297, 2026-11-03. The post is a hype-style growth pitch that points to the author's Telegram and channel-scaling service. Method steps are his; guardrails marked (added) are not. Related skills in the library cover multi-channel Shorts networks and identical-Short pipelines.\n",
+      "sourceUrls": [
+        "https://x.com/MethodByVid/status/2117686246789288297"
+      ],
+      "authors": [
+        "@MethodByVid"
+      ],
+      "tags": [
+        "content",
+        "youtube",
+        "outreach",
+        "shorts"
+      ],
+      "wordCount": 726,
+      "mtime": "2026-11-03T22:03:55.108220+00:00",
       "hasSource": true
     },
     {
