@@ -1,6 +1,6 @@
 # Grok Bot Skill Library
 
-> 68 reusable playbooks (skills) for marketing, content, SEO/AI search, outreach, ads, design and AI-agent workflows.
+> 69 reusable playbooks (skills) for marketing, content, SEO/AI search, outreach, ads, design and AI-agent workflows.
 > Each skill is a Markdown file with YAML front matter (name, description) and step-by-step instructions.
 
 ## How to use this library
@@ -14,7 +14,7 @@
 
 All skills in one file: https://retrend.github.io/grok-skill-library/llms-full.txt
 Human browser with search: https://retrend.github.io/grok-skill-library/
-Last skill update: 2026-11-13
+Last skill update: 2026-11-14
 
 ## WebMCP tools
 
@@ -65,12 +65,13 @@ They run in the page and only read this site's own files. Manifest: https://retr
 - [optimize-about-us-for-ai-search](https://retrend.github.io/grok-skill-library/skills/optimize-about-us-for-ai-search.md): Use this when rewriting or building an About Us page so buyers and AI search systems get a clear, crawlable company story with value prop, services, differentiators, ICP, team, process, key facts table, and FAQ.
 - [orchestrate-deep-not-broad](https://retrend.github.io/grok-skill-library/skills/orchestrate-deep-not-broad.md): Use this when deciding how to parallelize agents — favor going deeper on one or a few problems (best-of-N, adversarial review, multi-repro, model-by-workload) over breadth across many unrelated tasks.
 - [pick-and-run-a-bot-assisted-money-path-on-x](https://retrend.github.io/grok-skill-library/skills/pick-and-run-a-bot-assisted-money-path-on-x.md): Use this when you want to turn an X account plus an AI bot team into income (selling your own offer, lead gen, sponsors, a bot-setup service, a new offer from your skills, or a job) and need ready-made prompts for each path.
-- [plan-a-youtube-channel-with-nine-production-prom](https://retrend.github.io/grok-skill-library/skills/plan-a-youtube-channel-with-nine-production-prom.md): Use this when starting or tightening a single YouTube channel and you want a fixed prompt sequence for niche, setup, ideas, a 45-day schedule, scripting, titles and thumbnails, a pre-publish review, analytics and a monetisation check.
+- [plan-a-youtube-channel-with-nine-production-prom](https://retrend.github.io/grok-skill-library/skills/plan-a-youtube-channel-with-nine-production-prom.md): Use this when starting or tightening a single YouTube channel and you want a fixed prompt sequence for niche, setup, ideas, a 45-day schedule, scripting, titles and thumbnails, a pre-publish review, analytics and a monetisation check, plus optional prompts for Shorts from a script, an income plan and a 2-hours-a-day batch workflow.
 - [pod-satire-markifact-procedure](https://retrend.github.io/grok-skill-library/skills/pod-satire-markifact-procedure.md): Use this when Pod Satire Studio pulls Comedy Morgue YouTube Analytics through the Markifact connector, or when deciding whether a pull is allowed.
 - [pod-satire-virality-playbook](https://retrend.github.io/grok-skill-library/skills/pod-satire-virality-playbook.md): Use this when Pod Satire Studio packages a Comedy Morgue video, writes hooks, picks a format, plans retention or engagement, chooses Shorts versus long-form, or maps watch-time metrics to the next pitch.
 - [prime-context-with-indirect-prompts-and-compound](https://retrend.github.io/grok-skill-library/skills/prime-context-with-indirect-prompts-and-compound.md): Use this when researching, planning, prototyping, or architecting with pstack — especially to draw intent out of the agent (/teach, /how, /why, /recall), compound context across skills, or run /architect before large changes.
 - [produce-kurzgesagt-style-explainers-with-approva](https://retrend.github.io/grok-skill-library/skills/produce-kurzgesagt-style-explainers-with-approva.md): Use this when you want a coding agent to produce an original 2D animated explainer in a Kurzgesagt-inspired visual style, with script and storyboard approval before any asset spend, layered artwork, narration sync, contact sheets and preview clips.
 - [pull-leads-from-seo-aeo-via-gsc-striking-distanc](https://retrend.github.io/grok-skill-library/skills/pull-leads-from-seo-aeo-via-gsc-striking-distanc.md): Use this when turning Google Search Console into SEO/AEO leads: export Queries, pull bottom-of-funnel terms in positions 4–20, pick pages to push into the top 3–5, then use Claude + an AI Search checklist to prioritize and ship ranking-factor updates.
+- [rebuild-an-instagram-profile-with-seven-strategi](https://retrend.github.io/grok-skill-library/skills/rebuild-an-instagram-profile-with-seven-strategi.md): Use this when an Instagram account's bio, name field, highlights, pinned posts or grid aren't turning profile visitors into followers or leads, and you want an AI chat (Claude, ChatGPT) to redesign them and set up a four-week test.
 - [research-first-landing-page-design](https://retrend.github.io/grok-skill-library/skills/research-first-landing-page-design.md): Use this when AI landing pages look generic — force a research report against real shipped references (Mobbin MCP or screenshots) before rebuild, then scoped fix passes.
 - [reverse-engineer-a-competitor-s-google-ads-weekl](https://retrend.github.io/grok-skill-library/skills/reverse-engineer-a-competitor-s-google-ads-weekl.md): Use this when you already run Google Ads and want a weekly process to see who bids against you, what ads they run, which keywords they abandoned and where they are weak by location, then turn those gaps into campaign tests.
 - [rewrite-ai-drafts-so-they-read-like-a-person](https://retrend.github.io/grok-skill-library/skills/rewrite-ai-drafts-so-they-read-like-a-person.md): Use this when a draft sounds machine-written (even structure, stiff tone, too much polish) and you want a fixed set of rewrite passes to make it read like a person, without faking experience or blurring facts.
