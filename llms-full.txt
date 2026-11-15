@@ -1,4 +1,4 @@
-# Grok Bot Skill Library (full text, 69 skills)
+# Grok Bot Skill Library (full text, 74 skills)
 Index: https://retrend.github.io/grok-skill-library/index.json
 
 
@@ -2367,6 +2367,131 @@ Source: Colin McDermott’s **Grok Bot × Jev** template — “Give all your ag
 
 
 ========================================================================
+# skill: give-every-meta-ad-a-daily-wait-kill-refresh-sca
+# url: https://retrend.github.io/grok-skill-library/skills/give-every-meta-ad-a-daily-wait-kill-refresh-sca.md
+========================================================================
+
+---
+name: 'Give every Meta ad a daily wait, kill, refresh, scale or keep verdict'
+description: >-
+  Use this when a founder or small team runs their own Meta (Facebook and
+  Instagram) ads and needs fixed number-based rules, or a daily agent check, for
+  when to wait, kill, refresh, scale or keep each ad, brief the next ad, read
+  competitors and judge lead quality.
+---
+# Steps
+
+## Before launch
+1. **Write your target on a post-it.** Every rule below is measured against it.
+   ```
+   sales
+   target per sale = profit on an average order ÷ 3
+   e.g. $75 profit per order → $25 a sale
+
+   leads
+   max per lead = what a customer is worth × how many leads become customers
+   e.g. $600 customer, 1 in 10 leads buys → $60 a lead
+   target = $40, so you keep a margin
+   ```
+   A lead is an enquiry, not a customer.
+2. **Set up seven columns.** Amount spent; results (purchases or leads only); cost per result against target; frequency (per person this week); link click-through rate (link clicks, not all clicks); hook rate; hold rate. Build the last two once under Columns, Customize columns, Create custom metric, and save as a preset:
+   ```
+   hook rate = 3-second video plays ÷ impressions
+   hold rate = ThruPlays ÷ 3-second video plays
+   ```
+   Rough bar: hook under 20% is weak, 30%+ good; hold 25%+ good. Your own account's average beats any benchmark. Meta reports the same sale several ways (purchases, website purchases, pixel purchases): pick one, never add them up.
+3. **Brake and settings.** Set Billing & payments, Account spending limit so what's left covers this month's budget plus ~10%; raise it monthly. After every launch, open the ad's Advantage+ creative settings and switch off everything that changes your words or picture (rewrites, music, animation, product cards, translation). Keep "adapt to placement". Recheck: options can switch back on.
+
+## Daily verdicts
+4. **Don't judge too early.** No verdict on an ad before 1,000 impressions and 4 days live. Then judge on the last 14 days together, never yesterday. Learning wants ~50 results a week per ad set; "learning limited" is normal on small accounts. Sales are credited back to the ad's day for up to 7 days after a click, so recent days keep growing.
+5. **Check the whole account first.**
+   - Results crashed everywhere but clicks held: tracking problem. Touch nothing.
+   - Everything ~25% more expensive at once (season, Black Friday): move the bar with it.
+   - Lots of clicks, few people reaching the page: the site is the problem.
+6. **Give every ad one verdict.**
+   - **Wait:** under 1,000 impressions or under 4 days.
+   - **Kill:** 0 results after spending 3× target over two weeks; or over 1.5× target per result over two weeks and still expensive this week; or a video nobody watches past 3 seconds that doesn't pay back.
+   - **Refresh:** idea works, people are tired: frequency 3+ a week with cost rising, or link CTR down 25% while cost is up 20%. Warm audiences (past visitors, customers) can take up to 6 a week.
+   - **Scale:** under target over two weeks with at least 5 sales or leads.
+   - **Keep:** everything else.
+   - **Watch:** one bad week after a good one. Don't kill.
+7. **Scale slowly.** +20% at a time, then hands off for 3 days. Scale the budget, not the ad: raise a campaign or ad set budget only when the whole thing is under target; if one ad is a winner inside an expensive campaign, switch off the weak ads first. Before raising, all four must hold: whole budget under target over two weeks; spending 90%+ of budget; not in learning; nothing changed in 3 days. If one fails, that's today's answer.
+8. **Make 2–3 moves max, then log.** One log entry per day: what you saw, what you did, why. When unsure: wait.
+
+## Next ads
+9. **Change 2 of 4.** Meta's delivery system (Andromeda) groups lookalike ads as one ad, so recolours find no new buyers. A new ad changes at least two of: the idea (reason to buy), the person, the format, the opening (first 3 seconds or first line). Run 3 to 6 live ads per ad set, each a different idea; more is wasted under about $50 a day. A tired winner keeps its idea and gets a new opening (new first frame or scene, not just new words).
+10. **Start from your winners.** High hook rate (30%+): the opening works. High link CTR: the promise works. Low cost per sale: page and offer work too. Fill this brief for each new ad:
+    ```
+    name: A7 · <IDEA_IN_3_WORDS>
+    kind: <ITERATION_OF_A1> or <NEW_IDEA>
+    idea: <THE_REASON_TO_BUY_ONE_LINE>
+    for: <THE_PERSON>
+    format: <VIDEO_9x16_15-25s> <PHOTO_4x5> <CAROUSEL_3-5_CARDS>
+    opening: <EXACTLY_WHAT_IS_SEEN_AND_SAID_IN_FIRST_3S_OR_FIRST_LINE>
+    then: <2-4_BEATS>
+    proof: <A_REAL_NUMBER_REVIEW_OR_VISIBLE_DETAIL>
+    ask: <THE_BUTTON_PLUS_ONE_PLAIN_INSTRUCTION>
+    why it should work: <THE_WINNER_NUMBER_IT_BUILDS_ON>
+    ```
+    Proof has to be real. If you don't have one, leave it empty and go get one.
+11. **Write the first 125 characters as the ad.** Line 1 is the hook: a specific outcome, a surprising fact or a customer's own words, never "introducing…" or a question nobody asked. Then 1–3 short lines (proof, what it is, offer) and one plain instruction. Headline about 40 characters, the benefit, not the brand name. Video: 9:16 for reels and stories, 4:5 for feed, captions always, keep text out of the top ~14% and bottom ~35% of a reel. Openings that work: result first then how; a hand doing the thing close up with sound; a customer saying one specific sentence; on-screen text naming the person; something visibly wrong getting fixed. A captioned phone video often beats a polished ad. Don't reference the viewer's personal attributes ("struggling with debt?"); talk about the product.
+
+## Competitors
+12. **Read the Meta Ad Library by start date.** Link (change country and keyword):
+    ```
+    https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=<COUNTRY>&q=<BRAND_OR_KEYWORD>&search_type=keyword_unordered&media_type=all
+    ```
+    Running 60+ days: proven, study these. Under 14 days: their tests. Many near-identical ads launched the same day: a test; come back in 3 weeks to see what survived. For 3–5 competitors, 5–10 ads each, write:
+    ```
+    <COMPETITOR> · <N> active · <N> proven (60+ days)
+    proven ideas: <THE_REASON_TO_BUY_EACH_PROVEN_AD_SELLS>
+    openings that last: <FIRST_LINES_OR_SECONDS_THAT_KEEP_COMING_BACK>
+    offers: <DISCOUNTS_SHIPPING_GUARANTEES_BUNDLES>
+    what nobody says: <THE_ANGLE_MISSING_ACROSS_ALL_OF_THEM>
+    ```
+    The last line is usually your best next ad. Take the idea, never copy the ad.
+
+## Lead ads
+13. **Judge leads on quality, not cost.** Reply within the first hour; decide before launch who replies and on which channel. Mark every lead: replied, qualified (call booked, quote asked), sale, no reply, fake. Never scale an ad until at least 1 in 10 of its leads is real; never kill one that brings real prospects because its leads look expensive. Many bad leads: switch the form to higher intent (review screen before submit) and add one multiple-choice qualifying question (budget, timing, need), max 3 questions beyond name, email and phone. Few good leads: leave the form, look at the ad.
+
+## Rules Meta enforces
+14. **Check categories and tracking.**
+    - Special ad categories (housing, employment, credit and financial, politics) are law. Housing can include home repairs and renovations. In the first three: no age or gender targeting, no zip codes, 15-mile (25 km) minimum radius, no lookalikes.
+    - EU ads must state who benefits and who pays; Meta no longer runs political or social issue ads in the EU.
+    - Health and wellness sites may be limited in what the pixel sends and may not be able to optimise for purchases; check Events Manager first.
+    - Interest exclusions are gone; excluding custom audiences (past buyers) still works. With Advantage+ audience on, interests and ages above your minimum are hints. Broad targeting plus genuinely different ads beats clever targeting.
+    - Default attribution: 7-day click, 1-day view, plus 1-day engage-through. Meta narrowed what counts as a click this year; check this before blaming ads for a 2026 drop.
+    - Meta won't match your shop. Use shop, CRM and bank for money; use Meta's numbers to compare ads with each other.
+
+## As an agent (optional)
+15. **Run it as a morning check.** Each morning the agent reads the last 14 days by day at ad level, prints a verdict per ad with the number behind it, proposes 2–3 moves, writes the next ad brief, lists leads still waiting for a call, checks Advantage+ creative toggles, and moves nothing without approval. Every approved move goes in the log.
+
+# Success check
+- A written target per sale or lead.
+- Every live ad has a verdict and the number behind it, from the last 14 days.
+- No more than 2–3 moves a day, each logged with the reason.
+- After a month, the log shows which ideas and openings win in your account.
+
+# Source
+- Tobia Donadon (@tobiadonadon_), "Claude Just Solved Meta Ads: When to Kill, Keep or Scale (V2)", X article, 9 Nov 2026 AEDT: https://x.com/tobiadonadon_/status/2119539823807451501
+- His packaged Claude Code skill: https://www.tobiadonadon.com/projects/construct/material/skills/meta-ads (not reviewed here).
+- Thresholds are his own rules from his and clients' accounts. Platform details (attribution, categories, Andromeda, EU rules) are as he states them for 2026; check Meta's help pages before relying on them. The lead-speed claim cites an old Harvard Business Review study.
+
+# Anti-patterns
+- Switching an ad off on day 2 because it has $11 spent and 0 sales.
+- Doubling the budget of a day-1 winner.
+- Judging on yesterday instead of two weeks.
+- Adding purchases, website purchases and pixel purchases together.
+- Ten colour variants of one ad counted as a test.
+- Scaling one ad's ad set when the campaign as a whole is over target.
+- Cheapest cost per lead treated as best.
+- Leaving Advantage+ creative rewriting your ads unchecked.
+- Made-up reviews or numbers in the brief.
+- Letting an agent change budgets or switch ads off without your approval.
+- Running financial-adviser or credit ads without the special ad category and a compliance review. (added, not in source)
+
+
+========================================================================
 # skill: go-depth-first-before-parallelizing-agents
 # url: https://retrend.github.io/grok-skill-library/skills/go-depth-first-before-parallelizing-agents.md
 ========================================================================
@@ -2491,6 +2616,139 @@ Use the public documented TypeSafe API and current official documentation at htt
 - A noul is a yes/no judgement whose `noul` field is the probability of yes, not a separate confidence score.
 - Choice and score are also documented, but the local helper currently validates noul and choice only.
 - Do not use unsupported response types without implementing and testing their validation.
+
+
+========================================================================
+# skill: keep-a-banned-md-that-every-draft-is-checked-aga
+# url: https://retrend.github.io/grok-skill-library/skills/keep-a-banned-md-that-every-draft-is-checked-aga.md
+========================================================================
+
+---
+name: Keep a banned.md that every draft is checked against
+description: >-
+  Use this when an agent keeps writing in AI style (em dashes, "it's not x, it's
+  y", delve, closing summaries) and you want one standing file of banned
+  structures, words, formatting and tone that it reads before every draft and
+  checks the draft against.
+---
+The hook's "90% your slop problem is gone" is the author's claim, not a measured result. The useful part is the file and the prompt.
+
+This works before and during drafting. To fix a draft that's already written, use the seven rewrite passes in rewrite-ai-drafts-so-they-read-like-a-person. (added, not in source)
+
+## Steps
+1. Create `banned.md` in the agent's project or skills folder, where every writing task can read it. Start from the author's file below, word for word.
+2. Add every phrase you'd fire a writer for, plus your own repeat offenders. Keep sections 1 to 4 as the rules the agent checks against.
+3. Tell the agent to read the file before every draft by putting the prompt below in its standing instructions or at the top of each writing task.
+4. When a draft still slips through, add the pattern to the right section instead of fixing that one draft by hand. (added, not in source)
+
+### The file
+```
+# banned.md
+rules for writing like a person, not a model
+
+## 1. banned structures (these matter more than words)
+
+- negative parallelism: "it's not x, it's y" / "not just x, but y" / "this isn't about x"
+  -> say y. delete the x
+
+- fake build-up: "no x. no y. just z."
+  -> say z
+
+- self-answered questions: "the result?" "why does this matter?" "the catch?"
+  -> state the answer
+
+- colon reveals: "here's the thing:" "the truth is:" "the kicker:"
+  -> cut the setup, keep the point
+
+- -ing tails: "..., highlighting the importance of x" / "..., ensuring y" / "..., reflecting z"
+  -> end the sentence. if the point matters, give it its own sentence
+
+- fake ranges: "from startups to enterprises" "from beginners to experts"
+  -> name who it's actually for
+
+- inflated significance: "stands as", "serves as a testament", "plays a vital role", "marks a turning point"
+  -> use "is". say what it does
+
+- vague authority: "experts say", "studies show", "many believe"
+  -> name the source or cut the claim
+
+- the closing moral: "in conclusion", "overall", "ultimately", "the lesson here is"
+  -> stop at the last useful line
+
+- symmetry: every paragraph the same length, every sentence the same rhythm
+  -> mix one-line paragraphs with longer ones
+
+## 2. banned words
+
+ai overuse: delve, underscore, showcase, intricate, tapestry, pivotal, crucial, vital, foster, enhance, landscape, realm, testament, notably, comprehensive, insights, additionally, moreover, furthermore
+hype: unlock, unleash, elevate, supercharge, empower, leverage, harness, seamless, robust, cutting-edge, game-changer, revolutionary, transformative
+filler: truly, incredibly, really, very, quite, actually, simply, essentially
+phrases: in today's world, in the ever-evolving, let's dive in, let that sink in, at the end of the day, it's important to note, it's worth noting, when it comes to
+
+## 3. banned formatting
+
+- em dashes (—). use a period, a comma or a new line
+- exclamation marks
+- emojis as bullets or in headers
+- bold on random phrases
+- "**term:** explanation" bullets where the term is repeated in the explanation
+- a list where one sentence would do
+
+## 4. banned tone
+
+- opening with praise ("great question", "absolutely")
+- hedging (arguably, may potentially, it could be said)
+- announcing what you're about to say ("in this post i'll explain")
+- sounding like a press release, a linkedin post or a travel brochure
+
+## 5. how a person writes
+
+- the point goes in the first line
+- one idea per sentence. short sentences, with a longer one when it earns it
+- specific beats general: a number, a name, a tool, a date, a price
+- simple words. if you wouldn't say it out loud, rewrite it
+- opinions stated plainly, no hedging
+- it reads like texting a smart friend
+
+## 6. self-check before you hand it over
+
+1. read every sentence against sections 1-4
+2. if a sentence breaks a rule, rewrite the whole sentence. a synonym keeps the same pattern
+3. count em dashes and exclamation marks. both must be zero
+4. check the last line. if it summarizes, delete it
+5. read it out loud in your head. anything that sounds like a model, rewrite
+```
+
+### The prompt
+```
+before you write anything, read banned.md in full.
+
+write the draft. then check it line by line against sections 1 to 4 of the file.
+if a line breaks a rule, rewrite the whole sentence. a synonym keeps the same pattern.
+
+before you send it:
+- count em dashes and exclamation marks. both must be zero
+- check the last line. if it summarizes, delete it
+- read it like a person texting a friend. anything that sounds like a model, rewrite
+
+send only the final text. no notes, no list of what you changed.
+```
+
+## Success check
+- Zero em dashes and zero exclamation marks.
+- No section 1 structure and no section 2 word in the output. A quick search for the banned words confirms it. (added, not in source)
+- The point is in the first line, and the last line isn't a summary.
+- The output has only the final text, with no change notes.
+
+## Anti-patterns
+- Swapping a banned word for a synonym and keeping the same sentence shape.
+- Treating the word list as the whole fix. The author ranks structures above words.
+- Banning words a brand or a regulator requires, such as a required disclaimer in financial-adviser copy. Make an exception there. (added, not in source)
+- Letting the file grow into a list nobody reads. Cut rules that never fire. (added, not in source)
+- Treating "90% gone" as a measured result.
+
+## Source
+J.B. (@VibeMarketer_), https://x.com/VibeMarketer_/status/2121625654949187602, 15 Nov 2026 (Sydney time). Three-post thread: hook, the file (https://x.com/VibeMarketer_/status/2121625668048060485) and the prompt (https://x.com/VibeMarketer_/status/2121625680027013441).
 
 
 ========================================================================
@@ -4563,6 +4821,84 @@ By the time it goes live, each lens has nothing left to flag: the first line is 
 
 
 ========================================================================
+# skill: run-a-five-advisor-council-prompt-before-a-decis
+# url: https://retrend.github.io/grok-skill-library/skills/run-a-five-advisor-council-prompt-before-a-decis.md
+========================================================================
+
+---
+name: Run a five-advisor council prompt before a decision
+description: >-
+  Use this when you face a judgment call (which idea to make, whether to build a
+  product, a client's rush request, picking between two tools, an overloaded
+  week) and want one chat model to argue it from five angles and hand back a
+  single recommendation and first action.
+---
+"Council" is not an official Claude feature, despite the post's "BREAKING" hook. It's a role-play prompt you paste into any chat model. Community versions with sub-agents and peer review already exist, adapted from Andrej Karpathy's LLM Council idea. One model playing five roles gives you different prompts, not different models, so it can still share blind spots. (added, not in source)
+
+Fill the <ANGLE_BRACKET> slots with real facts. Prompts 2 to 9 assume the council from prompt 1 is already set up in the same chat.
+
+## Steps
+1. **Set up the council** (paste first, in a fresh chat)
+   ```
+   Play five advisors: Strategist (goal), Skeptic (weak assumptions), Creative Advisor (overlooked options), Audience Advocate (who's affected), and Operator (what's doable). Give each one sentence. Show the biggest disagreement and have one advisor answer the strongest objection. End with one recommendation, the first action, and what could change your mind. Label assumptions and ask one question first if a missing detail could change the verdict.
+   ```
+2. **Pick a use-case prompt** from the list below and paste it in the same chat.
+3. **Answer its one question** if it asks one before giving a verdict.
+4. **Read the disagreement, not just the recommendation.** If the Skeptic's objection wasn't really answered, push back once. (added, not in source)
+5. **Do the first action.** Check any labeled assumption or "verify" flag before acting on it.
+
+### Use-case prompts
+1. **Pick your next video idea**
+   ```
+   I create <CONTENT_TYPE> for <AUDIENCE> on <PLATFORM>. I want more <SAVES_SHARES_COMMENTS_OR_CLICKS>. My options are <A>, <B>, and <C>. I have <TIME_AND_EQUIPMENT>. Debate what serves my goal and fits my resources. Pick one and give me an opening line, three talking points, and a call to action.
+   ```
+2. **Fix a video that loses viewers**
+   ```
+   My <LENGTH> video is for <AUDIENCE> and promises <PAYOFF>. Viewers drop off at <TIMESTAMP_OR_UNKNOWN>. Script <PASTE_SCRIPT>. Debate whether the hook, setup, or timing of the payoff is the likeliest issue. Pick one change to test, rewrite the first five seconds, and cut one line. Label any unconfirmed cause as a hypothesis.
+   ```
+3. **Test a product idea before building it**
+   ```
+   I want to sell <PRODUCT> to <BUYER> for <PRICE>. Here's the demand I've seen <COMMENTS_DMS_OR_NONE>. I have <HOURS_AND_BUDGET>. Debate whether the evidence suggests people would pay. Give me one test, the exact message to post, and the result that would justify building a first version.
+   ```
+4. **Stress-test a workshop**
+   ```
+   My <LENGTH> workshop teaches <AUDIENCE> to <SPECIFIC_TASK>. Here's the agenda <PASTE_AGENDA>. I have <PREP_TIME>. Imagine attendees leave confused or fail to finish the exercise. Debate the likely causes, rank the top three, and give me a timed agenda with one activity to shorten or cut.
+   ```
+5. **Reply to a client's rush request**
+   ```
+   My client asked <PASTE_REQUEST>. We agreed on <SCOPE_AND_DEADLINE>. I can deliver <WHAT_AND_BY_WHEN>. Weigh client goodwill against workload and overpromising. Recommend one offer and draft a warm reply under 100 words with a clear deliverable and date. If the request adds work, ask the client what to prioritize.
+   ```
+6. **Choose between two tools**
+   ```
+   I need <TOOL_A> or <TOOL_B> for <RECURRING_TASK>. My budget is <MONTHLY_AMOUNT>, my must-haves are <FEATURES>, and my deal-breaker is <CONSTRAINT>. Here's what I know <PRICES_AND_FEATURES>. Debate cost, ease, and fit. Pick one provisionally, give me a 15-minute pass/fail test, and flag what I should verify.
+   ```
+7. **Turn a work story into an interview answer**
+   ```
+   I'm interviewing for <ROLE>, and the job emphasizes <SKILL>. My real example is <SITUATION_ACTION_AND_RESULT>. Debate what would convince a hiring manager and what sounds vague. Write a natural 60-second answer using only my facts. Ask one tough follow-up question and wait for my reply.
+   ```
+8. **Make an overloaded week fit your calendar**
+   ```
+   I need to finish <TASKS_AND_DEADLINES>. My free blocks are <TIMES>, my fixed commitments are <COMMITMENTS>, and the biggest risk is <CONSEQUENCE_OF_MISSING_A_DEADLINE>. Debate what to finish, shrink, or reschedule. Give me a plan that fits, one action for today, and a two-sentence message if a deadline needs to move.
+   ```
+
+## Success check
+- Each of the five advisors got one sentence and a real disagreement is shown.
+- The strongest objection got an answer.
+- You end with one recommendation, one first action and what would change the verdict.
+- Assumptions are labeled, and nothing in the output uses facts you didn't give it.
+
+## Anti-patterns
+- Believing "BREAKING: Claude has a new feature". It's a prompt.
+- Leaving slots vague. The verdict is only as good as the facts you paste.
+- Treating five roles from one model as independent opinions. For a high-stakes call, also ask a second model or a person. (added, not in source)
+- Sending the drafted client reply or deadline message without reading it. (added, not in source)
+- Using it for regulated advice (financial, legal, medical) in place of a qualified review. (added, not in source)
+
+## Source
+Jeffar_AI (@Jeffar_AI), https://x.com/Jeffar_AI/status/2121789769650958729, 15 Nov 2026 (Sydney time). Ten-post thread: hook, a setup prompt and eight use-case prompts. The "new feature" claim is false. Five-advisor councils predate the post as community Claude skills based on Andrej Karpathy's LLM Council.
+
+
+========================================================================
 # skill: run-a-multi-channel-shorts-network
 # url: https://retrend.github.io/grok-skill-library/skills/run-a-multi-channel-shorts-network.md
 ========================================================================
@@ -5822,6 +6158,127 @@ description: >-
 - https://x.com/codyschneider/status/2099996699993219402
 - @codyschneider (Cody Schneider), Sep 15, 2026
 - Product mention in post: http://graphed.com/platform
+
+
+========================================================================
+# skill: willow-phase-youtube-playbook
+# url: https://retrend.github.io/grok-skill-library/skills/willow-phase-youtube-playbook.md
+========================================================================
+
+---
+name: Willow Phase YouTube playbook
+description: >-
+  Use this when Willow Phase packages, schedules, reviews or measures an ambient
+  music single on YouTube, to know which saved YouTube skills apply, how to
+  adapt them to short instrumental releases, and which tactics to skip.
+---
+# Willow Phase YouTube playbook
+
+The live profile holds the job, the channel facts and the approval gates. This file maps the YouTube methods Steven has saved onto ambient music singles. Pull the named skill when a step needs its detail.
+
+## Which skill for which job
+
+| Job | Skill | Use | Skip or adapt |
+|---|---|---|---|
+| Channel setup, About, banner, launch trio | plan-a-youtube-channel-with-nine-production-prom, step 2 | promise line, banner under 8 words, three linked launch videos | niche and script steps 1, 3 and 5 are for talking videos |
+| Title and thumbnail | same skill, step 6, plus pod-satire-virality-playbook, Packaging | title, thumbnail and first frame make the same promise; thumb text at most 4 words, one subject, high contrast; no misleading packaging | the proof is the mood and the place (the nature shot), not a demo |
+| Pre-publish check | same skill, step 7 | reused or repetitive material, rights, AI disclosure, missed promises | run it on every release, batch or not |
+| Release promo off YouTube | run-a-music-release-promo-checklist | rights and metadata phase, track story and core emotion, targets set before any spend, value-first Reddit and Discord, T+4 review | draft only; posting, DMs, email and paid lines need Steven's yes per item |
+| Analytics | same plan skill, step 8, plus pod-satire-virality-playbook, Metric mapping | compare same-format uploads at similar ages; label hypothesis versus measured | no verdict from private or prelaunch views |
+| Monetisation | same plan skill, step 9 | check official YouTube Help, separate fan funding from ads | no fixed window, no revenue forecasts |
+| Shorts | same plan skill, step 10, plus ship-30-identical-shorts, levers 3 to 5 | a 15 to 30 second loop of the strongest section of the track, a distinct first frame, ending on the payoff, linked to the full single | no voiceover or captions script; own audio only |
+| Visual openers | build-an-ai-hook-bank-from-saved-tiktoks | save visual first frames that stop the scroll; remap the pattern | no spoken hooks; never copy |
+| Study a reference channel or video | hand off to the YouTube Blueprint bot | a plan for an original take | never clone |
+
+## Ambient-specific rules
+
+1. Name the listening purpose for each single (focus, wind-down, walking, background) and put it in the title or the first description line. A 3 to 5 minute single does a different job from an hour-long mix, so don't package it like one.
+2. Titles: track name first, then a plain mood or setting cue. Example: "Field Margins · ambient techno with summer meadow footage". No hype words.
+3. Description: line 1 is the mood and purpose; then the track family, the tempo or feel if known, and the AI-music disclosure wording Steven approved. Add playlist and next-single links once they exist. Add no footage credits or sources.
+4. Use one playlist per track family plus a full-releases playlist in release order. End screens point to the next single or the family playlist.
+5. A later compilation mix made only from released singles is an option. Flag the reused-content risk and let Steven decide.
+6. Vary the footage and colour treatment between tracks. A strict identical template across 26 AI-music uploads is the pattern the inauthentic-content policy targets, so don't borrow ship-30-identical-shorts' fixed template for the long-form singles.
+
+## Never borrow
+
+- From run-a-multi-channel-shorts-network: burner channels, rival pairs, comment seeding from second accounts, fake first comments. Only its account-hygiene step applies (roles for editors, 2FA, current recovery email).
+- Engagement bait, sub4sub, fake giveaways, or misleading thumbnails.
+- Monetisation timelines, CTR scores or revenue numbers that are not from Studio or official pages.
+
+## Measurement once live
+
+- Compare each single at 7 and 28 days against the others at the same ages.
+- Long-form: impressions click-through rate (CTR), average percentage viewed, returning viewers, and playlist adds. Shorts: stayed-to-watch rate and the click-through to the linked single.
+- CTR and impressions come from a Studio Advanced-mode CSV export. Willow Phase has no Markifact or Metricool connection.
+- Wait for at least 6 to 8 singles before changing the format. One weak upload is noise.
+
+
+========================================================================
+# skill: win-long-tail-ai-recommendations-with-narrow-q-a
+# url: https://retrend.github.io/grok-skill-library/skills/win-long-tail-ai-recommendations-with-narrow-q-a.md
+========================================================================
+
+---
+name: Win long-tail AI recommendations with narrow Q&A pages
+description: >-
+  Use this when a new or small brand can't break into AI assistants' answers for
+  broad "best X" questions and you want to get named for narrow,
+  problem-specific questions instead, measure which assistants pick it up, and
+  optionally scale the winners into many pages with AI.
+---
+# Steps
+
+1. **Skip the head terms.** The 3 to 5 brands an assistant names for broad asks ("best `<CATEGORY>`", "cheapest", "`<COMMON_FEATURE>`-free") barely moved over 6 to 7 months of Burke's tracking. Don't target them first.
+2. **Pick 4 or 5 narrow buyer problems.** Each one is a specific problem plus a specific constraint, phrased the way a buyer would ask an assistant. Burke's example: "I get irritation from baking soda. What natural deodorant should I buy for sensitive skin?" Write yours as `<LONG_TAIL_QUESTIONS>`.
+3. **Name the specific terms.** Put the exact ingredients, features, methods or comparisons those questions involve (Burke used "colloidal oatmeal" and "magnesium hydroxide") into the copy, word for word.
+4. **Build a small site and get it indexed.** Burke used a $11.25 domain, a site Claude built on Vercel in about 20 minutes, and 3 pages:
+   - a product or service page with specifics (her "formulation notes")
+   - product Q&A pages that answer the narrow questions directly
+   - one comparison page for the narrow choice (hers: magnesium vs baking soda for sensitive skin)
+5. **Publish one off-site essay in the brand's voice.** Burke posted one Substack essay bylined as the brand. She wrote no reviews or testimonials and paid for no coverage.
+6. **Query on a schedule and leave it alone.** Run a script that asks each assistant the long-tail questions plus about 13 broad control questions. Ask ChatGPT with browsing on and with browsing off, Claude and Gemini. Log whether the brand is named and in what position. Burke didn't touch the site for 30 days.
+7. **Read the results by assistant and by query.** In Burke's test:
+   - ChatGPT with browsing on named the brand first in 4 of 4 long-tail answers, starting at week 3.
+   - ChatGPT with browsing off: not named.
+   - The 13 broad questions: not named.
+   - Claude and Gemini: never named it.
+8. **Double down on what got picked up.** Add more Q&A and comparison pages for the narrow questions that worked. Keep testing the others per assistant. (added, not in source)
+
+# Optional: scale it with AI (from @gkxspace)
+
+9. **Mine real pain points.** Have the AI review competitors' data and best pages in bulk and pull out users' real pain points. gkxspace built for a need he had himself, so he knew what good looked like.
+10. **Generate pages for every narrow question.** Have Claude generate pages in bulk (he made over a thousand), one per finely split question, each targeting a different audience and need, each with an overview section and Q&A. He found ChatGPT's crawler picked up new pages very fast.
+11. **Attribute, then let the AI maintain it in a loop.** Track which pages are indexed and which bring revenue. Have the AI:
+    - improve the pages that convert best
+    - fix or remove pages that aren't indexed or have problems
+    - expand the topics that sell most
+    Rerun the loop on a schedule. He says he stepped in only a few times.
+
+# Success check
+- A per-assistant table of the long-tail and broad questions, showing named or not, with position, checked weekly for at least 4 weeks.
+- The brand is named for at least one narrow question on at least one assistant.
+- If scaled: indexed pages, AI-referred visits and revenue per page, so the maintenance loop has numbers to act on.
+
+# Example for a golf pro (added, not in source)
+- `<LONG_TAIL_QUESTIONS>`: "I'm over 50 and keep slicing my driver. Should I book lessons or a fitting near `<SUBURB>`?" or "Is a playing lesson or a range lesson better for breaking 90?"
+- Pages: the lesson offer with specifics, a Q&A page per question, and one comparison page (for example, playing lesson vs range lesson).
+
+# Source
+- Original: Deana Burke, Boys Club, "the fake brand that ChatGPT fell for", 5 Aug 2026: https://paragraph.com/@boysclub/the-fake-brand-that-chatgpt-fell-for
+- Relayed by Cybernews (Eglė Krištopaitytė), 10 Aug 2026: https://cybernews.com/ai-news/chatgpt-fake-deodorant/
+- Extra detail from Burke's BevNET interview: https://www.bevnet.com/video/how-to-get-ai-to-recommend-your-brand-over-competitors
+- Steps 9 to 11: 余温 (@gkxspace), 11 Nov 2026, in Chinese, translated: https://x.com/gkxspace/status/2120464771900379217
+- Burke ran one test with one brand. gkxspace says daily revenue rose from a few hundred to 1,000–2,000 (currency not given) and that 60% of a week's ~$4,900 in sales came from ChatGPT. His screenshots show this, but none of it is independently checked. Assistants change often, so rerun the test before trusting it.
+
+# Anti-patterns
+- Inventing a brand, product, credentials or ingredients to sell. Burke's brand was fake on purpose to prove a point. Use real offers and true claims only. (added, not in source)
+- Fake reviews or testimonials. Burke used none, and they break consumer law. (added, not in source)
+- In regulated niches such as finance, health or advice, publishing Q&A answers without a compliance check. (added, not in source)
+- Thousands of near-identical AI pages with nothing useful on them. Google's spam policies call mass-produced, low-value pages "scaled content abuse", and that can sink the whole site in search. Each page should answer its question with real specifics. (added, not in source)
+- Letting the AI delete pages or data unattended. Keep deletes behind a human check and a backup. One of gkxspace's screenshots shows Claude stopping before a database delete because it found real paying users. (added, not in source)
+- Judging the result on "best X" queries.
+- Treating "AI" as one channel. Pickup differed completely between ChatGPT with browsing, ChatGPT without it, Claude and Gemini.
+- Checking once in week 1 and giving up. Pickup took about 3 weeks.
 
 
 ========================================================================
