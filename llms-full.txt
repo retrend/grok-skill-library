@@ -1,4 +1,4 @@
-# Grok Bot Skill Library (full text, 75 skills)
+# Grok Bot Skill Library (full text, 78 skills)
 Index: https://retrend.github.io/grok-skill-library/index.json
 
 
@@ -1190,6 +1190,100 @@ Optional: hand the same skill to an always-on agent to ingest **new** saves on a
 
 
 ========================================================================
+# skill: build-and-test-small-roblox-games-with-claude
+# url: https://retrend.github.io/grok-skill-library/skills/build-and-test-small-roblox-games-with-claude.md
+========================================================================
+
+---
+name: Build and test small Roblox games with Claude
+description: >-
+  Use this when making simple Roblox games to earn from players: picking an open
+  genre, getting Claude to write the scripts one system at a time, running a
+  small ad test, then killing or scaling each game.
+---
+# Build and test small Roblox games with Claude
+
+Make simple Roblox games with Claude writing the scripts. Ship each one, test it with a small ad spend, then kill it or scale it. Each new game reuses scripts from the last one.
+
+Inputs: Roblox Studio, Claude, about 1 hour a day, and $50–100 ad budget per game.
+
+## Steps
+
+1. Find a genre that's still open.
+   - Open Roblox's Charts and look at Up-and-Coming.
+   - Look for games under 3 months old with 1,000+ players.
+   - New games breaking into a genre means it's still open. If the top 10 are all 5 years old, skip that genre.
+2. Play the top 3 games in that genre for 10 minutes each.
+   - Write down everything that's slow, confusing or boring.
+   - That list is your game design. You're building the same kind of game without the annoying parts.
+3. Describe your game in one sentence.
+   - Too vague: "an obby."
+   - Good: "escape a cage that gets harder every level, with friends."
+   - If you can't explain it in one sentence, players won't get it in 10 seconds.
+4. Get a build plan from Claude (about 15 minutes).
+   - Give Claude the one-sentence idea and your list of fixes.
+   - Ask for a build plan split into small systems: movement, levels, UI, saving, shop.
+   - The plan is your to-do list.
+   - Example prompt (added, not in source; the post gives no wording):
+     ```
+     Game idea: <ONE_SENTENCE_IDEA>
+     Problems to fix from the top games in this genre: <FIX_LIST>
+     Write a build plan for this Roblox game, split into small systems I can build one per session: movement, levels, UI, saving, shop. For each system, list what it does and how I'll test it in Studio.
+     ```
+5. Build one system per session.
+   - Claude writes the script. You paste it into Studio and test it.
+   - If something breaks, paste the error back to Claude to fix.
+   - At an hour a day, expect 2–3 weeks for a simple game. The author's fastest went from first line of code to live in under 24 hours.
+6. Spend extra time on the first 30 seconds.
+   - Most players decide straight away whether to stay.
+   - Give them a clear goal and fast action, with no confusing menus.
+   - The author says an hour here is worth more than an hour on any other part of the game.
+7. Make a thumbnail people want to click.
+   - Study the thumbnails of the top 5 games in your genre.
+   - Match their style and colours, but make it your own.
+   - On Roblox the thumbnail is your ad. A great game with a bad thumbnail gets no players.
+8. Add ways to earn before launch, then test.
+   - Game passes.
+   - In-game items and boosts.
+   - Rewarded video ads.
+   - Publish, put $50–100 into Roblox ads, and watch for 3–5 days.
+9. Kill it or scale it.
+   - If players leave fast, drop the game and start the next one.
+   - If players stay and come back, push updates and spend more on ads.
+10. Repeat in the same genre.
+    - The next game reuses about half the scripts from the last one, so each game gets quicker to build.
+    - Hits fade over time, so keep shipping.
+
+## Success check
+
+- A one-sentence pitch and a fix list exist before any code is written.
+- Every system was tested in Studio before the next one was started.
+- After the 3–5 day ad test, there's a written kill-or-scale decision based on whether players stayed and came back.
+
+## The author's income maths (unverified)
+
+- His game made $778 in one day with 3,000 players. He works that out as about 26 cents per player.
+- He then says a small game that "holds 100 players" makes about $26 a day, or $780 a month, so 10 such games make $7,800 a month.
+- Treat this as a claim. It's one game's best day. "3,000 players" and "holds 100 players" probably measure different things (players in a day versus players online at once), so the maths may not carry over. He sells a course, linked at the end of the thread.
+
+## Anti-patterns
+
+- Inventing a new genre instead of improving one that's already working.
+- Picking a genre where the top 10 games are years old.
+- Building the whole game in one go instead of one tested system at a time.
+- Launching with no way to earn, or with a thumbnail you didn't study.
+- Holding on to a game that players leave quickly.
+- Planning around $7,800 a month. The post itself says not every game will hit.
+
+## Source
+
+- Thread: https://x.com/ashdev__/status/2122225404908085645
+- Author: ash (@ashdev__)
+- Posted: 16 November 2026 (Sydney time)
+- The final post links to the author's paid course. Nothing from the course is included here.
+
+
+========================================================================
 # skill: build-motion-graphics-videos-with-claude-code
 # url: https://retrend.github.io/grok-skill-library/skills/build-motion-graphics-videos-with-claude-code.md
 ========================================================================
@@ -1402,6 +1496,210 @@ Field names change between Graph API versions. Check them against Meta’s curre
 
 - Generic version of the workflow pitched by Chris (@chr1stwits) for AdsUploader ([post, 6 Oct 2026](https://x.com/chr1stwits/status/2107372255919653288), [adsuploader.com](https://adsuploader.com)): template ad settings mirrored, creatives dropped once, ratio and thumbnail auto-match, API or XLSX launch, CLI/MCP for agents. Product not required.
 - API field references: Meta Marketing API docs for [asset customization rules](https://developers.facebook.com/docs/marketing-api/ad-creative/asset-feed-spec/asset-customization-rules/), [placement asset customization](https://developers.facebook.com/docs/marketing-api/dynamic-creative/placement-asset-customization/), [Advantage+ creative](https://developers.facebook.com/docs/marketing-api/creative/advantage-creative/get-started/), and [ad creative](https://developers.facebook.com/docs/marketing-api/reference/adcreative/).
+
+
+========================================================================
+# skill: comedy-morgue-cut-check
+# url: https://retrend.github.io/grok-skill-library/skills/comedy-morgue-cut-check.md
+========================================================================
+
+---
+name: Comedy Morgue cut check
+description: >-
+  Use this when Pod Satire Studio starts a Comedy Morgue episode or Shorts
+  batch, checks a cut before it is scheduled or shown to Steven, or handles his
+  notes on a cut.
+---
+# Comedy Morgue cut check
+
+Goal: every cut is right before it goes out or before Steven watches it. Recuts are a full round of work, so the checks come first.
+
+## 1. Cut Brief (before the script)
+
+Save to the episode folder as cut-brief.md. One screen:
+
+- Thesis in one sentence.
+- Brand: Comedy Morgue or Comedy Ombudsman, and why.
+- Runtime target: 16 to 22 minutes.
+- The five argument lines from the Comedy Morgue script method skill.
+- Format (Versus, Saga update, Autopsy) and the story score from /workspace/youtube-research/comedy-morgue/METHOD.md.
+- First spoken line and first frame.
+- The payoff, and how the first 20 seconds promise it.
+- Clip list: source URL, in and out times, length (20s or less), what the commentary adds.
+- Shorts: 5 ideas, one idea each, 35 to 50 seconds, each ends on its payoff.
+- Go-public list: the episode's time, and each Short's day and time, never two on one day.
+- Standing notes: every memory entry tagged "standing note", copied in full.
+- Open risks: rights questions, claims without a source yet.
+
+## 2. Self-check
+
+Check with tools, and say how you checked each line:
+
+1. Runtime is inside the target.
+2. First line and first frame match the brief.
+3. Every standing note is met.
+4. Narration is Kokoro am_onyx at speed 1.05 with no processing.
+5. Audio: no clipping, voice sits above music, no silence over 2 seconds unless planned, about -14 LUFS.
+6. Captions match the narration word for word.
+7. Every clip is within its planned length, 20s or less, and carried by commentary.
+8. Clips are roughly a quarter to a third of runtime.
+9. The format differs from at least one of the last two episodes (check sagas.md).
+10. Every factual claim about a real person has a source link in the description.
+11. Branding matches the brand line.
+12. Each Short ends on its payoff with no outro and has a distinct first frame.
+
+Fix each miss and re-check that line. List anything you could not check.
+
+## 3. Approval
+
+Under the weekly routine's standing yes, a cut that passes the self-check is scheduled; report the brief, the self-check and the go-public list in the run report. Otherwise send Steven one message: preview link, the brief, the self-check (with any unchecked lines) and the go-public list, and ask for all notes in one reply, with timestamps.
+
+## 4. Notes and recuts
+
+1. Number the notes. Ask one question only if a note is unclear; otherwise start.
+2. Change only the noted segments. Re-render. Re-run the self-check lines the change touches.
+3. Reply with a change log: note number, what changed, timestamp.
+4. Save any note that applies beyond this episode to memory as a standing note, with its reason and source. Update DAILY-RECIPE.md if the note changes the recipe, using the shared-file rule.
+5. After a second recut, ask Steven whether the brief itself is wrong before a third.
+
+## Anti-patterns
+
+- Scheduling or showing a cut that has not passed the self-check.
+- Rebuilding the whole episode for a note about one segment.
+- Recutting after each note while more notes are still coming.
+- Pasting long render logs into chat.
+- Treating "approve the upload" as covering anything not on the go-public list.
+
+
+========================================================================
+# skill: comedy-morgue-script-method
+# url: https://retrend.github.io/grok-skill-library/skills/comedy-morgue-script-method.md
+========================================================================
+
+---
+name: Comedy Morgue script method
+description: >-
+  Use this when Pod Satire Studio writes or rewrites a Comedy Morgue or Comedy
+  Ombudsman script, for an episode or a Short, or reviews one before it is
+  narrated.
+---
+# Comedy Morgue script method
+
+A script is an argument with jokes in it, read by a flat synthetic voice. Get the argument right first, then the jokes, then the sound. The full method is /workspace/youtube-research/comedy-morgue/METHOD.md.
+
+## 0. Read the voice file
+
+Read /workspace/youtube-research/comedy-morgue/VOICE.md before writing, if it exists. It holds passages Steven likes, passages he rejected and why, and his standing notes. Match the liked passages for rhythm and attitude; never reuse their wording. If it is missing, note that in the run report.
+
+## 1. The argument (before any prose)
+
+Write these five lines. If you can't, the episode isn't ready.
+
+1. Thesis: one sentence a fan of the target would disagree with.
+2. Why now: the moment from the past two weeks that makes it worth saying.
+3. Exhibits: 3 to 5 clips or facts, in order, each one worse or stranger than the last.
+4. The turn: the point where the story changes meaning (who benefits, what they said before, what it cost).
+5. The last line: it pays off the opening. Write it now.
+
+Then write the beat sheet from METHOD.md section 6, with exact transcript quotes for every clip.
+
+## 2. Structure for a 16 to 22 minute episode
+
+- Cold open: one clip under 20 seconds, then one dry line.
+- Thesis spoken by 0:45.
+- Three or four acts. Each act is one exhibit, has one job, and ends on a short button line.
+- The turn lands around the midpoint.
+- Close on the last line from step 1. No recap, no lesson, no sign-off.
+
+A Short is one exhibit and one button line. Nothing else.
+
+## 3. Clips and narration
+
+- Before a clip: one line telling the viewer what to listen for.
+- After a clip: add what the clip doesn't show. Context, a contradiction, a consequence, or the receipt.
+- Never describe what the viewer just watched.
+- The target's own words do the damage. Quote exactly, with the source.
+- Each clip 20 seconds or less.
+- Write the script as a segment file (VO, CLIP, HOLD, FREEZE), one Kokoro render per VO segment.
+- Narration carries more runtime than clips; clips are roughly a quarter to a third.
+
+## 4. Jokes
+
+- Specific beats general: the name, the number, the product, the exact quote.
+- Understate. The voice is a coroner reading a report, not a comic doing a bit.
+- One joke per paragraph. If two are fighting, keep the more specific one.
+- Aim at power, money and hypocrisy. Not looks, family or illness.
+- Set up a callback in act one and use it once more near the end.
+- Cut any joke that needs a second sentence to explain it.
+- A fact that is funny on its own doesn't need a joke on top.
+
+## 5. Writing for the Kokoro voice
+
+The narrator can't do sarcasm, emphasis or a knowing pause. The words have to do it.
+
+- Short sentences. One idea each. Vary length so three in a row don't match.
+- The funny word goes last in the sentence.
+- No brackets, no asides inside a sentence, no italics for stress.
+- Avoid questions that only work with a raised voice.
+- Spell out numbers, symbols and abbreviations the way they should be said.
+- Check names and odd words by generating them once; respell any that come out wrong.
+- A paragraph break is the only pause you have. Use one before a button line.
+
+Kokoro settings: am_onyx, speed 1.05, no processing, about 0.08s sentence gaps and 0.25s paragraph gaps. HOLD segments are the only extra pauses.
+
+## 6. Let the edit time the joke
+
+- The cut is the punchline. End a narration line on the setup and cut straight to the clip that answers it.
+- The planned silence. Write `[HOLD 1.0s]` after a line that needs to land, over a still or slow zoom on the target's face. A few times an episode, not every paragraph.
+- The freeze. `[FREEZE]` holds the clip's last frame for a beat after a damning line in the clip.
+- The understatement after. One flat line of a few words after a wild clip.
+
+## 7. Lines to cut on sight
+
+- Openers: "Let's dive in", "In the world of", "Picture this", "Buckle up".
+- Hinges: "But here's the thing", "Here's where it gets interesting", "And that's the point".
+- "It's not X, it's Y" and "This isn't just X, it's Y".
+- Lists of three adjectives or three examples in a row.
+- A rhetorical question followed by its own answer.
+- Morals: "And maybe that says something about all of us."
+- Hedges: "arguably", "it could be said", "in many ways".
+- Anything that sounds like a summary of the episode.
+
+## 8. Passes
+
+1. Draft one act at a time with the drafting prompt in METHOD.md section 8.3, from the five lines.
+2. Cut 15 percent. Lose the weakest joke in each act.
+3. Fact pass: every claim about a real person has a source link. Label opinion as opinion.
+4. Ear pass: narrate the first 60 seconds with Kokoro and listen back for stumbles, wrong names and flat spots. Fix the text, not the voice settings.
+5. Length: size from the measured words-a-minute rate in /workspace/comedy-morgue/DAILY-RECIPE.md (about 209 wpm), never 150.
+
+## 9. Final check
+
+Score each line yes or no, and fix every no:
+
+- A fan of the target would disagree with the thesis.
+- Each act has one job and ends on a button line.
+- No narration line repeats a clip.
+- Every joke names something specific.
+- Nothing from the cut-on-sight list is left.
+- The last line pays off the opening.
+- It matches VOICE.md and breaks no standing note.
+
+Approval: when the weekly routine runs under Steven's standing yes, there is no script lock; carry on to narration. Otherwise send Steven the five lines, the script and the three lines you're least sure of, and ask for a yes or all notes in one reply.
+
+## 10. Learning from his notes
+
+- Each line Steven rewrites goes into VOICE.md as a before and after pair, with his reason.
+- Each passage he praises goes in under "Liked".
+- A note that applies to every script becomes a standing note in memory, with its reason and source.
+- Use the shared-file rule on VOICE.md.
+
+## Anti-patterns
+
+- Writing prose before the five lines exist.
+- A script that retells the week with jokes attached and no thesis.
+- Fixing a weak joke by adding another one.
+- Copying the phrasing of a reference channel.
 
 
 ========================================================================
