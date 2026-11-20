@@ -1,4 +1,4 @@
-# Grok Bot Skill Library (full text, 78 skills)
+# Grok Bot Skill Library (full text, 83 skills)
 Index: https://retrend.github.io/grok-skill-library/index.json
 
 
@@ -2385,6 +2385,260 @@ After a redesign or a new feature, run implement again. Existing `stableKey`s mu
 
 
 ========================================================================
+# skill: find-a-page-s-missing-queries-with-gsc-and-bing-
+# url: https://retrend.github.io/grok-skill-library/skills/find-a-page-s-missing-queries-with-gsc-and-bing-.md
+========================================================================
+
+---
+name: Find a page's missing queries with GSC and Bing data
+description: >-
+  Use this when refreshing one existing page for SEO and you want to find the
+  search queries it misses or covers weakly, using both Google Search Console
+  and Bing Webmaster Tools query exports plus a live results-page check.
+---
+
+# Find a page's missing queries with GSC and Bing data
+
+Use both Google Search Console (GSC) and Bing Webmaster Tools query data for one page, have Claude find the query clusters the page misses or covers weakly, then make the edits by hand. The author says Bing often shows queries, impressions and positions for pages where GSC shows nothing, and that Bing's AI Performance report shows when a page is cited in AI answers.
+
+## Steps
+
+1. Pick one page to refresh. Note its URL, its primary target keyword and a one-line description of the audience or what the site sells.
+2. Export the page's queries from GSC: query, clicks, impressions, CTR and average position.
+3. Export the same columns for the same page from Bing Webmaster Tools. If Bing Webmaster Tools isn't set up for the site, verify the site there first (added, not in source: it can import a site already verified in GSC).
+4. Optional: check Bing's AI Performance report to see whether the page is cited in AI answers (per the author).
+5. Give Claude the article (pasted, or the URL to fetch) and both query lists, using the prompt below word for word with the slots filled in. Use a model that can search the web, so step 3 of the prompt checks the live results pages.
+6. Review the output yourself. Accept, reject or edit each recommendation. Don't apply it all automatically.
+7. Make the edits on the page: new or expanded sections, tables, FAQs, and the title tag and meta description.
+8. Resubmit the page for indexing in GSC and in Bing Webmaster Tools.
+9. Add internal links to the page from related pages. (The author covers this in a separate thread that isn't included here.)
+10. Send any "wrong intent" clusters to a new-page plan instead of forcing them into this page.
+11. Success check (added, not in source): after the page is re-crawled, give it a few weeks, then pull both query exports again. The target clusters should show more impressions or better average positions, and CTR should rise where the title or meta description changed.
+
+## The prompt (word for word; the author's square-bracket slots are shown here in angle brackets)
+
+```
+You are a senior SEO content strategist. I'm going to give you one page from my site plus the search queries it gets impressions for in Google Search Console and Bing Webmaster Tools. Your job is to find the queries I'm missing or covering poorly, and tell me exactly what to change on the page.
+
+## Inputs
+
+Page URL: <URL>
+Primary target keyword: <KEYWORD>
+Audience / what the site sells: <ONE_LINE>
+
+Article content:
+<PASTE THE FULL ARTICLE, OR SAY "fetch the URL above">
+
+GSC queries (query, clicks, impressions, CTR, avg position):
+<PASTE GSC EXPORT>
+
+Bing Webmaster Tools queries (query, clicks, impressions, CTR, avg position):
+<PASTE BING EXPORT>
+
+## What to do
+
+1. Merge and clean the queries
+- Combine both lists into one table. Mark each query as GSC only, Bing only, or both.
+- Group near-duplicates and close variants into clusters (e.g. "best X for Y", "X for Y 2026", "top X Y").
+- Note where Bing shows data that GSC doesn't. Treat Bing queries as real demand signals, not noise.
+
+2. Check every cluster against the article
+For each cluster, classify coverage as:
+- Covered well: the article answers it directly with a clear section
+- Covered weakly: mentioned in passing, buried, or answered vaguely
+- Not covered: the article doesn't address it at all
+- Wrong intent: the query wants something this page shouldn't be (flag it for a separate page instead)
+Quote the part of the article that covers it, or say "none."
+
+3. Check the SERP and search intent
+For the main clusters (and every "not covered" / "weak" cluster with meaningful impressions), search the query and look at the top results. Tell me:
+- Dominant intent (informational, commercial, transactional, navigational)
+- Dominant format (listicle, guide, comparison, tool, product page, etc.)
+- What the top-ranking pages include that mine doesn't (sections, tables, FAQs, examples, data, pricing, visuals)
+- Any SERP features worth targeting (featured snippet, People Also Ask, video)
+
+4. Prioritize opportunities
+Score each opportunity High / Medium / Low based on:
+- Impressions across both engines
+- Current position (positions 5 to 20 are the quickest wins)
+- CTR gap (high impressions, low CTR = title/meta or snippet problem)
+- Effort to fix (a new paragraph vs. a full new section vs. a new page)
+
+## Output format
+
+A. Summary: 3 to 5 sentences on the biggest gaps and the fastest wins.
+
+B. Query coverage table:
+| Cluster | Example queries | Source (GSC/Bing/both) | Impressions | Avg position | Coverage status | Priority |
+C. Content recommendations, ordered by priority. For each one:
+- Target queries
+- What to add or change (new H2, expand a section, add a table, add an FAQ, rewrite the intro, etc.)
+- Where in the article it goes
+- A suggested heading and 2 to 3 sentences describing what the section should say
+- Why: the intent or SERP evidence behind it
+
+D. Title tag and meta description: 2 to 3 rewritten options that pull in the strongest query clusters while keeping the primary keyword near the front. Keep titles under 60 characters and meta descriptions under 155.
+E. Pages to create instead: list any "wrong intent" clusters that deserve their own page, with a suggested title and target keyword for each.
+```
+
+## Related skills
+
+- `follow-steven-s-seo-and-aeo-bible`: the house rules for any edits this produces.
+- `pull-leads-from-seo-aeo-via-gsc-striking-distanc`: finding striking-distance queries across a whole site.
+- `find-google-ai-feature-wins-with-tiered-search-c`: prompts for winning Google's AI features.
+
+## Anti-patterns
+
+- Using GSC data only, which misses Bing-only queries (the point of the method).
+- Applying every recommendation without review. The author warns that fully hands-off SEO automation is how sites get wrecked.
+- Stuffing "wrong intent" queries into the page instead of planning a separate page.
+- Running the prompt without web access, so the results-page check in step 3 is guessed.
+- Rewriting the title or meta when the real problem is missing content, or the reverse. Check the CTR gap compared with the coverage status first.
+
+## Source
+
+- Thread: https://x.com/asaio87/status/2122592064068104348 by @asaio87, 17 Nov 2026 (Sydney time)
+- The prompt is copied word for word from post 4 of the thread, with its slots shown in angle brackets.
+
+
+========================================================================
+# skill: find-google-ai-feature-wins-with-tiered-search-c
+# url: https://retrend.github.io/grok-skill-library/skills/find-google-ai-feature-wins-with-tiered-search-c.md
+========================================================================
+
+---
+name: Find Google AI-feature wins with tiered Search Console prompts
+description: >-
+  Use this when you have a site's Google Search Console export and want ranked,
+  data-only Claude prompts to grow Google AI Overview and AI Mode impressions:
+  question headings, titles, positions 8 to 20, money pages, lost clicks, links,
+  comparison pages, translations, hubs and missing pages.
+---
+# Find Google AI-feature wins with tiered Search Console prompts
+
+Run ranked SEO moves against your own Google Search Console export. Every prompt works only on numbers from your data. Work through the S tier first, then the A tier.
+
+Inputs: Search Console access for the site, Claude (Claude.ai or Claude Code), the site URL, the brand name, and 3 to 5 facts about what the site sells.
+
+## Steps
+
+1. Export the data.
+   - In Search Console, open Performance > Search results, set the last 3 months and export.
+   - Keep Queries.csv and Pages.csv.
+   - For the translation prompt (step 14), also keep Countries.csv.
+   - For the lost-clicks prompt (step 10), export with Compare: last 3 months vs the previous period.
+2. Open a fresh Claude chat. Paste the base rules first, every time, and attach the files:
+   ```
+   You're an SEO analyst. Attached: Queries.csv and Pages.csv from my Search Console Performance export (last 3 months). Columns: Top queries, Clicks, Impressions, CTR, Position / Top pages, Clicks, Impressions, CTR, Position.
+   My site: <SITE_URL>. My brand: <BRAND>. What I sell: <3_TO_5_FACTS>.
+   Rules: use code for all math. Only use numbers from the files, no industry averages. Drop every query containing my brand and tell me how many. If brand is over 20% of impressions, stop and ask. Ignore queries under 100 impressions (20 if fewer than 20 queries remain). The export doesn't say which page ranks for which query, so any pairing is a "likely page" I must confirm in Search Console. Plain English, no filler.
+   ```
+3. Paste one tactic prompt from the tiers below after the base rules.
+4. Pick one tier and work it for a week. Don't jump between tiers.
+5. Before changing a page, confirm any "likely page" in Search Console (click the query, then the Pages tab). The export doesn't link queries to pages.
+
+### S tier: do first (quick, and works on pages Google already shows)
+
+6. Question headings with direct answers. Write headings as the questions people search, answer each in one direct line, and add an FAQ with matching schema.
+   ```
+   Task: find queries starting with how, what, why, when, can, is, does, should, which with CTR below my median CTR. Top 15 by impressions: query, likely page, impressions, position, the exact H2 to add, a 40 to 60 word answer from my facts only. Mark what needs my input.
+   ```
+7. Titles, H1s and descriptions. One H1 per page, the main search in the title, and no duplicate meta descriptions.
+   ```
+   Task: round each query's position to a whole number. For positions 1 to 5, take the median CTR per position (group 1 to 3 and 4 to 5 if under 5 queries). List queries with CTR under half the median: query, likely page, impressions, CTR vs median, 2 new titles under 60 characters, a description under 155. Extra clicks per month = impressions x (median minus current CTR) / 3.
+   ```
+8. Positions 8 to 20. Add a better section to the existing page instead of making a new page.
+   ```
+   Task: queries at average position 8 to 20, skip one-word queries. Top 15 by impressions: query, likely page, impressions, position, the heading plus 2 sentences to add. Extra clicks per month = impressions x (my median CTR at positions 3 to 5 minus current CTR) / 3. Say it's what it's worth if it reaches the top 5.
+   ```
+9. Money pages. Fix the page Google already shows for your best money search.
+   ```
+   Task: my 10 pages with the most impressions that could bring a sale or enquiry. For each, stop at the first real problem: 1) another page of mine looks aimed at the same search, 2) wrong page type for the search, 3) main query not in title or H1 or not answered near the top, 4) too thin for the topic. Table: page, main query, impressions, position, first problem, one-line fix. Say what you can't check without the live page.
+   ```
+10. Pages that lost 30% or more of their clicks. Refresh them, because Google already trusted them.
+   ```
+   Task: needs the compare columns (last 3 months vs previous 3). If missing, say so and stop. In Pages.csv, find pages with clicks down 30% or more (skip pages under 10 clicks before). If position got worse by 1 or more: refresh. If position held but impressions fell: demand, leave it. Table plus the first 3 refreshes in detail.
+   ```
+11. Internal links. Use real links, not JavaScript buttons, then link from pages that get traffic to pages that make money.
+   ```
+   Task: my top 10 pages by clicks, and my money pages: <MONEY_PAGE_URLS>. For each money page give 3 source pages from the top list, a sentence where the link fits and a descriptive anchor (no "click here").
+   ```
+
+### A tier: big effect, but weeks rather than days
+
+12. First-party data. Publish a free tool, calculator or stats page fed by your own users' results.
+   ```
+   Task: from my queries, find topics asking for a number, a score, a price or an average. List 5 with impressions and what data I'd need. Then ask me what data I actually hold, one topic at a time. Don't invent any figure.
+   ```
+13. One-to-one comparison pages for every pair in your category, with a matrix on the hub and a verdict and next step on each page.
+   ```
+   Task: find queries with "vs", "or", "alternative", "compare" or "difference". Group by pair. List pairs with impressions, and the page to build: title, 5 sections, a verdict line. If I have no pair-style queries, say so.
+   ```
+14. Translations. Translate proven pages into the languages Search Console already shows impressions from, and add hreflang.
+   ```
+   Task: from Countries.csv (and Queries.csv), list countries with impressions but few clicks where English isn't the main language. Rank by impressions. For the top 5, name the language, the 10 pages from Pages.csv to translate first, and what to check after (hreflang, broken placeholders in the text).
+   ```
+15. Hub guide sections. Put a guide under each hub's grid covering what the parts mean, how to choose, an FAQ and breadcrumb schema.
+   ```
+   Task: from Pages.csv, find hub or category pages with high impressions and low clicks. For the top 5, outline a guide section: 4 H2s from queries in the file, a 5-question FAQ, and what to link to. No filler.
+   ```
+16. Missing pages.
+   ```
+   Task: cluster my queries by topic. List clusters over 200 total impressions where no page in Pages.csv has matching URL words. Table: topic, example queries, impressions, page to build, page type. Max 10.
+   ```
+17. Duplicate and long URLs. Consolidate them with redirects so there's one page per search.
+   ```
+   Task: group my queries by topic. Flag topics where 2 or more pages have matching URL words and both have impressions. Table: topic, pages, combined impressions, advice (keep one and redirect, or retarget). Remind me to confirm in Search Console (click the query, Pages tab).
+   ```
+
+### B tier: check the fit for your niche (no prompts in the source)
+
+18. Get links to pages whose content is already right. This pays only after the content is fixed.
+19. Answer real questions on Reddit and Quora as a real person, only where your buyers ask.
+20. For a local business, match the name, address and phone number on every listing.
+21. Publish on a schedule. It compounds slowly.
+22. Build programmatic pages only if each one has its own unique data table. The same text with a new city name doesn't count.
+
+### C tier: do once (hygiene)
+
+23. Make pages static and fast. Nobody ranks for speed alone.
+24. Add structured data that matches the visible text. Google says AI features need no special schema.
+25. Submit a sitemap and check indexing.
+26. Set hreflang correctly and scan translations for broken text.
+
+### Track it
+
+27. In Search Console, go to Performance > Search results > Generative AI features (Beta), with Search type set to Web (text). This shows Google only, not ChatGPT or Perplexity.
+
+## Success check
+
+- Each prompt's output uses only numbers from the files, lists how many brand queries were dropped, and marks every page pairing as "likely".
+- One tier was worked for a week before the next was started.
+- The Generative AI features report was compared with the starting point after each tier.
+
+## Anti-patterns
+
+- Parasite SEO. Google's site reputation abuse policy targets it.
+- llms.txt as a priority. Google says AI Overviews and AI Mode need no AI text files.
+- Mass AI pages that say nothing new. Google's scaled content abuse policy covers them.
+- Running a tactic prompt without the base rules, which lets Claude use industry averages or invented numbers.
+- Treating a "likely page" as confirmed without checking it in Search Console.
+- Inventing figures for first-party data pages. Step 12's prompt asks what data you hold for a reason.
+
+## Caveats
+
+- The author's results (561K AI-feature impressions in 90 days, from about 700 a day to 17K) come from his own site, and his screenshot is in the repo. He says his timeline doesn't prove which change caused which jump, and it can't be checked from outside.
+- He says to run the prompts with "Fable 5.2" but ran them himself with Fable 5.1 and Opus. They're plain prompts, so any capable model that can run code on a CSV should work.
+- His tracking section promotes MentionFlow (mentionflow.ai), his own product. It isn't needed for this method.
+- For broader rules on SEO and getting cited in AI answers, see [Follow Steven's SEO and AEO Bible](sand-workflow:follow-steven-s-seo-and-aeo-bible). It agrees on llms.txt and scaled content. For a leads-first take on positions 4 to 20, see [Pull leads from SEO/AEO via GSC striking-distance queries](sand-workflow:pull-leads-from-seo-aeo-via-gsc-striking-distanc). (Cross-references added, not in source.)
+
+## Source
+
+- Post and X article: https://x.com/noelcetaSEO/status/2122702185792237736 (@noelcetaSEO, 18 November 2026, Sydney time)
+- Prompt repo: https://github.com/gc-digital-net/google-ai-features-tiers (commit bec35d2, 18 November 2026). The repo has no licence file. Prompts are copied word for word, with square-bracket slots changed to angle brackets.
+
+
+========================================================================
 # skill: find-implicit-state-machines-in-a-codebase
 # url: https://retrend.github.io/grok-skill-library/skills/find-implicit-state-machines-in-a-codebase.md
 ========================================================================
@@ -3351,6 +3605,59 @@ description: >-
 
 ## Source
 - https://x.com/poteto/status/2058975157503570132, @poteto, Mon May 25 18:15:06 +0000 2026 (2026-05-26 04:15 AEST)
+
+
+========================================================================
+# skill: grow-organic-traffic-through-a-core-update-with-
+# url: https://retrend.github.io/grok-skill-library/skills/grow-organic-traffic-through-a-core-update-with-.md
+========================================================================
+
+---
+name: Grow organic traffic through a core update with eight foundation moves
+description: >-
+  Use this when a site needs durable organic growth or protection from a Google
+  core update: fixing on-site basics, duplicates, comparison pages, hubs, unique
+  data, translation and a steady blog, with AI doing the typing and people
+  making the calls.
+---
+
+# Grow organic traffic through a core update with eight foundation moves
+
+Noel Ceta's eight-step playbook for a site that kept climbing through Google's November 2026 core update. AI does the typing: code, drafts written to a spec, translations, and checks against the spec. People decide which searches matter, which page answers each one, what the spec is, and what never ships.
+
+## Steps
+
+1. Match the homepage to the exact search. Use the exact phrase people type as the homepage H1 and title. Turn the H2s into the questions people ask, and add an FAQ. (His went from 10 to 17 questions.)
+2. Fix the basics before writing anything new. Crawl your own site and check that every page has one H1, menus are real links rather than JavaScript buttons, and pages are prerendered. (One of his pages had 11 H1s. Response time dropped from over 0.5 seconds to 0.1 to 0.2 seconds.)
+3. Remove duplicate pages. Find pages that share a title or meta description. Give each one its own URL, title and description, and redirect the old URLs. (He had 22 product pages sharing one title.)
+4. Give every comparison search its own page. Write the spec first: the sections, FAQs, internal links and a verdict. Then build every page to that spec so none ends up thin. (He built 136 pages to one spec: 8 sections, 6 FAQs and at least 8 internal links each.)
+5. Build hubs. Group related pages under a hub that has a guide section and an FAQ, and show related posts under every blog post so no page sits on its own. (He built 16 hubs of 1,500 to 1,900 words each.)
+6. Publish data nobody else has, such as your users' results, your own numbers or your own tool. If Google can get it elsewhere, it has no reason to rank you. (His is a tool showing live averages from his own users.) He calls this the step competitors can't copy.
+7. Translate what already works. In Search Console, find the countries already showing impressions. Translate your proven pages for them, add hreflang, then have someone review the translations. (He runs 15 languages, and one review pass fixed about 1,800 strings.)
+8. Keep the blog going. Real people write it, on a schedule, at a pace you can keep up for a year.
+9. Divide the work. AI writes the code, drafts to your spec and translations, and checks every page against the spec. You decide the target searches, which page answers each one, the spec itself, and the never-ship list (for example, made-up statistics).
+10. Success check (added, not in source): a fresh crawl shows one H1 per page and no duplicate titles or descriptions. Every comparison page passes the spec check. Search Console clicks and impressions are tracked weekly from before the change.
+
+## Related skills
+
+- `follow-steven-s-seo-and-aeo-bible`: house rules. Where this playbook and the Bible differ, the Bible wins.
+- `find-google-ai-feature-wins-with-tiered-search-c`: Noel's earlier prompt pack for Google AI features.
+- `find-a-page-s-missing-queries-with-gsc-and-bing-`: refreshing a single page's query coverage.
+- `build-a-best-product-listicle-page-for-ai-search`: comparison-style pages.
+
+## Anti-patterns
+
+- Writing new content before fixing H1s, links, rendering and duplicates.
+- Building comparison pages without a spec, which gives thin, uneven pages.
+- Orphan pages with no hub and no related links.
+- Publishing machine translations without a human review.
+- Letting AI decide strategy, or publish made-up statistics.
+- A burst of posts for one week, then silence.
+
+## Source
+
+- Thread: https://x.com/noelcetaSEO/status/2123545906733584682 by @noelcetaSEO, 20 Nov 2026 (Sydney time)
+- His results (5 clicks to 21,540 a month in 16 days, and 53.3K clicks and 4M impressions over 16 months with no paid ads) are his own screenshot claims, unverified. The thread doesn't name the site.
 
 
 ========================================================================
@@ -5712,6 +6019,102 @@ Jeffar_AI (@Jeffar_AI), https://x.com/Jeffar_AI/status/2121789769650958729, 15 N
 
 
 ========================================================================
+# skill: run-a-marketing-job-with-the-boring-marketing-sk
+# url: https://retrend.github.io/grok-skill-library/skills/run-a-marketing-job-with-the-boring-marketing-sk.md
+========================================================================
+
+---
+name: Run a marketing job with the Boring Marketing skills library
+description: >-
+  Use this when a marketing job (brand setup, positioning, local SEO, AI search
+  visibility, landing pages, copy, paid ads, ad creative, email, reviews,
+  social, prospecting local clients) should run on @boringmarketer's 32-skill
+  library, which is kept on the box at
+  /workspace/shared/boring-marketing-skills.
+---
+
+# Run a marketing job with the Boring Marketing skills library
+
+A library of 32 MIT-licensed marketing skills by @boringmarketer. They all read and write one shared set of brand files. The whole library, including its scripts and reference files, is copied to the box at `/workspace/shared/boring-marketing-skills` (pinned at commit bd5aaed). This skill picks the right one and runs it from there. It's too big to embed: about 680 KB of skill text plus Python scripts.
+
+## Steps
+
+1. Set up a working folder for each business: `/workspace/marketing/<CLIENT_SLUG>/`. Run every skill from inside it, because the skills write brand files to `./brand/` in the current folder. Never mix two businesses in one folder.
+2. If `./brand/brand.yaml` doesn't exist yet, run `start-here` first. It reads the site and reviews and writes the brand files that every other skill reads.
+3. Pick the skill from the table below. If the request is vague, use `start-here`, which routes it for you.
+4. Read `/workspace/shared/boring-marketing-skills/skills/<SKILL>/SKILL.md` in full, then any `references/` files it names.
+5. Wherever a skill says `${CLAUDE_SKILL_DIR}`, use `/workspace/shared/boring-marketing-skills/skills/<SKILL>`. Shared scripts are in `skills/start-here/scripts/` and `_system/scripts/`. Run them with `python3`.
+6. Optional API keys (Firecrawl, ScrapeCreators, the ad platforms) are named in each skill's frontmatter. Leave them out and the skill falls back to free tools. Never paste a key into a brand file.
+7. Follow the skill's own output format and checks, then apply the house rules below before handing anything over.
+8. Success check: the deliverable is saved in the client folder, there's a row for it in `./brand/assets.md`, and every claim and quote has a source.
+
+## House rules on top of the library (added, not in source)
+
+- SEO and AI-search work: Steven's SEO and AEO Bible (skill `follow-steven-s-seo-and-aeo-bible`, copy at `/workspace/shared/seo-aeo-bible.md`) takes priority over `ai-search`, `seo-content`, `site-audit` and `keyword-research` wherever they disagree. For example, the Bible gives llms.txt zero priority, while `ai-search` offers to build one.
+- Writing: Steven's `/workspace/shared/humanise-writing.md` takes priority over the library's own `seo-content/references/humanize.md`.
+- Meta ads: the `meta-ads` skill can launch campaigns through the API. Don't spend money or publish without Steven's yes. Also see `give-every-meta-ad-a-daily-wait-kill-refresh-sca`.
+- Outreach skills (`pitch-the-fix`, `email-sequences`, `speed-to-lead`) produce drafts only. Steven sends.
+- Financial-adviser clients (Niche Connect): check copy, reviews and testimonials against financial-advice promotion rules before use.
+- Ignore `automations/hooks/hooks.json`. It's set up for a different coding tool, and it isn't needed here.
+
+## Which skill
+
+| Job | Skill |
+|---|---|
+| First run, vague request, onboarding a client, routing | `start-here` |
+| Voice profile built from real quotes | `brand-voice` |
+| Angle, offer, first screen, answers to objections | `positioning-angles` |
+| Customers' own words from reviews, Reddit and comments | `audience-research` |
+| Rivals' messaging, pricing, ads and gaps | `competitive-intel` |
+| Google Business Profile compared with the top 3 in the map pack, plus a month of posts | `google-business-profile` |
+| 90-day local SEO plan | `local-seo-plan` |
+| Town pages that aren't the same page with the city name swapped | `service-area-pages` |
+| Whether ChatGPT, Perplexity, Gemini and Google's AI answers name you | `ai-search` |
+| Topic map instead of a long keyword spreadsheet | `keyword-research` |
+| Articles that rank and get cited | `seo-content` |
+| Many pages from one template and real data | `programmatic-seo` |
+| Crawl as Google and the AI crawlers do, then rank the fixes | `site-audit` |
+| Owner replies to reviews and the review request | `reviews` |
+| The site on a phone, as a customer sees it | `first-screen-check` |
+| One-offer landing page | `landing-page` |
+| Copy in the customer's words, with every claim checked | `direct-response-copy` |
+| Quiz, calculator or guide, built and working | `lead-magnet` |
+| Meta, Google, LinkedIn and TikTok campaigns with a test plan | `paid-ads` |
+| Make Google Ads count real calls and forms | `google-ads-tracking` |
+| Pause test: do the ads add calls or just take credit? | `ads-incrementality-check` |
+| Launch and check Meta campaigns through the API | `meta-ads` |
+| Text-back for missed calls and lead follow-up | `speed-to-lead` |
+| Ad creative in 21 formats, product images and video | `creative` |
+| Welcome, follow-up, win-back and cold email sequences | `email-sequences` |
+| Newsletter in the brand's voice, using click data | `newsletter` |
+| Read the numbers and feed back what worked | `performance-review` |
+| Rank local businesses losing the most customers (prospecting) | `find-local-clients` |
+| Short email pitching one broken thing and its fix | `pitch-the-fix` |
+| Posts built from your own best posts | `social-content` |
+| Long guide with named sources | `long-form-article` |
+| One piece turned into native posts for each platform | `content-atomizer` |
+
+There are also two multi-skill playbooks in `automations/workflows/` (`full-funnel-build.md`, `campaign-fanout.md`) and five recurring-job write-ups in `automations/routines/` (competitor watch, AI-citation monitor, monthly performance review, brand health check, weekly content). Turn one into a Grok Bot routine only if Steven asks.
+
+## Refreshing the copy
+
+The author says the repo may not stay public, so the box copy is the one to rely on. To update it: clone `https://github.com/boringmarketer/boring-marketing-skills` to a temp folder, compare it with `CHANGELOG.md`, then replace `/workspace/shared/boring-marketing-skills` and update `PINNED.txt`.
+
+## Anti-patterns
+
+- Running a skill without brand files in place, which gives generic output.
+- Running a skill from `/workspace` itself, which mixes up clients' brand files.
+- Importing all 32 as separate global skills. They depend on shared scripts and brand files, so they break when split up.
+- Letting the library's SEO advice override the Bible.
+- Using the `meta-ads` or outreach skills to spend money or send messages without Steven's yes.
+
+## Source
+
+- Post: https://x.com/boringmarketer/status/2122395509293989985 by @boringmarketer, 17 Nov 2026 (Sydney time)
+- Repo: https://github.com/boringmarketer/boring-marketing-skills, MIT licence, © 2026 Boring Marketing, LLC, commit bd5aaed
+
+
+========================================================================
 # skill: run-a-multi-channel-shorts-network
 # url: https://retrend.github.io/grok-skill-library/skills/run-a-multi-channel-shorts-network.md
 ========================================================================
@@ -7092,6 +7495,91 @@ description: >-
 - Judging the result on "best X" queries.
 - Treating "AI" as one channel. Pickup differed completely between ChatGPT with browsing, ChatGPT without it, Claude and Gemini.
 - Checking once in week 1 and giving up. Pickup took about 3 weeks.
+
+
+========================================================================
+# skill: write-a-cold-traffic-ad-from-a-17-element-brief
+# url: https://retrend.github.io/grok-skill-library/skills/write-a-cold-traffic-ad-from-a-17-element-brief.md
+========================================================================
+
+---
+name: Write a cold-traffic ad from a 17-element brief
+description: >-
+  Use this when writing a direct-response video ad or VSL script for cold
+  traffic (people who don't know the brand) and you need to work out what to
+  say, in what order, before writing.
+---
+
+# Write a cold-traffic ad from a 17-element brief
+
+Derick Carneiro's method for direct-response video ads aimed at people who don't know the brand. The ad has to make four "sales" before the product is pitched: the content, hope, value and impulse sales. Each sale is built from "reasons why" the viewer already wants to hear, and there are 17 of them in total. You find those reasons from facts about the product and from ads that are already winning, fill them into a brief, then write the brief into the structure of a proven reference ad.
+
+## The 17 elements (his ad psychology)
+
+Stage 1, the content sale (make them want to watch to the end):
+1. Format: why the viewer relaxes and doesn't suspect a sales pitch.
+2. Topic: why the viewer might care about what the ad says.
+3. Concept: why they feel they have to watch to the end.
+4. Visual hook: why they snap out of autopilot and stop scrolling.
+5. Copy hook: why they decide to keep watching.
+
+Stage 2, the hope sale (why it failed before and why this works):
+6. Identification: why they feel understood.
+7. Point of contact: what they already suspect causes the problem.
+8. Unique mechanism of the problem: the missing reason that proves their suspicion right.
+9. Unique mechanism of the function: the action needed to fix it, and why other solutions can't do it.
+10. Unique mechanism of the solution: the one thing that performs that action, with proof.
+11. Conditions: why other solutions don't offer it, and what makes it rare or hard to get.
+
+Stage 3, the value sale (why this product):
+12. Unique selling proposition: why this product is the best or only place to get the mechanism under the right conditions.
+13. Features: only the components that raise the odds of the result, make the dream outcome tangible, cut effort or shorten the timeline.
+14. Anchoring: why not solving the problem costs more (money, emotion, time) than the price.
+
+Stage 4, the impulse sale (why now):
+15. Risk reversal: why not buying is riskier than buying.
+16. What they gain by buying now.
+17. What they lose by waiting.
+
+## Steps
+
+1. Premises. List the facts you already have from the product page: brand, product, ingredients or components, attributes, price and bundles, guarantee, what buyers gain by buying now, and what they lose by waiting. Use only real facts.
+2. Pick the market (a group sharing one desire). For a running brand, use the market its highest-traffic landing pages and most-launched ads of the last 60 days target. For an untested product, list the markets it could serve, drop any with fewer than three competitors, and pick the one whose competitors grew traffic most in the last 30 days. He uses the GetHookd ad library (with its MCP and Claude) and TrendTrack for this. Don't gamble on a new market: save the risk for concept, format and hook.
+3. Pick the segment: a cluster within the market that shares a condition, identity or behaviour. Either reuse the segment that winning ads (yours or competitors') already target, or read Reddit threads to find one nobody is targeting.
+4. Profile the avatar in two layers.
+   - Psychographics: primary desire, main problem, secondary desires, pain points, dreams, fears. Take these from winning ads, funnels and past sales letters in the same market rather than doing days of fresh research. They barely change over time.
+   - Identity: demographics; behaviour (which competitor ads, videos, trends, hobbies, news and shows catch their attention, and any related conditions); perspective (beliefs, biases, enemies, allies, language). Put most of your research effort into behaviour, because that's where topics, formats, concepts and hooks come from.
+5. Brief the mechanism by answering four questions. Which point of contact does this avatar want to hear? Which problem mechanism are they most ready to accept? Which function mechanism? Which solution mechanism? Connect dots they already believe rather than teaching something new.
+6. Brief the content.
+   - Topic: list candidate facts, topics or situations the avatar cares about, using search demand and what winning ads cover, then pick one.
+   - Format: the look, narrative style and characters, with their roles. Reuse elements from ads already performing, and place at most one deliberate new bet.
+   - Concept: combine characters, narrative and topic into a one-line logline, then find the angle that makes the avatar need to hear more.
+   - Copy hook: pick a hook structure that's proven in ad libraries and fits the concept, then write it.
+   - Visual hook: something that fits the format and concept but breaks expectations.
+7. Brief the offer.
+   - Conditions: answer "why can't I just get this myself?"
+   - Unique selling proposition: show that the product meets each of those conditions, one by one, using only facts from the premises.
+   - Features: map each one to odds, dream, effort or time, and drop any that map to none.
+   - Anchoring: compare the daily price with the money, emotional and time cost of not solving the problem.
+8. Brief the close. Risk reversal (for example, a guarantee longer than the time results take), the gain from buying now (bundles, shipping), and the loss from waiting. Use only real deadlines and stock limits.
+9. Write. Download and transcribe a proven reference ad in the same market. Split it into mini-blocks by job (hook, belief break, mechanism reveal, product presentation and so on), then fill each block from the brief. You can do this by hand, or give a writing model the brief and the reference's block structure. The brief decides what gets said. The reference only decides the order and the rhythm.
+10. Batch by risk. Each new bet (concept, format, hook, segment) raises an ad's risk. For a scaling brand, run a few conservative ads, many moderate ones and some aggressive ones.
+11. Success check (added, not in source): every one of the 17 elements is filled in the brief with a reason, each factual claim traces back to a premise, and the script follows the reference's block order.
+
+## Anti-patterns
+
+- Opening a cold-traffic ad with price, product or offer.
+- Letting AI write the ad without a brief. He says this is why most AI-written ads fail.
+- Listing ingredients or features that don't serve odds, dream, effort or time.
+- Spending days on psychographic research that winning ads already contain, while neglecting behaviour research.
+- Betting on a new market when the gain is in a new concept, format or hook.
+- Promising fast results the avatar has stopped believing.
+- (Added, not in source.) Making health, medical, income or financial claims that the product page and the law don't support. His worked example is a capsaicin supplement for men with diabetes and erectile dysfunction, using a sexualised video-game character and a Black Friday "stock running out" close. Platform ad policies and consumer law in Australia and elsewhere restrict health claims, sexual content and false scarcity. For Niche Connect or any financial-adviser client, financial-promotion rules apply too. Check every claim before an ad runs.
+
+## Source
+
+- Post and X article "how I write ads that make strangers buy": https://x.com/DerickCarneiro_/status/2123414633935520052 by @DerickCarneiro_, 20 Nov 2026 (Sydney time)
+- His claims (that he's sold over $300M, trained 90% of Brazil's copywriters, and that readers will do $100k to $300k a day) are his own and unverified.
 
 
 ========================================================================
