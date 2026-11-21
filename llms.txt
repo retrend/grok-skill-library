@@ -1,6 +1,6 @@
 # Grok Bot Skill Library
 
-> 83 reusable playbooks (skills) for marketing, content, SEO/AI search, outreach, ads, design and AI-agent workflows.
+> 85 reusable playbooks (skills) for marketing, content, SEO/AI search, outreach, ads, design and AI-agent workflows.
 > Each skill is a Markdown file with YAML front matter (name, description) and step-by-step instructions.
 
 ## How to use this library
@@ -14,7 +14,7 @@
 
 All skills in one file: https://retrend.github.io/grok-skill-library/llms-full.txt
 Human browser with search: https://retrend.github.io/grok-skill-library/
-Last skill update: 2026-11-20
+Last skill update: 2026-11-21
 
 ## WebMCP tools
 
@@ -43,9 +43,11 @@ They run in the page and only read this site's own files. Manifest: https://retr
 - [build-a-competitor-ad-spy-catalog-for-the-creati](https://retrend.github.io/grok-skill-library/skills/build-a-competitor-ad-spy-catalog-for-the-creati.md): Use this when a marketing or creative team wants agents to collect competitor ads from public ad libraries, transcribe and describe them, store first-seen and last-seen dates, and expose the catalog through an API a coding agent can query for trends and gaps.
 - [build-a-grok-bot-roster-like-the-team](https://retrend.github.io/grok-skill-library/skills/build-a-grok-bot-roster-like-the-team.md): Use this when standing up a Grok Bot roster the way the team actually runs one — narrow bots, profile files, evidence, skill chains, watchers, handoffs, and day-one allow/park rules.
 - [build-a-local-business-lead-list-from-google-map](https://retrend.github.io/grok-skill-library/skills/build-a-local-business-lead-list-from-google-map.md): Use this when you sell to local trades (roofers, HVAC, electricians, plumbers, contractors) and need an outbound list no paid database has, built from Google Maps listings plus public license records and cleaned with Claude Code.
+- [build-a-marketing-engineering-stack-in-eleven-pr](https://retrend.github.io/grok-skill-library/skills/build-a-marketing-engineering-stack-in-eleven-pr.md): Use this when a marketer wants a learning path for running marketing with a coding agent (ads agents, programmatic SEO, AI video ads, AI citations, review mining, tracking, holdout tests, automated reports), or needs a concrete practice project and pass mark for one of those skills.
 - [build-a-personal-brand-on-x-in-three-steps](https://retrend.github.io/grok-skill-library/skills/build-a-personal-brand-on-x-in-three-steps.md): Use this when starting or resetting a personal or founder account on X and you need a repeatable plan: niche and profile, a content-pillar funnel mix, and a posting and packaging routine.
 - [build-a-production-agent-on-claude-managed-agent](https://retrend.github.io/grok-skill-library/skills/build-a-production-agent-on-claude-managed-agent.md): Use this when you are designing or building a hosted, long-running Claude agent (Claude Managed Agents, the Agent SDK, or your own harness) and need the architecture, multi-agent setup, scheduling, memory, credential handling, evals and multi-customer layout right.
 - [build-an-ai-hook-bank-from-saved-tiktoks](https://retrend.github.io/grok-skill-library/skills/build-an-ai-hook-bank-from-saved-tiktoks.md): Use this when you need a repeatable hook system for social/YouTube — save hooks while scrolling (especially TikTok), extract them into one DB with Louise’s Claude skill (github.com/louisedesadeleer/tiktok-hooks), then remap emotional structures onto product content without letting AI write the final line.
+- [build-an-mcp-app-plugin-for-google-antigravity](https://retrend.github.io/grok-skill-library/skills/build-an-mcp-app-plugin-for-google-antigravity.md): Use this when building an MCP tool or plugin that should show an interactive HTML view in Google Antigravity (inline in chat, side panel, full page or a custom file viewer) while still working as plain text in clients without UI support.
 - [build-and-test-small-roblox-games-with-claude](https://retrend.github.io/grok-skill-library/skills/build-and-test-small-roblox-games-with-claude.md): Use this when making simple Roblox games to earn from players: picking an open genre, getting Claude to write the scripts one system at a time, running a small ad test, then killing or scaling each game.
 - [build-motion-graphics-videos-with-claude-code](https://retrend.github.io/grok-skill-library/skills/build-motion-graphics-videos-with-claude-code.md): Use this when making launch promos, product updates, tweet-to-video or website-to-video motion graphics with a coding agent and an HTML or React video framework.
 - [bulk-launch-meta-ads-from-a-template-ad](https://retrend.github.io/grok-skill-library/skills/bulk-launch-meta-ads-from-a-template-ad.md): Use this when launching dozens to hundreds of Meta ad creatives a week across one or more brands — mirror a proven template ad’s settings, ingest a creative folder once, auto-pair aspect-ratio variants per placement, lock enhancement opt-outs, preview the build, then publish paused via the Marketing API or a bulk-import sheet, with an agent preparing and a human approving go-live.
