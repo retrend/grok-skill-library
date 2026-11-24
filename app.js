@@ -241,7 +241,10 @@
           ${authors ? `<span class="meta-item">${authors}</span>` : ""}
           <span class="meta-item">${skill.wordCount.toLocaleString("en-GB")} words</span>
           <span class="meta-item">Updated ${formatDate(skill.mtime)}</span>
-          <a class="meta-item raw-link" href="skills/${encodeURIComponent(skill.id)}.md" target="_blank" rel="noopener">Raw .md ↗</a>
+          <span class="raw-actions">
+            <a class="meta-item raw-link" href="skills/${encodeURIComponent(skill.id)}.md" target="_blank" rel="noopener">Raw .md ↗</a>
+            <a class="raw-download" href="skills/${encodeURIComponent(skill.id)}.md" download="${escapeHtml(skill.id)}.md" title="Download ${escapeHtml(skill.name)} as Markdown" aria-label="Download ${escapeHtml(skill.name)} as Markdown"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2v8.5"/><path d="M4.5 7.5 8 11.2 11.5 7.5"/><path d="M3 14h10"/></svg></a>
+          </span>
         </div>
         ${sourcesHtml}
       </div>

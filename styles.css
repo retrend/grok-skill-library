@@ -477,6 +477,37 @@ mark, .hl {
   color: var(--text-mute);
   font-variant-numeric: tabular-nums;
 }
+.raw-actions {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+}
+a.raw-download {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  padding: 0;
+  color: var(--accent);
+  border-radius: 6px;
+  text-decoration: none;
+  line-height: 0;
+}
+a.raw-download:hover {
+  background: var(--accent-soft);
+  color: #e9c4ff;
+  text-decoration: none;
+}
+a.raw-download:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+a.raw-download svg {
+  width: 14px;
+  height: 14px;
+  display: block;
+}
 .detail-sources {
   display: flex;
   flex-wrap: wrap;
