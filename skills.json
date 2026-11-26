@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-23T12:15:45.003270+00:00",
-  "count": 86,
+  "generatedAt": "2026-11-26T02:18:29.457235+00:00",
+  "count": 88,
   "skills": [
     {
       "id": "ad-lab-research-and-production-playbook",
@@ -15,7 +15,7 @@
         "tiktok"
       ],
       "wordCount": 607,
-      "mtime": "2026-11-15T04:14:18.977909+00:00",
+      "mtime": "2026-11-25T09:35:56.154392+00:00",
       "hasSource": false
     },
     {
@@ -35,7 +35,7 @@
         "answers"
       ],
       "wordCount": 401,
-      "mtime": "2026-11-15T04:14:16.217950+00:00",
+      "mtime": "2026-11-25T09:35:45.970342+00:00",
       "hasSource": true
     },
     {
@@ -57,7 +57,7 @@
         "scoring"
       ],
       "wordCount": 487,
-      "mtime": "2026-11-15T04:13:15.398697+00:00",
+      "mtime": "2026-11-25T09:35:03.942111+00:00",
       "hasSource": true
     },
     {
@@ -76,7 +76,7 @@
         "verification"
       ],
       "wordCount": 499,
-      "mtime": "2026-11-15T04:13:38.518050+00:00",
+      "mtime": "2026-11-25T09:36:18.982500+00:00",
       "hasSource": true
     },
     {
@@ -96,7 +96,7 @@
         "design"
       ],
       "wordCount": 494,
-      "mtime": "2026-11-15T04:14:22.905849+00:00",
+      "mtime": "2026-11-25T09:36:09.174454+00:00",
       "hasSource": true
     },
     {
@@ -116,7 +116,7 @@
         "ai-search"
       ],
       "wordCount": 775,
-      "mtime": "2026-11-15T04:13:56.154162+00:00",
+      "mtime": "2026-11-25T09:35:25.874239+00:00",
       "hasSource": true
     },
     {
@@ -136,7 +136,7 @@
         "ousterhout"
       ],
       "wordCount": 397,
-      "mtime": "2026-11-15T04:14:16.557945+00:00",
+      "mtime": "2026-11-25T09:35:44.046333+00:00",
       "hasSource": true
     },
     {
@@ -158,7 +158,7 @@
         "ugc"
       ],
       "wordCount": 550,
-      "mtime": "2026-11-15T04:13:24.514270+00:00",
+      "mtime": "2026-11-25T09:36:10.730461+00:00",
       "hasSource": true
     },
     {
@@ -181,7 +181,7 @@
         "tiktok"
       ],
       "wordCount": 583,
-      "mtime": "2026-11-15T04:13:38.126041+00:00",
+      "mtime": "2026-11-25T09:36:18.714499+00:00",
       "hasSource": true
     },
     {
@@ -201,7 +201,7 @@
         "outreach"
       ],
       "wordCount": 693,
-      "mtime": "2026-11-15T04:14:01.838122+00:00",
+      "mtime": "2026-11-25T09:35:24.498231+00:00",
       "hasSource": true
     },
     {
@@ -222,7 +222,7 @@
         "ugc"
       ],
       "wordCount": 887,
-      "mtime": "2026-11-15T04:14:32.445695+00:00",
+      "mtime": "2026-11-25T09:36:00.670413+00:00",
       "hasSource": true
     },
     {
@@ -241,7 +241,7 @@
         "outreach"
       ],
       "wordCount": 480,
-      "mtime": "2026-11-15T04:13:44.834148+00:00",
+      "mtime": "2026-11-25T09:35:07.214133+00:00",
       "hasSource": true
     },
     {
@@ -260,7 +260,7 @@
         "content"
       ],
       "wordCount": 481,
-      "mtime": "2026-11-15T04:13:37.218018+00:00",
+      "mtime": "2026-11-25T09:36:17.682494+00:00",
       "hasSource": true
     },
     {
@@ -281,7 +281,7 @@
         "local"
       ],
       "wordCount": 1403,
-      "mtime": "2026-11-15T04:14:02.646115+00:00",
+      "mtime": "2026-11-25T09:35:25.342236+00:00",
       "hasSource": true
     },
     {
@@ -302,7 +302,7 @@
         "ai-search"
       ],
       "wordCount": 1527,
-      "mtime": "2026-11-20T22:23:45.944829+00:00",
+      "mtime": "2026-11-25T09:36:13.554475+00:00",
       "hasSource": true
     },
     {
@@ -321,7 +321,7 @@
         "youtube"
       ],
       "wordCount": 573,
-      "mtime": "2026-11-15T04:14:30.933720+00:00",
+      "mtime": "2026-11-25T09:36:02.770423+00:00",
       "hasSource": true
     },
     {
@@ -342,7 +342,7 @@
         "production"
       ],
       "wordCount": 1129,
-      "mtime": "2026-11-15T04:13:56.626160+00:00",
+      "mtime": "2026-11-25T09:35:26.642243+00:00",
       "hasSource": true
     },
     {
@@ -368,7 +368,7 @@
         "tiktok"
       ],
       "wordCount": 999,
-      "mtime": "2026-11-15T04:13:38.026039+00:00",
+      "mtime": "2026-11-25T09:36:18.626498+00:00",
       "hasSource": true
     },
     {
@@ -386,7 +386,7 @@
         "plugin"
       ],
       "wordCount": 1048,
-      "mtime": "2026-11-21T15:51:36.096900+00:00",
+      "mtime": "2026-11-25T09:35:52.426374+00:00",
       "hasSource": true
     },
     {
@@ -406,7 +406,7 @@
         "small"
       ],
       "wordCount": 823,
-      "mtime": "2026-11-17T02:05:22.799711+00:00",
+      "mtime": "2026-11-25T09:35:46.858346+00:00",
       "hasSource": true
     },
     {
@@ -428,7 +428,7 @@
         "design"
       ],
       "wordCount": 874,
-      "mtime": "2026-11-15T04:13:47.350165+00:00",
+      "mtime": "2026-11-25T09:35:14.866176+00:00",
       "hasSource": true
     },
     {
@@ -452,7 +452,7 @@
         "ads"
       ],
       "wordCount": 1253,
-      "mtime": "2026-11-15T04:13:22.498346+00:00",
+      "mtime": "2026-11-25T09:36:02.814424+00:00",
       "hasSource": true
     },
     {
@@ -468,7 +468,7 @@
         "shorts"
       ],
       "wordCount": 552,
-      "mtime": "2026-11-17T01:23:26.020159+00:00",
+      "mtime": "2026-11-25T09:35:33.622280+00:00",
       "hasSource": false
     },
     {
@@ -484,7 +484,7 @@
         "morgue"
       ],
       "wordCount": 1115,
-      "mtime": "2026-11-17T01:23:16.443997+00:00",
+      "mtime": "2026-11-25T09:36:17.686494+00:00",
       "hasSource": false
     },
     {
@@ -504,7 +504,7 @@
         "codex"
       ],
       "wordCount": 353,
-      "mtime": "2026-11-15T04:13:17.362582+00:00",
+      "mtime": "2026-11-25T09:35:43.638331+00:00",
       "hasSource": true
     },
     {
@@ -523,7 +523,7 @@
         "design"
       ],
       "wordCount": 2239,
-      "mtime": "2026-11-15T04:13:39.206065+00:00",
+      "mtime": "2026-11-25T09:35:01.490092+00:00",
       "hasSource": true
     },
     {
@@ -550,7 +550,7 @@
         "workflows"
       ],
       "wordCount": 1490,
-      "mtime": "2026-11-15T04:14:22.557855+00:00",
+      "mtime": "2026-11-25T09:35:56.546393+00:00",
       "hasSource": true
     },
     {
@@ -570,7 +570,7 @@
         "page"
       ],
       "wordCount": 1073,
-      "mtime": "2026-11-18T02:24:31.655245+00:00",
+      "mtime": "2026-11-25T09:35:15.018177+00:00",
       "hasSource": true
     },
     {
@@ -591,7 +591,7 @@
         "google"
       ],
       "wordCount": 1690,
-      "mtime": "2026-11-17T22:50:42.991850+00:00",
+      "mtime": "2026-11-25T09:35:13.642170+00:00",
       "hasSource": true
     },
     {
@@ -612,7 +612,7 @@
         "engineering"
       ],
       "wordCount": 463,
-      "mtime": "2026-11-15T04:13:52.934173+00:00",
+      "mtime": "2026-11-25T09:35:13.134167+00:00",
       "hasSource": true
     },
     {
@@ -631,7 +631,7 @@
         "verification"
       ],
       "wordCount": 1184,
-      "mtime": "2026-11-15T04:14:32.961686+00:00",
+      "mtime": "2026-11-25T09:36:00.966415+00:00",
       "hasSource": true
     },
     {
@@ -647,7 +647,7 @@
         "ai-search"
       ],
       "wordCount": 6815,
-      "mtime": "2026-11-16T12:31:40.130445+00:00",
+      "mtime": "2026-11-25T09:35:35.478290+00:00",
       "hasSource": true
     },
     {
@@ -668,7 +668,7 @@
         "calibrated"
       ],
       "wordCount": 306,
-      "mtime": "2026-11-15T04:13:39.990081+00:00",
+      "mtime": "2026-11-25T09:36:20.254497+00:00",
       "hasSource": true
     },
     {
@@ -689,7 +689,7 @@
         "outreach"
       ],
       "wordCount": 1591,
-      "mtime": "2026-11-15T04:14:32.573693+00:00",
+      "mtime": "2026-11-25T09:36:02.646423+00:00",
       "hasSource": true
     },
     {
@@ -708,7 +708,7 @@
         "verification"
       ],
       "wordCount": 567,
-      "mtime": "2026-11-15T04:14:03.062111+00:00",
+      "mtime": "2026-11-25T09:35:25.898239+00:00",
       "hasSource": true
     },
     {
@@ -728,7 +728,7 @@
         "traffic"
       ],
       "wordCount": 625,
-      "mtime": "2026-11-20T11:41:16.602776+00:00",
+      "mtime": "2026-11-25T09:36:19.266502+00:00",
       "hasSource": true
     },
     {
@@ -748,7 +748,7 @@
         "realistic"
       ],
       "wordCount": 238,
-      "mtime": "2026-11-15T04:13:53.478172+00:00",
+      "mtime": "2026-11-25T09:35:13.506169+00:00",
       "hasSource": true
     },
     {
@@ -764,7 +764,7 @@
         "request"
       ],
       "wordCount": 256,
-      "mtime": "2026-11-15T04:13:23.090322+00:00",
+      "mtime": "2026-11-25T09:36:12.678470+00:00",
       "hasSource": false
     },
     {
@@ -785,7 +785,7 @@
         "content"
       ],
       "wordCount": 958,
-      "mtime": "2026-11-15T09:47:15.861854+00:00",
+      "mtime": "2026-11-25T09:35:51.950371+00:00",
       "hasSource": true
     },
     {
@@ -801,7 +801,7 @@
         "scout"
       ],
       "wordCount": 488,
-      "mtime": "2026-11-15T04:14:07.994058+00:00",
+      "mtime": "2026-11-25T09:35:37.202298+00:00",
       "hasSource": false
     },
     {
@@ -821,7 +821,7 @@
         "engagers"
       ],
       "wordCount": 1335,
-      "mtime": "2026-11-15T04:13:20.422432+00:00",
+      "mtime": "2026-11-25T09:36:04.862433+00:00",
       "hasSource": true
     },
     {
@@ -842,7 +842,7 @@
         "shorts"
       ],
       "wordCount": 726,
-      "mtime": "2026-11-15T04:14:03.658105+00:00",
+      "mtime": "2026-11-25T09:35:33.822281+00:00",
       "hasSource": true
     },
     {
@@ -863,7 +863,7 @@
         "ugc"
       ],
       "wordCount": 386,
-      "mtime": "2026-11-15T04:13:24.378275+00:00",
+      "mtime": "2026-11-25T09:36:10.458460+00:00",
       "hasSource": true
     },
     {
@@ -879,7 +879,7 @@
         "dream"
       ],
       "wordCount": 1371,
-      "mtime": "2026-11-22T22:14:54.710821+00:00",
+      "mtime": "2026-11-25T09:36:23.158431+00:00",
       "hasSource": false
     },
     {
@@ -900,7 +900,7 @@
         "outreach"
       ],
       "wordCount": 513,
-      "mtime": "2026-11-15T04:13:14.134781+00:00",
+      "mtime": "2026-11-25T09:35:06.922131+00:00",
       "hasSource": true
     },
     {
@@ -920,7 +920,7 @@
         "deep"
       ],
       "wordCount": 194,
-      "mtime": "2026-11-15T04:13:56.486161+00:00",
+      "mtime": "2026-11-25T09:35:26.238241+00:00",
       "hasSource": true
     },
     {
@@ -939,7 +939,7 @@
         "outreach"
       ],
       "wordCount": 1262,
-      "mtime": "2026-11-15T04:13:16.586625+00:00",
+      "mtime": "2026-11-25T09:35:42.122323+00:00",
       "hasSource": true
     },
     {
@@ -962,7 +962,7 @@
         "shorts"
       ],
       "wordCount": 1142,
-      "mtime": "2026-11-15T04:13:39.382068+00:00",
+      "mtime": "2026-11-25T09:35:01.730094+00:00",
       "hasSource": true
     },
     {
@@ -978,7 +978,7 @@
         "markifact"
       ],
       "wordCount": 183,
-      "mtime": "2026-11-15T04:13:22.590342+00:00",
+      "mtime": "2026-11-25T09:36:02.866424+00:00",
       "hasSource": false
     },
     {
@@ -995,7 +995,7 @@
         "shorts"
       ],
       "wordCount": 567,
-      "mtime": "2026-11-20T22:21:09.030501+00:00",
+      "mtime": "2026-11-25T09:35:02.422100+00:00",
       "hasSource": false
     },
     {
@@ -1015,7 +1015,7 @@
         "prompting"
       ],
       "wordCount": 972,
-      "mtime": "2026-11-15T04:13:37.802033+00:00",
+      "mtime": "2026-11-25T09:36:18.442498+00:00",
       "hasSource": true
     },
     {
@@ -1035,7 +1035,7 @@
         "kurzgesagt"
       ],
       "wordCount": 3505,
-      "mtime": "2026-11-15T04:13:14.466759+00:00",
+      "mtime": "2026-11-25T09:35:46.670346+00:00",
       "hasSource": true
     },
     {
@@ -1051,7 +1051,7 @@
         "outreach"
       ],
       "wordCount": 568,
-      "mtime": "2026-11-15T04:13:15.306703+00:00",
+      "mtime": "2026-11-25T09:35:03.778110+00:00",
       "hasSource": true
     },
     {
@@ -1070,7 +1070,7 @@
         "outreach"
       ],
       "wordCount": 882,
-      "mtime": "2026-11-15T04:14:22.617854+00:00",
+      "mtime": "2026-11-25T09:36:09.022453+00:00",
       "hasSource": true
     },
     {
@@ -1092,7 +1092,7 @@
         "design"
       ],
       "wordCount": 1337,
-      "mtime": "2026-11-15T04:14:32.913687+00:00",
+      "mtime": "2026-11-25T09:36:04.794433+00:00",
       "hasSource": true
     },
     {
@@ -1113,7 +1113,7 @@
         "engineer"
       ],
       "wordCount": 521,
-      "mtime": "2026-11-15T04:14:32.441695+00:00",
+      "mtime": "2026-11-25T09:36:04.318431+00:00",
       "hasSource": true
     },
     {
@@ -1133,7 +1133,7 @@
         "drafts"
       ],
       "wordCount": 604,
-      "mtime": "2026-11-15T04:14:32.957686+00:00",
+      "mtime": "2026-11-25T09:36:00.962415+00:00",
       "hasSource": true
     },
     {
@@ -1149,7 +1149,7 @@
         "review"
       ],
       "wordCount": 376,
-      "mtime": "2026-11-15T04:13:32.578018+00:00",
+      "mtime": "2026-11-25T09:36:21.426470+00:00",
       "hasSource": false
     },
     {
@@ -1169,7 +1169,7 @@
         "content"
       ],
       "wordCount": 507,
-      "mtime": "2026-11-15T04:13:39.226065+00:00",
+      "mtime": "2026-11-25T09:35:01.526093+00:00",
       "hasSource": true
     },
     {
@@ -1189,7 +1189,7 @@
         "signal"
       ],
       "wordCount": 1215,
-      "mtime": "2026-11-15T04:14:15.609958+00:00",
+      "mtime": "2026-11-25T09:35:51.950371+00:00",
       "hasSource": true
     },
     {
@@ -1209,7 +1209,7 @@
         "landing-pages"
       ],
       "wordCount": 423,
-      "mtime": "2026-11-15T04:13:53.138173+00:00",
+      "mtime": "2026-11-25T09:35:22.446220+00:00",
       "hasSource": true
     },
     {
@@ -1228,7 +1228,7 @@
         "content"
       ],
       "wordCount": 861,
-      "mtime": "2026-11-15T10:04:19.346038+00:00",
+      "mtime": "2026-11-25T09:35:55.722389+00:00",
       "hasSource": true
     },
     {
@@ -1249,7 +1249,7 @@
         "landing-pages"
       ],
       "wordCount": 976,
-      "mtime": "2026-11-18T02:21:55.336979+00:00",
+      "mtime": "2026-11-25T09:35:52.806376+00:00",
       "hasSource": true
     },
     {
@@ -1269,7 +1269,7 @@
         "shorts"
       ],
       "wordCount": 324,
-      "mtime": "2026-11-15T04:13:20.762417+00:00",
+      "mtime": "2026-11-25T09:36:10.490460+00:00",
       "hasSource": true
     },
     {
@@ -1284,7 +1284,7 @@
         "youtube"
       ],
       "wordCount": 1349,
-      "mtime": "2026-11-15T04:14:17.673928+00:00",
+      "mtime": "2026-11-25T09:35:45.366339+00:00",
       "hasSource": true
     },
     {
@@ -1305,7 +1305,7 @@
         "tiktok"
       ],
       "wordCount": 735,
-      "mtime": "2026-11-15T04:14:16.657943+00:00",
+      "mtime": "2026-11-25T09:35:53.310378+00:00",
       "hasSource": true
     },
     {
@@ -1327,7 +1327,7 @@
         "outreach"
       ],
       "wordCount": 2116,
-      "mtime": "2026-11-15T04:13:29.610105+00:00",
+      "mtime": "2026-11-25T09:36:12.982472+00:00",
       "hasSource": true
     },
     {
@@ -1347,7 +1347,7 @@
         "hour"
       ],
       "wordCount": 442,
-      "mtime": "2026-11-15T04:13:37.226018+00:00",
+      "mtime": "2026-11-25T09:36:17.702494+00:00",
       "hasSource": true
     },
     {
@@ -1368,7 +1368,7 @@
         "landing-pages"
       ],
       "wordCount": 453,
-      "mtime": "2026-11-15T04:14:04.458097+00:00",
+      "mtime": "2026-11-25T09:35:35.806291+00:00",
       "hasSource": true
     },
     {
@@ -1390,7 +1390,7 @@
         "ugc"
       ],
       "wordCount": 621,
-      "mtime": "2026-11-15T04:14:32.181699+00:00",
+      "mtime": "2026-11-25T09:36:04.030429+00:00",
       "hasSource": true
     },
     {
@@ -1411,7 +1411,7 @@
         "outbound"
       ],
       "wordCount": 1442,
-      "mtime": "2026-11-15T04:13:45.230151+00:00",
+      "mtime": "2026-11-25T09:35:07.542135+00:00",
       "hasSource": true
     },
     {
@@ -1430,7 +1430,29 @@
         "outreach"
       ],
       "wordCount": 859,
-      "mtime": "2026-11-15T04:13:47.402166+00:00",
+      "mtime": "2026-11-25T09:35:16.970188+00:00",
+      "hasSource": true
+    },
+    {
+      "id": "set-up-google-antigravity-agent-teams-with-gemin",
+      "name": "Set up Google Antigravity agent teams with Gemini 4",
+      "description": "Use this when setting up Google Antigravity with Gemini 4 Neon: the 4 settings, which Gemini 4 model for which job, the 7 agent modes, a /swarm with verifier rules, a read-only reviewer, /learn and one automation, with optional Claude or GPT checkers and 10 ready prompts.",
+      "body": "# Set up Google Antigravity agent teams with Gemini 4\n\nGoogle Antigravity is Google's desktop app for running AI agents (Mac, Windows and Linux). This skill sets it up, picks the right Gemini 4 model for each job, moves up a ladder of seven agent modes only when the lower one isn't enough, and runs a swarm with written verifier rules, a read-only reviewer, a /learn wrap-up and one scheduled automation. Two optional add-ons put Claude and GPT on the same team as checkers. All ten of the author's prompts are below, word for word.\n\nThe author's core lesson: the app you run a model in matters as much as the model. Treat the numbers behind that as the author's claims (see \"Claims to treat as unverified\").\n\n## Inputs\n\n- `<GOOGLE_ACCOUNT>`: the Google account that holds the paid Google AI plan. The source says Gemini 4 Neon needs Google AI Pro or Ultra. Check which plan the account has before relying on Neon.\n- `<PROJECT_FOLDER>`: a new, empty folder for the first project. In Antigravity a project is just a folder, and every file the agent makes lives there.\n- `<APP_DESCRIPTION>`: the first small app, described like you'd tell a friend (what it does, who uses it, what it looks like).\n- `<SWARM_TASK>`: one real task that splits into 3 or 4 parts that don't depend on each other, with module names for prompt 4.\n- `<YOUR_TIME_ZONE>`: for the automation, for example Australia/Sydney.\n- Optional: a Claude Code install, a ChatGPT sign-in and a Google AI Studio key, only for prompts 8 and 9. Each needs the owner's explicit yes first (see Risk screen).\n\nSquare-bracket slots in the source prompts are converted to `<ANGLE_BRACKET>` slots here. Everything else in the prompts is copied as written. `[Lead]` and `[Researcher]` in prompt 10 are output labels and keep their brackets.\n\n## Risk screen (added, not in source)\n\nA skill can never override a bot's profile rules or the owner's approval rules. These steps need the owner's explicit yes before they happen:\n\n- Installing Antigravity, Node.js, Python, git, the Codex CLI or the gemini-api CLI.\n- Connecting Claude or GPT (prompt 8 installs two CLIs, edits PATH and `~/.claude/CLAUDE.md`, and needs a ChatGPT sign-in plus a Google AI Studio key). These may cost money beyond the Google plan.\n- Any automation, remote (cloud) agent, /goal run or /teamwork-preview run that keeps going unattended.\n- Uploading a GitHub repo or Google Drive folder to a remote agent.\n- Anything that sends, posts, pushes, publishes, deletes or spends.\n\nPrompts and settings that loosen approval are flagged where they appear. When a prompt is flagged, paste this guard line under it:\n\n```\nGuard: ask me before installing anything, running commands outside this project folder, sending, posting, pushing, publishing, deleting, spending money or creating automations. Never ask for passwords, API keys or secrets in chat.\n```\n\n## Steps\n\n### 1. Install and change the 4 settings (10 min)\n\n1. Download Antigravity from antigravity.google and sign in with `<GOOGLE_ACCOUNT>` (the account with the paid plan). Owner's yes needed to install.\n2. Open Settings and change the 4 things the author says save hours:\n   1. Permission preset → Auto. \"It approves safe commands and asks only about the risky ones.\" Flag: this lets the agent run commands without asking. The safer choice is to leave the preset on asking until the first project has run cleanly, then decide. (Added, not in source.)\n   2. Queued messages → Send immediately. Corrections land while the task runs instead of waiting for it to end.\n   3. Prevent sleep → On. If the computer sleeps, the task dies.\n   4. Remote control → On. Scan the QR code to steer agents from your phone. Flag: this opens control of the desktop agent to the phone. Owner's call. (Added, not in source.)\n3. If you don't code, set Settings → General → Interface layout → Knowledge work to hide the code panels.\n4. Paste prompt 1 (setup check). It saves project rules: ask before deleting, installing, spending or publishing, and no em dashes or \"it's not X, it's Y\".\n\n### 2. Pick the model for the job\n\nGemini 4 has four models: Hydrogen, Argon, Neon and Carbon. Three matter for agent work:\n\n| Model | Use it for |\n|---|---|\n| Hydrogen | Fast everyday small stuff, and the grunt work under Orchestrator |\n| Neon (launched 18 Nov 2026) | Almost everything, on High |\n| Carbon | Only the longest jobs |\n\n- Run Neon on High by default. The source cites Greg Isenberg: High is the sweet spot, and Extra High burns far more quota for about 2 points.\n- For a big but boring job, pick Orchestrator in the model menu: Neon plans, Hydrogen does the routine work and hands back to Neon when stuck.\n- Neon is brief. Ask for detail when you want it.\n\n### 3. Build the first app (20 min)\n\n1. Projects → New project → pick `<PROJECT_FOLDER>`. Model: Gemini 4 Neon on High.\n2. Paste prompt 2 with `<APP_DESCRIPTION>`. Its two fixed lines stop the cheap prototype look and make the agent launch the app itself. Flag: \"launch it for me\" runs the code the agent wrote, inside the project folder. Fine for a local test app.\n3. If the agent says \"run this in terminal\", type: launch it for me.\n4. Never accept \"done\" without proof. After every build, send:\n\n```\nOpen my app in the browser, click every button, try to break it, fix what fails and show me a screenshot of the final version.\n```\n\n### 4. Climb the 7-rung ladder only as far as needed\n\nStart at the bottom. Move up only when the rung below isn't enough. Higher rungs do more and burn quota faster. Prompt 3 has one prompt for each rung.\n\n1. Just Ask. One agent, one chat. Rewrite an email, fix a bug. Most days this is enough.\n2. Sub-agents. The agent sends a helper on one side job while it keeps working. Often happens on its own.\n3. Orchestrator. Neon plans, Hydrogen does the routine work. Pick it in the model menu. For one bigger job that needs a plan. Google says it stretches the quota further.\n4. Workflows (`/run-workflow`). The agent writes a script that runs the same job many times at once (20 listings, 20 helpers). Save it and rerun it next week. Read the script before it runs (the prompt asks for this).\n5. Swarm (`/swarm`). Different jobs that must fit together, plus a checker. Every worker spends its own quota.\n6. Boost (`/boost`). Many models attack one hard problem, criticise each other's answers and run real tests. For the bug nobody can find. Paid plans only.\n7. Teamwork (`/teamwork-preview`). Projects that run for hours or days. It interviews you first, then works with checks at every step. Paid plans, still in preview. Flag: long unattended run, owner's yes first.\n\n### 5. Run one swarm with verifier rules (30 min)\n\n1. Check the job splits into 3 or 4 parts that don't depend on each other. If it doesn't, stay on a lower rung. Don't swarm a 2-minute task.\n2. Type `/swarm` and the task. The chat becomes the coordinator. It splits the job, gives each worker its own piece, adds a verifier for every 2 to 4 workers and puts everyone on one shared board you can watch live. Idle agents sleep and burn nothing.\n3. Use prompt 4. Two rules from the source make it work:\n   - One module per worker, so they build at the same time without breaking each other's files.\n   - Write the verifier rules into the prompt: real browser, zero console errors, nothing overlaps, data survives a reload.\n4. Watch the board. Click any worker to read its chat, message it directly or stop it if it goes off track.\n\n### 6. Add a read-only reviewer\n\nCustom sub-agents are plain Markdown files. Each runs in its own context window, in parallel, so the main chat doesn't fill up. You can limit what each one can touch. Use prompt 5 to make a reviewer that reads files and runs tests but can never edit. Call it before every merge.\n\n### 7. End every session with /learn (2 min)\n\nType `/learn`. Antigravity turns your corrections from the session into permanent project rules or a new skill. Read the proposal before approving it, the same way you'd review any skill change. Two more commands:\n\n- `/grill-me` interviews you one question at a time before it starts. Pair it with `/plan` for a real plan.\n- `/goal` keeps working without stopping until the goal is verified done. Flag: unattended run, owner's yes first.\n\n### 8. Set one automation (5 min)\n\n1. Use prompt 6 with `/automation` and a plain-English schedule (\"Every Monday at 8am\" works). Owner's yes before creating it.\n2. Each run starts fresh with no memory of the last one, so put everything it needs into the instruction. Prompt 6 does this by reading last week's report first.\n3. Runs can start up to 15 minutes late. Every past run is saved.\n4. Remote agents can also start a task in the cloud from a GitHub repo or Google Drive folder. That uploads the folder. Owner's yes first.\n\n### 9. Optional: a second model as checker (next day, per the source)\n\nEvery model has blind spots, and a second model catches them. The source points to Andrej Karpathy's llm-council repo (github.com/karpathy/llm-council) for the idea: several models answer, review each other's answers anonymously, and a chairman merges the best.\n\n- Option A, inside Antigravity (nothing to install): on paid plans the model picker has Gemini, Claude Opus 5.5 and an open GPT model. Workers run on the chat's model by default, but any worker or the verifier can use a different one. Use prompt 7 so Neon builds and Claude checks. `/btw` asks a side question in a read-only fork while the main agent keeps working. The source says that on the free plan, Claude and GPT leave on 30 November.\n- Option B, inside Claude Code: prompt 8 makes Claude the lead with Gemini (gemini-api CLI) and GPT (Codex CLI) as advisers. Prompt 9 runs a three-model council before a big decision. Needs paid keys or sign-ins and installs software: owner's yes first, and treat it as optional.\n- For a single-model version of the council idea, see run-a-five-advisor-council-prompt-before-a-decis.\n\n### 10. Optional: design a full team with prompt 10\n\nPrompt 10 designs a 3 to 5 agent team as a graph with a quality loop (max 2 rounds) and a weekly improvement loop that changes nothing without your yes. In Antigravity it builds each agent as a skill. Its own rules already say to ask before installing, publishing, pushing, sending, deleting, spending or creating automations. \"Ship it\" pushes to a new GitHub repo, so only say it when you mean it.\n\n## The one-evening protocol (from the source)\n\n1. Install Antigravity, change the 4 settings, run prompt 1 (10 min)\n2. Build one small app you'd actually use with prompt 2 (20 min)\n3. Run one /swarm on a real task with verifier rules (30 min)\n4. End the session with /learn (2 min)\n5. Set one automation for Monday morning (5 min)\n\nTomorrow, add the second model.\n\n## Prompt pack\n\nThe author also posted prompt 10 on its own as a card (x.com/0xCodila/status/2125255995882696848, 25 Nov 2026 Sydney).\n\n### Prompt 1: Setup check (paste into Antigravity)\n\n```\nYou are my Antigravity setup assistant. Check my setup step by step and fix what you can:\n1. Tell me which model and thinking level this chat uses. I want Gemini 4 Neon on High.\n2. Check that git, Node.js and Python are installed. If something is missing, tell me what and ask before installing.\n3. Save these as project rules, in the place Antigravity reads rules from, so every new chat in this project follows them:\n   - Visual quality matters as much as function.\n   - Never use em dashes or \"it's not X, it's Y\" in any text you write for me.\n   - Ask before deleting files, installing software, spending money or publishing anything.\n   - When you finish, explain what you did in 3 short lines.\n4. Check that you can open and test a web page in the browser. If it needs an extension or a setting, tell me exactly what to click.\n5. Give me a 3-line report: what's ready, what I must do myself, what to try first.\n```\n\nSafe as written: it asks before installing. Run it first.\n\n### Prompt 2: Your first app (with the 2 fix lines)\n\n```\nBuild me <APP_DESCRIPTION: what it does, who uses it, what it looks like>.\n\nVisual quality is just as important as functionality. Make it look like a polished, modern product, not a prototype.\n\nBuild it as a <native Mac/Windows app | local web app>. When it's done, launch it for me.\n```\n\nFlag: \"launch it for me\" runs code the agent wrote. Fine inside the project folder.\n\n### Prompt 3: One prompt for each rung of the ladder\n\n```\n1 Just Ask:      Rewrite this email to sound confident and half as long: <TEXT>\n2 Sub-agents:    While you work on <MAIN_TASK>, send a helper to check <SIDE_JOB> and report back.\n3 Orchestrator:  (pick Orchestrator in the model menu) Plan and build <ONE_BIGGER_JOB>. Show me the plan before you start.\n4 Workflows:     /run-workflow For every file in <FOLDER>, <CHECK_OR_EXTRACT_X> and give me one table. Show me the script before it runs.\n5 Swarm:         /swarm <SEE_PROMPT_4>\n6 Boost:         /boost Find the root cause of <BUG> and fix it. Prove the fix with a failing test that now passes.\n7 Teamwork:      /teamwork-preview Build <BIG_PROJECT>. Interview me first. Don't make anything up, check real sources.\n```\n\nFlag: rungs 6 and 7 are paid and rung 7 runs for hours or days. Owner's yes before rung 7. Add the guard line to rungs 4 to 7. (Added, not in source.)\n\n### Prompt 4: Swarm with verifier rules\n\n```\n/swarm Build <PROJECT_NAME>: <ONE_LINE_DESCRIPTION>.\n\nWorkers, one module each, no one touches another's files:\n- @shell: shared layout and design system, done first\n- @<MODULE_1>: <WHAT_IT_DOES>\n- @<MODULE_2>: <WHAT_IT_DOES>\n- @<MODULE_3>: <WHAT_IT_DOES>\n\nVerifier rules (reject anything that fails):\n- Open the app in a real browser and click every button\n- Zero console errors\n- No overlapping elements at 1280x720 and on a phone screen\n- Data survives a page reload\n\nSend failures back to the worker who wrote it. Report to me only when every check passes, with the number of checks run\n```\n\nFlag: every worker spends its own quota. Add the guard line if Permission preset is on Auto. (Added, not in source.)\n\n### Prompt 5: Read-only reviewer sub-agent\n\n```\nCreate a custom sub-agent for this project called \"reviewer\", in the format Antigravity uses for custom sub-agents. Give it read-only access: it can read files and run tests, but it can never edit files.\n\nIts instructions:\nYou review every change in this project before I merge it.\n1. Read the diff and run the tests.\n2. List real problems only: bugs, security risks, data loss, broken UI. Skip style nitpicks.\n3. For each problem: file, line, why it breaks, the fix in one line.\n4. Verdict: PASS or FAIL.\n\nThen show me the file you created and tell me how to call the reviewer.\n```\n\nSafe as written: read-only by design.\n\n### Prompt 6: Monday automation\n\n```\n/automation Every Monday at 8am, <YOUR_TIME_ZONE>: <check folder X / look at my calendar for this week / pull last week's numbers from file Z>. Read last week's report in reports/ first so you can compare. Summarize what changed in 5 bullets, flag anything that needs me today, and save the report to reports/<DATE>.md. Ask me only before reading new folders.\n```\n\nFlag: creates an unattended scheduled run. Owner's yes before creating it, and keep \"Ask me only before reading new folders\". (Added, not in source.)\n\n### Prompt 7: 3 models in one Antigravity swarm\n\n```\n/swarm <YOUR_TASK>.\nRun the workers on Gemini 4 Neon.\nRun the verifier on Claude Opus 5.5, so a different model checks the work.\nBefore the final report, ask a second verifier on GPT-OSS-120b to review only the risky parts: money, data, permissions.\nTell me what each model caught.\n```\n\nFlag: Claude Opus 5.5 and GPT-OSS-120b in the picker need a paid plan. (Added, not in source.)\n\n### Prompt 8: GPT + Claude + Gemini as one team (paste into Claude Code)\n\n```\nSet up an AI team on this computer. You (Claude Code) are the lead. Gemini 4 Neon is your advisor and media team. GPT is your builder and reviewer. I only talk to you; you call the other two yourself.\n\n1. CHECK: detect my OS and what is already installed (Node.js, Codex CLI, gemini-api CLI).\n2. INSTALL: OpenAI's Codex CLI (github.com/openai/codex) and Google's Gemini API CLI (github.com/google-gemini/gemini-api-cli). Use only the install steps from their official READMEs.\n3. SIGN IN: tell me exactly what to type in a separate terminal window: run \"codex\" and choose \"Sign in with ChatGPT\", then set up gemini-api with my Google AI Studio key the way its README says. Never ask me to paste a key or password into this chat.\n4. MODELS: run \"gemini-api models list --all\" and check the Codex model list. Use the exact IDs for Gemini 4 Neon and the strongest GPT my plan offers. If one is missing, tell me and use the closest.\n5. HELPERS: create two scripts in ~/.ai-team/bin and add them to PATH:\n- ask-gemini \"task\" <FILES>: sends the task and files to Gemini 4 Neon. Read-only. With --image, --video, --music or --voice it calls the matching gemini-api command and saves the file to ./assets.\n- ask-gpt <project folder> \"task\": runs Codex in that folder in the workspace-write sandbox, never full access. For reviews, read-only.\n6. RULES: add an \"AI team\" section to ~/.claude/CLAUDE.md:\n- Small edits: do them yourself.\n- Big plans: write yours, and at the same time send my original words (not your draft) to ask-gemini. Check every claim before you trust it, merge both plans, and tell me what you took from each.\n- Backend and data work with a fixed interface: send it to ask-gpt with the interface and acceptance tests. Read its diff and run the tests yourself.\n- Images, video, music and voice-over for the project: ask-gemini with the matching flag.\n- Before every merge, ask-gpt reviews the diff. Only money, data loss, permissions, messages to other people and broken releases block it. Max 2 rounds, then ask me.\n- Report in plain words: what's done and what I'll see.\n7. TEST: run one small task through the whole team (plan a simple to-do app and make its icon) and show me who did what.\n\nDone means: both tools work, the scripts run, the rules are in CLAUDE.md and the test passed. Stop and ask only when you need my sign-in or before anything that costs money beyond my plans\n```\n\nFlag: installs two CLIs, edits PATH and ~/.claude/CLAUDE.md, and needs a ChatGPT sign-in and a Google AI Studio key. Its last line asks the agent to stop only for sign-in or spending, so it would install without asking. Optional, owner's yes first, and paste the guard line under it. (Added, not in source.)\n\n### Prompt 9: Model council before a big decision (paste into Claude Code after prompt 8)\n\n```\nBefore we decide, run a council. The question: <YOUR_QUESTION, e.g. \"Which stack should I use for this app?\" or \"Is this plan safe to ship?\">\n\n1. Ask three models the same question separately, so none sees the others: you (Claude), Gemini 4 Neon through ask-gemini, and GPT through ask-gpt in read-only mode. Give all three the same context files.\n2. Remove the names, label the answers A, B and C, and send all three back to each model. Ask each one to rank them and point out the weakest claim in each.\n3. As chairman, write the final answer: where all three agree, where they disagree and why, and your recommendation in 3 lines.\n4. Show me the three original answers under the summary.\n\nDon't change any files. If a claim can be checked (a price, a command, a version), check it before it goes into the final answer.\n```\n\nSafe as written once prompt 8 is set up: it changes no files. Needs prompt 8 first.\n\n### Prompt 10: My Gemini 4 Neon AI team (the card from my last post)\n\n```\n<prompt>\n<role> You are my AI team architect and builder running on Gemini 4 Neon. Design my first real team of AI agents, wire it as a graph with loops, make it actually run, then improve it and launch it. A real team, not a demo. </role>\n<mode> First check what you can do here. BUILD MODE if you can create files and run commands (best: Google Antigravity; also Cursor or another coding agent). CHAT MODE if you can't (Gemini app, AI Studio). </mode>\n<intake> Grill me first: max 5 sharp questions in one message, each with your recommended answer and a free option if one exists. Ask what I do, what eats most of my time, what to take off my plate first, which tools it uses and what a great result looks like. Then wait. </intake>\n<use_case> Pick ONE first job that saves me the most time this month and say in 2 lines why the others can wait. Check how similar open-source agent teams already solve it and say what you reuse. </use_case>\n<team> 3 to 5 agents. Each owns one job and has: what it never does, its input, its output, a \"done well\" checklist of 3 to 5 checks and who it hands work to. A Lead is the only agent I talk to. A Checker scores every result against \"done well\". Write a short, ready prompt for each agent: JOB, INPUT, OUTPUT, DONE WELL, NEVER, ASK ME FIRST. </team>\n<graph> Wire the team as a graph. Nodes: agents, tools and my approval point. Edges: every handoff, labeled with what it carries. Independent steps run in parallel and join before the next step. The Lead routes by clear if/then rules. Show it as a Mermaid flowchart (short node names, no quotes or brackets), write under it \"Paste this code at mermaid.live to see the picture\", then a plain arrow version. If you can make images, also draw it with the same labels. </graph>\n<loops> Quality loop: when a check fails, the Checker sends the work back to the right agent with the exact fixes. Max 2 rounds, then it comes to me with what is still wrong. Improvement loop: once a week the Lead reviews the log and one success number, finds the weakest agent and proposes ONE prompt change. Nothing changes until I say yes. The Lead keeps a short team memory and reads it before every run. </loops>\n<antigravity> In Google Antigravity: use Neon on medium or high, tell me to pick Orchestrator (Neon plans, a cheaper model builds) and to connect the team's apps in Customizations. Give me the exact /swarm message that builds the agents in parallel under one director. Use browser use to study my references and check your own output. Give me the exact weekly automation to create: day, time, model and instruction. </antigravity>\n<build_mode> In Antigravity, build each agent as a skill so the team runs right there. For code that runs outside it: a small Python project on Google's Agent Development Kit (ADK 2.x). Read the docs at adk.dev for the version you install and never guess an API. Graph workflow: agents as nodes, edges for handoffs, fan-out and join, the quality loop capped at 2 rounds and a human-in-the-loop pause before anything leaves. Don't use the deprecated SequentialAgent, ParallelAgent or LoopAgent. Model: Gemini 4 Neon with its exact ID from the Gemini API models page. The API key comes only from an environment variable I set. Log every run. Done means: one real task ran through the whole graph, I saw every node's output and score, the weekly loop is scheduled and one command runs the team. </build_mode>\n<chat_mode> Run the graph right here, node by node, labeling every part like [Lead] or [Researcher]. Do parallel steps one after another, then join them. Run the quality loop for real: score, fixes, round number, max 2 rounds. End with [Lead] and the final answer. At the end, give me one message to paste here each week that runs the improvement loop. </chat_mode>\n<iterate> Never call v1 done. Run it on one real task of mine and judge it honestly against \"done well\". Then give me your 3 best ideas to make it clearly better. I pick, you build v2, then v3, and show the versions side by side. Take my feedback while you work. </iterate>\n<rules> Ask me before installing anything, publishing, pushing, sending, deleting, spending money or creating automations. Never ask for passwords, API keys or secrets in chat. If something fails, say what failed and the next fix. Never pretend a step ran. </rules>\n<launch> When I say \"ship it\": clean up the project, write a README (what it solves, install in 3 steps) and push it to a new GitHub repo. Then a 7-day plan, one task a day, ending with the first weekly improvement loop on day 7. </launch>\n<output> Send it in parts and end each with \"next?\": 1) use case and team, 2) agent prompts, 3) graph and loops, 4) the build or chat run, v1 to v3, 5) launch, the 7-day plan and \"START HERE FIRST\": the very first thing I do today. </output>\n<start> Say the mode, grill me with your 5 questions and wait. </start>\n</prompt>\n```\n\nIts <rules> block already asks before installing, publishing, pushing, sending, deleting, spending or creating automations. \"Ship it\" pushes to a new GitHub repo. (Added, not in source.)\n\n## Success check\n\n- Prompt 1's 3-line report says what's ready, and the project rules are saved where Antigravity reads them.\n- The first app opens, the browser check clicked every button, and you have a screenshot of the final version.\n- One swarm finished with the verifier reporting the number of checks run and every check passing.\n- The reviewer sub-agent exists, is read-only, and returns PASS or FAIL with file, line and fix.\n- /learn produced a proposal you read before approving.\n- One automation is scheduled, and its first saved run did what the instruction said.\n- Nothing was installed, sent, pushed, published, deleted or paid for without the owner's yes. (Added, not in source.)\n\n## Claims to treat as unverified\n\nThese are the author's claims on 26 Nov 2026 (Sydney time). None were tested here.\n\n- \"Gemini 4 Neon + Antigravity is the BEST setup right now\" and \"most BRILLIANT setup in the world\": opinion.\n- Theo's test: GPT 6.2 Astra spent 10+ days and got 46% smaller and 56% slower. Neon in Antigravity with swarm took 10 hours and got 5.95x smaller (47.44 MB to 7.97 MB) and up to 20x faster.\n- Artificial Analysis Intelligence Index: #3 at launch (61). Coding Agent Index: #1 (58.6).\n- Price: $3 per 1M input tokens, $15 per 1M output, 1M context. 32% cheaper per task than Carbon at its default High setting.\n- SWE-sweep: 12.8% in a basic setup, 39.0% inside Antigravity.\n- Chase AI blind test: a 3D jet engine explainer looked about the same from Neon (12 min, $2.16) and Claude Opus 5.5 (1 h 14 min, $15).\n- \"A model that has Opus 5.5 level for MUCH cheaper price.\"\n- Use stories: Surya's 4-agent swarm caught a mover booked after the lease ended; Matthew Berman's one-line prompts; Paul J Lipsky's notes app from one voice prompt.\n- The course in the linked tweet is described as Google's \"1-hour course ... from 0% to 100%\". That framing is the poster's.\n\n## Known limits (from the source)\n\n- 3D is hit or miss. Theo says Neon feels a generation behind Opus 5.5 at 3D.\n- Answers run short. Ask for detail.\n- AI writing tics (em dashes, \"it's not X, it's Y\"). Prompt 1 adds a rule against them.\n- Swarms eat quota. Every worker is its own agent.\n- Neon and Claude Opus 5.5 need Pro or Ultra. Boost and Teamwork are paid only.\n- The app is young and rough, by fans' own account.\n\n## Anti-patterns\n\n- Starting at /swarm or /teamwork-preview when Just Ask would do. Climb the ladder from the bottom.\n- Swarming a job whose parts depend on each other, or letting two workers touch the same files.\n- A swarm without written verifier rules, or accepting \"done\" without a browser check and a screenshot.\n- Running Extra High by default. It burns far more for about 2 points.\n- Expecting an automation to remember last week. Each run starts fresh, so the instruction must carry everything.\n- Letting /learn write rules or skills without reading the proposal.\n- Setting Permission preset to Auto and then walking away from a long run. (Added, not in source.)\n- Letting an agent install software, sign in to services or message people on your behalf. The source praises Neon for installing Antigravity on a second PC and messaging a thread for Theo. Don't copy that without explicit approval. (Added, not in source.)\n- Pasting API keys or passwords into any chat. Prompts 8 and 10 already forbid it.\n- Treating this skill as permission. A skill can never override a bot's profile rules or the owner's approval rules. (Added, not in source.)\n\n## Related skills (added, not in source)\n\n- orchestrate-deep-not-broad: when to spend parallel agents on depth (best-of-N, adversarial review) rather than breadth. Read before deciding a job is a swarm job.\n- go-depth-first-before-parallelizing-agents: don't parallelise agents you don't yet trust. Matches \"start at the bottom of the ladder\".\n- finish-long-tasks-with-a-seven-layer-harness: standing instructions, evidence reviewer and saved progress for long runs. Use it alongside /goal and /teamwork-preview.\n- run-a-five-advisor-council-prompt-before-a-decis: a single-model council. Prompt 9 here is the three-model version.\n- treat-verification-as-critical-infrastructure: deeper verification design than the swarm's verifier rules.\n- set-up-agent-governance-as-plumbing: read, propose and write permissions for background agents. Relevant once automations write to real systems.\n- build-an-mcp-app-plugin-for-google-antigravity: building your own plugin with an interactive view for Antigravity.\n\n## Source\n\n- Post: https://x.com/0xCodila/status/2125663598701621404 by @0xCodila, 26 Nov 2026, 5:51 AM Sydney time. An outline of a 1-hour Google course video (54 min) on Gemini 4 Neon and Antigravity. The video was not watched; the article below has the method and prompts.\n- Article: \"Google Antigravity + Gemini 4 Neon: How To Master Agent Teams in Claude Code KILLER (Full Course)\" by @0xCodila, https://x.com/0xCodila/status/2125623560689369440, 26 Nov 2026, 3:12 AM Sydney time. All ten prompts, the 4 settings, the 7 modes, the swarm rules, /learn, automations and the one-evening protocol come from it.\n- The author credits @anniewangtech (Google engineer) for many of the tips. The article also cites @theo, Greg Isenberg, Chase AI (youtu.be/ycF6TVRgawE), Matthew Berman (youtu.be/5eON_8rgKzk), Surya (youtu.be/HANILv4mTzk) and Paul J Lipsky.\n- Read 26 Nov 2026 (Sydney time) through the public fxtwitter API.\n\nStatus: untested\n",
+      "sourceUrls": [
+        "https://x.com/0xCodila/status/2125663598701621404",
+        "https://x.com/0xCodila/status/2125623560689369440"
+      ],
+      "authors": [
+        "@0xCodila",
+        "@anniewangtech",
+        "@theo"
+      ],
+      "tags": [
+        "agents",
+        "outreach"
+      ],
+      "wordCount": 5211,
+      "mtime": "2026-11-26T02:18:29.457235+00:00",
       "hasSource": true
     },
     {
@@ -1450,7 +1472,7 @@
         "shorts"
       ],
       "wordCount": 416,
-      "mtime": "2026-11-15T04:14:16.005953+00:00",
+      "mtime": "2026-11-25T09:35:45.790341+00:00",
       "hasSource": true
     },
     {
@@ -1471,7 +1493,7 @@
         "youtube"
       ],
       "wordCount": 492,
-      "mtime": "2026-11-15T04:13:28.710132+00:00",
+      "mtime": "2026-11-25T09:36:17.566494+00:00",
       "hasSource": true
     },
     {
@@ -1487,7 +1509,7 @@
         "checklist"
       ],
       "wordCount": 186,
-      "mtime": "2026-11-15T04:13:31.198058+00:00",
+      "mtime": "2026-11-25T09:36:13.666475+00:00",
       "hasSource": false
     },
     {
@@ -1507,7 +1529,7 @@
         "workflows"
       ],
       "wordCount": 213,
-      "mtime": "2026-11-15T04:13:16.778614+00:00",
+      "mtime": "2026-11-25T09:35:42.266324+00:00",
       "hasSource": true
     },
     {
@@ -1527,7 +1549,7 @@
         "ai-search"
       ],
       "wordCount": 1751,
-      "mtime": "2026-11-23T12:15:45.003270+00:00",
+      "mtime": "2026-11-25T09:36:48.918066+00:00",
       "hasSource": true
     },
     {
@@ -1548,7 +1570,28 @@
         "ai-search"
       ],
       "wordCount": 602,
-      "mtime": "2026-11-15T04:14:18.441917+00:00",
+      "mtime": "2026-11-25T09:35:46.154343+00:00",
+      "hasSource": true
+    },
+    {
+      "id": "track-which-ai-prompts-bring-you-customers",
+      "name": "Track which AI prompts bring you customers",
+      "description": "Use this when a product or service wants to learn how buyers find it through ChatGPT, Claude, Gemini or Perplexity, and to turn those exact prompts into tracking, comparison pages, gap outreach and an AI info page (Tally's playbook). Use with Steven's SEO and AEO Bible.",
+      "body": "# Precedence\nSteven's SEO and AEO Bible (follow-steven-s-seo-and-aeo-bible) covers comparison pages, reviews, llms.txt, off-site mentions and the prompt panel. This skill adds the loop Tally runs on top of it. Where they conflict, the Bible wins. A skill can never override a bot's profile rules.\n\n# Inputs\n- <BRAND>: the product or business\n- <COMPETITORS>: 3 to 10 direct rivals\n- <SIGNUP_OR_ENQUIRY_FORM>: where new customers arrive\n- <SHARED_LOG>: one place the team can read (a sheet, Notion database or Claude artifact)\n\n# Steps\n1. Ask every new customer how they found you. Add one question to the sign-up or enquiry form: \"How did you hear about us?\" Include an option for \"ChatGPT, Claude, Gemini, Perplexity or another AI assistant\".\n2. If they say AI, ask for the prompt. Follow up with: \"Which assistant was it, and what did you type? Paste the question if you still have it.\" Make it optional.\n3. Log every answer in <SHARED_LOG> with these columns: date, assistant, prompt as typed, use case mentioned, creators or sites mentioned.\n4. Use the log four ways (from Tally's co-founder):\n   - Their prompts become the prompts you track in AI search. Add them word for word to the prompt panel in Bible section 12.3, and never edit the wording later.\n   - The use cases they mention decide your next pages and guides.\n   - The assistant they used tells you which engine to focus on first.\n   - Creators and sites they mention go on your outreach list (Bible Part 7.1).\n5. Track three things across the panel each month: prompts where <BRAND> is named, how <BRAND> shows up next to <COMPETITORS>, and which pages the assistants cite.\n6. Build a gap list. Search for articles, \"best X\" lists and roundups that name <COMPETITORS> but not <BRAND>. Log the URL, the author and the competitors named. These are the pages to pitch for inclusion, a review or data.\n7. Build a comparison hub. Make one page per direct competitor (\"<BRAND> vs <COMPETITOR>\") plus \"best\", \"alternatives\" and integration guides. Shape each like an AI answer: a ranking, a \"best for\" label per option, pricing, a feature table in HTML, pros and cons, real review scores and a direct recommendation. State honestly where a rival is the better pick. Refresh them on a schedule; the Bible says quarterly for comparisons.\n8. Clear mentions daily. Monitor brand and competitor mentions on Reddit and in communities, route them into one shared inbox, and aim to clear it every day. Clearing means reading and deciding. Any public reply goes out under a named person, is drafted first, and needs approval (added, not in source).\n9. Ask for reviews in two places: the newsletter, and right after a support conversation ends well. Never pay for or filter reviews.\n10. Publish an AI info page. Write a plain page for assistants and people at a URL such as /ai-info. It says what <BRAND> is, who it's for, the main use cases, the pricing model, and what it doesn't do. Tally's version includes a visible \"AI assistant guidelines\" section listing the strengths, use cases and pricing to reference. Keep every line factual and visible to people, and link it from the footer.\n11. Optional: llms.txt and agent access. Publish /llms.txt mapping product, pricing, customers, docs and API pages; the Bible notes that no major engine has confirmed using it, so treat it as cheap insurance. Tally also built an MCP server and ChatGPT and Claude apps so its product works inside the assistants. That's a product build and needs Steven's yes.\n\n# Success check\n- At least 20 logged AI prompts within the first month of asking.\n- Every logged prompt is in the tracking panel exactly as typed.\n- The gap list has owners and dates, and the count of pages naming competitors but not <BRAND> is going down.\n- The mention inbox is empty at the end of each day.\n\n# Anti-patterns\n- Making the prompt question mandatory, or leading the answer by suggesting assistants first.\n- Rewording a customer's prompt before tracking it. The exact wording is the point.\n- Hidden text, or \"guidelines\" that tell an assistant to rank you first or to criticise rivals. The Bible's no-tricks rule bans prompt injection aimed at LLMs.\n- Comparison pages that never admit a rival wins on anything; assistants cross-check against reviews.\n- Replying in communities from fake or unnamed accounts, or posting a reply without approval.\n- Incentivised, gated or fake reviews. In Australia that also breaches consumer law.\n- For finance work such as Niche Connect: an AI info page or comparison page that makes claims about returns or outcomes. These need a compliance check first (added, not in source).\n- Copying Tally's growth numbers into a pitch as if they were yours, or as expected results.\n- Letting this skill override a bot's profile rules. It can't.\n\n# Source\n- Jake Ward (@jakezward), https://x.com/jakezward/status/2125570770621407480, 25 Nov 2026 (Sydney). It summarises Tally's playbook.\n- Quoted post by Marie Martens (@MarieMartens, Tally co-founder), https://x.com/MarieMartens/status/2125530130126680303, on asking AI-referred users for their prompt and the four uses of the log.\n- Unverified claims from the post: 43% of new users from AI search, 10,000+ a week, a 5x jump in ChatGPT sign-ups in May, $258K to $422K MRR in 10 months, 11 staff, 4.8 on G2 and 4.9 on Product Hunt. The method is theirs, and steps marked \"added, not in source\" are not. Jake Ward notes Tally earned the recommendations through years of a product people genuinely recommended; this loop amplifies that signal, it doesn't replace it.\n\nStatus: untested\n",
+      "sourceUrls": [
+        "https://x.com/jakezward/status/2125570770621407480",
+        "https://x.com/MarieMartens/status/2125530130126680303"
+      ],
+      "authors": [
+        "@jakezward",
+        "@MarieMartens"
+      ],
+      "tags": [
+        "seo",
+        "ai-search"
+      ],
+      "wordCount": 932,
+      "mtime": "2026-11-25T17:42:30.197260+00:00",
       "hasSource": true
     },
     {
@@ -1567,7 +1610,7 @@
         "verification"
       ],
       "wordCount": 768,
-      "mtime": "2026-11-15T04:13:47.854168+00:00",
+      "mtime": "2026-11-25T09:35:15.414179+00:00",
       "hasSource": true
     },
     {
@@ -1587,7 +1630,7 @@
         "launch"
       ],
       "wordCount": 383,
-      "mtime": "2026-11-15T04:13:21.702378+00:00",
+      "mtime": "2026-11-25T09:36:11.362464+00:00",
       "hasSource": true
     },
     {
@@ -1607,7 +1650,7 @@
         "engineering"
       ],
       "wordCount": 294,
-      "mtime": "2026-11-15T04:13:14.030788+00:00",
+      "mtime": "2026-11-25T09:35:46.182343+00:00",
       "hasSource": true
     },
     {
@@ -1627,7 +1670,7 @@
         "ads"
       ],
       "wordCount": 255,
-      "mtime": "2026-11-15T04:13:22.638340+00:00",
+      "mtime": "2026-11-25T09:36:12.226468+00:00",
       "hasSource": true
     },
     {
@@ -1643,7 +1686,7 @@
         "shorts"
       ],
       "wordCount": 703,
-      "mtime": "2026-11-15T04:14:16.325948+00:00",
+      "mtime": "2026-11-25T09:35:47.634350+00:00",
       "hasSource": false
     },
     {
@@ -1667,7 +1710,7 @@
         "recommendations"
       ],
       "wordCount": 926,
-      "mtime": "2026-11-15T04:13:55.286166+00:00",
+      "mtime": "2026-11-25T09:35:24.818233+00:00",
       "hasSource": true
     },
     {
@@ -1687,7 +1730,7 @@
         "cold"
       ],
       "wordCount": 1235,
-      "mtime": "2026-11-20T11:41:16.590776+00:00",
+      "mtime": "2026-11-25T09:35:44.990337+00:00",
       "hasSource": true
     },
     {
@@ -1707,7 +1750,7 @@
         "outreach"
       ],
       "wordCount": 793,
-      "mtime": "2026-11-15T04:13:36.562000+00:00",
+      "mtime": "2026-11-25T09:36:16.726490+00:00",
       "hasSource": true
     }
   ]

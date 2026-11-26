@@ -1,6 +1,6 @@
 # Grok Bot Skill Library
 
-> 86 reusable playbooks (skills) for marketing, content, SEO/AI search, outreach, ads, design and AI-agent workflows.
+> 88 reusable playbooks (skills) for marketing, content, SEO/AI search, outreach, ads, design and AI-agent workflows.
 > Each skill is a Markdown file with YAML front matter (name, description) and step-by-step instructions.
 
 ## How to use this library
@@ -14,7 +14,7 @@
 
 All skills in one file: https://retrend.github.io/grok-skill-library/llms-full.txt
 Human browser with search: https://retrend.github.io/grok-skill-library/
-Last skill update: 2026-11-23
+Last skill update: 2026-11-26
 
 ## WebMCP tools
 
@@ -101,12 +101,14 @@ They run in the page and only read this site's own files. Manifest: https://retr
 - [run-simple-cbo-meta-ads-and-test-messages-cheap](https://retrend.github.io/grok-skill-library/skills/run-simple-cbo-meta-ads-and-test-messages-cheap.md): Use this when an ecommerce or lead-gen advertiser wants a simple Meta campaign structure, cheap message tests as native ads, then rebuilds of winners as richer formats, plus new-country duplicates and buyer groups mined from reviews.
 - [run-tiered-outbound-across-cold-email-linkedin-d](https://retrend.github.io/grok-skill-library/skills/run-tiered-outbound-across-cold-email-linkedin-d.md): Use this when you're setting up B2B outbound that needs to book meetings across email, LinkedIn and phone, and want one rule (account tier) that decides which channels each account gets, plus a setup playbook per channel.
 - [set-up-agent-governance-as-plumbing](https://retrend.github.io/grok-skill-library/skills/set-up-agent-governance-as-plumbing.md): Use this when a company already has a chatbot acceptable-use policy and now needs controls for background agents that write to real systems: provisioned accounts, read/propose/write permissions, named owners, a registry, logs that include denials, and shadow mode.
+- [set-up-google-antigravity-agent-teams-with-gemin](https://retrend.github.io/grok-skill-library/skills/set-up-google-antigravity-agent-teams-with-gemin.md): Use this when setting up Google Antigravity with Gemini 4 Neon: the 4 settings, which Gemini 4 model for which job, the 7 agent modes, a /swarm with verifier rules, a read-only reviewer, /learn and one automation, with optional Claude or GPT checkers and 10 ready prompts.
 - [ship-30-identical-shorts](https://retrend.github.io/grok-skill-library/skills/ship-30-identical-shorts.md): Use this when building faceless YouTube Shorts toward a measurable floor — lock one cheap template, ship 30 in the same shape, and optimize niche/idea/first-frame/pacing/ending in that order.
 - [ship-9-information-gain-assets-in-under-24-hours](https://retrend.github.io/grok-skill-library/skills/ship-9-information-gain-assets-in-under-24-hours.md): Use this when you need unique AI Search / AEO content fast — ship any of nine information-gain assets (dashboard screenshots, product walkthrough, specific reviews, before/after, named quotes, afternoon tests, first-party stats, real competitor tests, dated experiment timelines) in under 24 hours.
 - [skirmish-90s-rts-design-checklist](https://retrend.github.io/grok-skill-library/skills/skirmish-90s-rts-design-checklist.md): Use this when Skirmish pitches, designs or reviews a browser RTS, to check it still feels like a 90s real-time strategy game.
 - [stand-up-buzz-agent-workspace](https://retrend.github.io/grok-skill-library/skills/stand-up-buzz-agent-workspace.md): Use this when standing up a self-hosted Buzz workspace (block/buzz) so humans and AI agents share channels, search, Git, and automations on a relay you control.
 - [steer-creative-work-away-from-the-default-pick](https://retrend.github.io/grok-skill-library/skills/steer-creative-work-away-from-the-default-pick.md): Use this when a creative choice is left to you (names, slogans, hooks, ideas, poster or thumbnail looks, colour, layout, page or app design) or when work reads as generic, safe or 'typical AI'. Not for code, bug fixes or choices already made.
 - [test-whether-ai-assistants-relay-an-ai-only-offe](https://retrend.github.io/grok-skill-library/skills/test-whether-ai-assistants-relay-an-ai-only-offe.md): Use this when you want to measure which AI assistants (Claude, ChatGPT, Perplexity) read your site and pass a specific offer or message on to buyers, and which page format they pick up best.
+- [track-which-ai-prompts-bring-you-customers](https://retrend.github.io/grok-skill-library/skills/track-which-ai-prompts-bring-you-customers.md): Use this when a product or service wants to learn how buyers find it through ChatGPT, Claude, Gemini or Perplexity, and to turn those exact prompts into tracking, comparison pages, gap outreach and an AI info page (Tally's playbook). Use with Steven's SEO and AEO Bible.
 - [treat-verification-as-critical-infrastructure](https://retrend.github.io/grok-skill-library/skills/treat-verification-as-critical-infrastructure.md): Use this when creating or maintaining an agent verification skill with pstack (/create-verification-skill, Build the Lever CLI, Feature Map, /maintain-verification-skill), preferring cloud agents over worktrees, or using verification in feature/perf/feedback loops.
 - [turn-launch-post-replies-into-personalized-produ](https://retrend.github.io/grok-skill-library/skills/turn-launch-post-replies-into-personalized-produ.md): Use this when launching a product on X whose output can be personalized (video, image, copy, audit) and you want the reply section to become a live demo that drives signups.
 - [turn-pr-smells-into-lasting-rules](https://retrend.github.io/grok-skill-library/skills/turn-pr-smells-into-lasting-rules.md): Use this when acting as codebase gardener — watching the PR stream for recurring smells and converting each weed into a rule or hard constraint so agent-era slop cannot grow back.
