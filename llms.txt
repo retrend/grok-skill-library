@@ -1,6 +1,6 @@
 # Grok Bot Skill Library
 
-> 88 reusable playbooks (skills) for marketing, content, SEO/AI search, outreach, ads, design and AI-agent workflows.
+> 90 reusable playbooks (skills) for marketing, content, SEO/AI search, outreach, ads, design and AI-agent workflows.
 > Each skill is a Markdown file with YAML front matter (name, description) and step-by-step instructions.
 
 ## How to use this library
@@ -14,7 +14,7 @@
 
 All skills in one file: https://retrend.github.io/grok-skill-library/llms-full.txt
 Human browser with search: https://retrend.github.io/grok-skill-library/
-Last skill update: 2026-11-26
+Last skill update: 2026-11-27
 
 ## WebMCP tools
 
@@ -70,6 +70,7 @@ They run in the page and only read this site's own files. Manifest: https://retr
 - [keep-a-banned-md-that-every-draft-is-checked-aga](https://retrend.github.io/grok-skill-library/skills/keep-a-banned-md-that-every-draft-is-checked-aga.md): Use this when an agent keeps writing in AI style (em dashes, "it's not x, it's y", delve, closing summaries) and you want one standing file of banned structures, words, formatting and tone that it reads before every draft and checks the draft against.
 - [library-scout-catalogue-playbook](https://retrend.github.io/grok-skill-library/skills/library-scout-catalogue-playbook.md): Use this when Library Scout collects entries into the catalogue, searches it for a project, or needs the catalogue schema and file paths.
 - [linkedin-engagers-to-tiered-outbound](https://retrend.github.io/grok-skill-library/skills/linkedin-engagers-to-tiered-outbound.md): Use this when building a LinkedIn outbound list from post engagers with Claude Code + Apify + Origami — scrape, tier, and launch Tier 1 sequences. Full runnable prompts are in this skill.
+- [make-code-drawn-old-cartoon-shorts-from-a-story](https://retrend.github.io/grok-skill-library/skills/make-code-drawn-old-cartoon-shorts-from-a-story.md): Use this when you want a coding agent to turn a story into a vertical animated short in an old hand-inked cartoon-cel style drawn entirely in code (Python, SVG, ffmpeg), with no AI image or video generators and approval gates at script, design sheet and shot list.
 - [make-trust-heavy-finance-shorts-from-a-lesson-ba](https://retrend.github.io/grok-skill-library/skills/make-trust-heavy-finance-shorts-from-a-lesson-ba.md): Use this when producing faceless short-form finance videos (YouTube Shorts and similar) from a body of finance material, with proof-showing visuals, an older trusted voice, and a prediction-tracker series, for audience growth or financial services lead gen.
 - [master-ai-content-then-hand-production-to-an-age](https://retrend.github.io/grok-skill-library/skills/master-ai-content-then-hand-production-to-an-age.md): Use this when building AI ad/content production from scratch into an agent-run pipeline — lock one image + one video model, ship daily, log prompts/steps, then teach Codex/Claude Code the workflow until a script becomes a finished upload-ready edit.
 - [memory-dream](https://retrend.github.io/grok-skill-library/skills/memory-dream.md): Use this for a scheduled memory-curation pass across a user's Grok Bots: read a window of past transcripts, verify, enrich and tidy what the bots remember, and write one reviewable proposal of memory adds and removes, each with a reason and source. Follows Anthropic's Dreams docs and its 'Dreaming with a dynamic workflow' cookbook. Proposes only; it never changes live memory.
@@ -100,6 +101,7 @@ They run in the page and only read this site's own files. Manifest: https://retr
 - [run-seo-from-claude-code-with-two-api-keys](https://retrend.github.io/grok-skill-library/skills/run-seo-from-claude-code-with-two-api-keys.md): Use this when a SaaS or service business wants keyword research, a content calendar, per-vertical landing pages and a competitor link-building list from Claude Code, using a Keywords Everywhere key and a DataForSEO key.
 - [run-simple-cbo-meta-ads-and-test-messages-cheap](https://retrend.github.io/grok-skill-library/skills/run-simple-cbo-meta-ads-and-test-messages-cheap.md): Use this when an ecommerce or lead-gen advertiser wants a simple Meta campaign structure, cheap message tests as native ads, then rebuilds of winners as richer formats, plus new-country duplicates and buyer groups mined from reviews.
 - [run-tiered-outbound-across-cold-email-linkedin-d](https://retrend.github.io/grok-skill-library/skills/run-tiered-outbound-across-cold-email-linkedin-d.md): Use this when you're setting up B2B outbound that needs to book meetings across email, LinkedIn and phone, and want one rule (account tier) that decides which channels each account gets, plus a setup playbook per channel.
+- [set-up-a-slow-turn-retro-hook-for-coding-agents](https://retrend.github.io/grok-skill-library/skills/set-up-a-slow-turn-retro-hook-for-coding-agents.md): Use this when a coding agent (Claude Code, Codex, Antigravity or similar) keeps wasting time on slow processes and you want a Stop hook that makes it diagnose and fix the slow default path after any turn of 10+ minutes of active work, with ROI logging.
 - [set-up-agent-governance-as-plumbing](https://retrend.github.io/grok-skill-library/skills/set-up-agent-governance-as-plumbing.md): Use this when a company already has a chatbot acceptable-use policy and now needs controls for background agents that write to real systems: provisioned accounts, read/propose/write permissions, named owners, a registry, logs that include denials, and shadow mode.
 - [set-up-google-antigravity-agent-teams-with-gemin](https://retrend.github.io/grok-skill-library/skills/set-up-google-antigravity-agent-teams-with-gemin.md): Use this when setting up Google Antigravity with Gemini 4 Neon: the 4 settings, which Gemini 4 model for which job, the 7 agent modes, a /swarm with verifier rules, a read-only reviewer, /learn and one automation, with optional Claude or GPT checkers and 10 ready prompts.
 - [ship-30-identical-shorts](https://retrend.github.io/grok-skill-library/skills/ship-30-identical-shorts.md): Use this when building faceless YouTube Shorts toward a measurable floor — lock one cheap template, ship 30 in the same shape, and optimize niche/idea/first-frame/pacing/ending in that order.
