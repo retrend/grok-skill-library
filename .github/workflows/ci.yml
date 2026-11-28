@@ -1,0 +1,27 @@
+name: grok-skill-library-ci
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Enforce control-file presence and repository hygiene
+        run: |
+          node -e '
+            const fs = require("fs");
+            const req = ["AGENTS.md", "CLAUDE.md", ".agent/architecture.md", ".agent/status.md", ".agent/decisions.md", ".agent/decisions-needed.md", ".agent/runbook.md"];
+            const missing = req.filter(f => !fs.existsSync(f));
+            if (missing.length) { console.error("Missing:", missing); process.exit(1); }
+            console.log("Cloud agent control files verified.");
+          '
